@@ -1,5 +1,7 @@
 # vision — 骰之侵略者截图识别模块
 
+> 当前状态：图标识别原型，尚未完成真实截图集或完整对局验收。`parse_screenshot` 未接入 OCR，`resources`、`target` 和 `dice` 留空，`row` 未赋值；匹配器每模板只返回一个位置。接入输入自动化前，按 [架构设计](../docs/agent-design/architecture.md)补齐重复实例、布局、状态可信度和动作验证。
+
 让自动化 Agent「看得懂」游戏截图：从截图识别棋盘上的单位/神器/专长/Boss技能，结合知识库输出结构化棋盘状态（JSON），供下游 LLM/规则引擎做决策。
 
 ## 目录结构
@@ -45,7 +47,7 @@ from vision.matcher import Matcher
 m = Matcher().load_manifest("vision/assets/manifest.json")
 
 # 匹配某类别（units/artifacts/perks/pilot_abilities/spells/commanders/pilots）
-hits = m.match_category("units", "screenshot.png", threshold=0.7)
+hits = m.match_category("screenshot.png", "units", threshold=0.7)
 for h in hits:
     print(f"[{h.score:.3f}] {h.zh}({h.en}) @({h.x},{h.y}) {h.w}x{h.h}")
 
