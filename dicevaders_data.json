@@ -1,0 +1,6688 @@
+{
+ "meta": {
+  "game": "Dicevaders",
+  "zh_name": "骰之侵略者",
+  "steam_appid": 3917700,
+  "developer": "Pengonauts",
+  "publisher": "Playstack",
+  "release_date": "2026-09-29",
+  "build": "25892943",
+  "universe": "StarVaders",
+  "source": "dicevader-wiki.vercel.app (extracted from installed game data)"
+ },
+ "terms": {
+  "GlobalMult": {
+   "title": {
+    "en": "{k.GlobalMult}",
+    "zh": "{k.GlobalMult}"
+   },
+   "desc": {
+    "en": "Multiplied with attack score and resets when your turn ends.",
+    "zh": "与攻击分数相乘，会在你的回合结束时重置。"
+   }
+  },
+  "BaseDice": {
+   "title": {
+    "en": "{k.BaseDice}",
+    "zh": "{k.BaseDice}"
+   },
+   "desc": {
+    "en": "The 3 dice that are rolled when your turn begins.",
+    "zh": "你的回合开始时会掷出的3枚骰子。"
+   }
+  },
+  "DiceMult": {
+   "title": {
+    "en": "{k.DicePower}",
+    "zh": "{k.DicePower}"
+   },
+   "desc": {
+    "en": "When a unit is scored, you get {k.DicePower} x {k.Attack}.",
+    "zh": "当有单位得分时，你获得{k.DicePower}×{k.Attack}的分数。"
+   }
+  },
+  "Budge": {
+   "title": {
+    "en": "{k.Budge}",
+    "zh": "{k.Budge}"
+   },
+   "desc": {
+    "en": "Spend to change the value of any dice by 1.",
+    "zh": "花费来将任意骰子的数值调整1点。"
+   }
+  },
+  "Chrono": {
+   "title": {
+    "en": "{k.Chrono}",
+    "zh": "{k.Chrono}"
+   },
+   "desc": {
+    "en": "Spend to reroll dice or the shop. You can also freeze items!",
+    "zh": "花费它来重掷骰子或商店商品。你也可以将物品冻结！"
+   }
+  },
+  "ShopToken": {
+   "title": {
+    "en": "{k.ShopToken} {f.keyword}Cash{f.end}",
+    "zh": "{k.ShopToken} {f.keyword}货币{f.end}"
+   },
+   "desc": {
+    "en": "Spend at the shop to buy items. Unspent {k.ShopToken} is converted into {k.MiniDice}.",
+    "zh": "在商店进行购物。没有花完的{k.ShopToken}会转化为{k.MiniDice}。"
+   }
+  },
+  "ShopRarity": {
+   "title": {
+    "en": "{f.keyword}% Shop Rarity{f.end}",
+    "zh": "{f.keyword}% 商店稀有度{f.end}"
+   },
+   "desc": {
+    "en": "Chance to find rarer items for the rest of the run.",
+    "zh": "在本局游戏中接下来的时间内能够找到更高稀有度物品的几率。"
+   }
+  },
+  "Shield": {
+   "title": {
+    "en": "{k.Shield}",
+    "zh": "{k.Shield}"
+   },
+   "desc": {
+    "en": "When scored, gives +0.5 {k.GlobalMult} but has 25% chance to break.",
+    "zh": "得分时，给予+0.5{k.GlobalMult}但有25%几率破损。"
+   }
+  },
+  "MiniDice": {
+   "title": {
+    "en": "{k.MiniDice}",
+    "zh": "{k.MiniDice}"
+   },
+   "desc": {
+    "en": "Rolled and scored automatically each turn.",
+    "zh": "每回合自动掷出和得分。"
+   }
+  },
+  "ArtifactXP": {
+   "title": {
+    "en": "{f.keyword}Artifact XP{f.end}",
+    "zh": "{f.keyword}神器经验{f.end}"
+   },
+   "desc": {
+    "en": "Artifacts can level up, increasing their power!",
+    "zh": "神器能够升级，提升自身的威力！"
+   }
+  },
+  "Trigger": {
+   "title": {
+    "en": "{f.keyword}\"Trigger an artifact\"{f.end}",
+    "zh": "{f.keyword}触发一件神器{f.end}"
+   },
+   "desc": {
+    "en": "Will do everything after the \"{k.A}\" of the artifact triggered.",
+    "zh": "会执行{k.A}之后的所有效果。"
+   }
+  },
+  "WhenTrigger": {
+   "title": {
+    "en": "{f.keyword}\"When you trigger\"{f.end}",
+    "zh": "{f.keyword}当你触发时{f.end}"
+   },
+   "desc": {
+    "en": "When the condition before the \"{k.A}\" is satisfied.",
+    "zh": "当“{k.A}”前方的条件被满足时。"
+   }
+  },
+  "Repeat": {
+   "title": {
+    "en": "{k.Repeat}",
+    "zh": "{k.Repeat}"
+   },
+   "desc": {
+    "en": "Repeats {k.Attack} and everything after the \"{k.A}\" in the scoring line \"{k.S}\".",
+    "zh": "重复结算{k.Attack}和“{k.S}”得分条件中所有“{k.A}”之后的效果。"
+   }
+  },
+  "Charge": {
+   "title": {
+    "en": "{k.Charge} {f.keyword}Charge{f.end}",
+    "zh": "{k.Charge} {f.keyword}电量{f.end}"
+   },
+   "desc": {
+    "en": "Some units can gain and spend charge.",
+    "zh": "一些单位可以获得和花费电量。"
+   }
+  },
+  "OnDestroy": {
+   "title": {
+    "en": "{f.keyword}\"On Death\"{f.end}",
+    "zh": "{f.keyword}死亡时{f.end}"
+   },
+   "desc": {
+    "en": "Triggers when that unit is destroyed.",
+    "zh": "当该单位被摧毁时触发。"
+   }
+  },
+  "Token": {
+   "title": {
+    "en": "{f.keyword}Token{f.end}",
+    "zh": "{f.keyword}衍生{f.end}"
+   },
+   "desc": {
+    "en": "Units created by other units or artifact effects have {f.keyword}Token{f.end} rarity.",
+    "zh": "由其他单位或神器效果创造出来的单位会拥有{f.keyword}衍生{f.end}稀有度。"
+   }
+  },
+  "Curse": {
+   "title": {
+    "en": "{f.keyword}Curse{f.end}",
+    "zh": "{f.keyword}诅咒{f.end}"
+   },
+   "desc": {
+    "en": "This does not count as an artifact and cannot be triggered by other effects.",
+    "zh": "这不被视为神器，也无法被其他效果触发。"
+   }
+  },
+  "Warped": {
+   "title": {
+    "en": "{f.keyword}Warped Units{f.end}",
+    "zh": "{f.keyword}异界单位{f.end}"
+   },
+   "desc": {
+    "en": "Ultra rare powerful units. More chance to appear for each turn you just skipped.",
+    "zh": "格外稀有的强大单位。跳过回合会提高它们的出现几率。"
+   }
+  },
+  "Astral": {
+   "title": {
+    "en": "{f.keyword}Astral Artifacts{f.end}",
+    "zh": "{f.keyword}星界神器{f.end}"
+   },
+   "desc": {
+    "en": "Ultra rare improved version of artifacts. They scale twice as fast per level!",
+    "zh": "极为稀有的强化版本神器。每级的成长翻倍！"
+   }
+  },
+  "Capture": {
+   "title": {
+    "en": "{f.keyword}Capture{f.end}",
+    "zh": "{f.keyword}吃{f.end}"
+   },
+   "desc": {
+    "en": "Destroy the unit and gain its {k.Attack}.",
+    "zh": "摧毁相应单位并获得其{k.Attack}。"
+   }
+  }
+ },
+ "keywords": {
+  "Shock": {
+   "en": "<nobr>{icons.Shock} {f.keyword}Shock{f.end}</nobr>",
+   "zh": "<nobr> {icons.Shock} {f.keyword}电击{f.end}</nobr>"
+  },
+  "Attack": {
+   "en": "<nobr>{icons.Attack} {f.keyword}STR{f.end}</nobr>",
+   "zh": "<nobr> {icons.Attack} {f.keyword}力量{f.end}</nobr>"
+  },
+  "Shield": {
+   "en": "<nobr>{icons.Shield} {f.keyword}Shield{f.end}</nobr>",
+   "zh": "<nobr> {icons.Shield} {f.keyword}护盾{f.end}</nobr>"
+  },
+  "Shielded": {
+   "en": "<nobr>{icons.Shield} {f.keyword}Shielded{f.end}</nobr>",
+   "zh": "<nobr> {icons.Shield} {f.keyword}有护盾{f.end}</nobr>"
+  },
+  "Repeat": {
+   "en": "{f.keyword}Repeat{f.end}",
+   "zh": "{f.keyword}重复{f.end}"
+  },
+  "BaseDice": {
+   "en": "{f.keyword}Base Dice{f.end}",
+   "zh": "{f.keyword}基础骰{f.end}"
+  },
+  "GlobalMult": {
+   "en": "{f.keyword}Mult{f.end}",
+   "zh": "{f.keyword}临时倍率{f.end}"
+  },
+  "Arrow": {
+   "en": "{icons.Arrow}",
+   "zh": "{icons.Arrow}"
+  },
+  "React": {
+   "en": "{icons.React}",
+   "zh": "{icons.React}"
+  },
+  "Chrono": {
+   "en": "<nobr>{icons.Chrono} {f.keyword}Chrono{f.end}</nobr>",
+   "zh": "<nobr> {icons.Chrono} {f.keyword}时空点{f.end}</nobr>"
+  },
+  "MiniDice": {
+   "en": "<nobr>{icons.MiniDice} {f.keyword}Mini-Dice{f.end}</nobr>",
+   "zh": "<nobr> {icons.MiniDice} {f.keyword}迷你骰{f.end}</nobr>"
+  },
+  "Budge": {
+   "en": "<nobr>{icons.Budge} {f.keyword}Budge{f.end}</nobr>",
+   "zh": "<nobr> {icons.Budge} {f.keyword}挪移{f.end}</nobr>"
+  },
+  "DicePower": {
+   "en": "<nobr>{icons.DicePower} {f.keyword}Dice Power{f.end}</nobr>",
+   "zh": "<nobr> {icons.DicePower} {f.keyword}骰子威力{f.end}</nobr>"
+  },
+  "Scored": {
+   "en": "{icons.Target}",
+   "zh": "{icons.Target}"
+  },
+  "Charge": {
+   "en": "{icons.Charge}",
+   "zh": "{icons.Charge}"
+  },
+  "ShopToken": {
+   "en": "{icons.ShopToken}",
+   "zh": "{icons.ShopToken}"
+  }
+ },
+ "rules": {
+  "MiniDice_Desc": {
+   "en": "After you score {k.BaseDice}, your {k.MiniDice} are rolled and scored automatically, 3 dice at a time.",
+   "zh": "在你用{k.BaseDice}得分之后，你会掷出{k.MiniDice}并自动得分，会按每组3个依次掷出。"
+  },
+  "Hearts_Desc": {
+   "en": "If you fail to defeat the {f.keyword}TARGET DEFENSE{f.end} in time, lose 1 {f.keyword}HEART{f.end} and gain an extra turn.\nIf you run out of {f.keyword}HEARTS{f.end} , you lose.",
+   "zh": "如果你未能在时限内战胜{f.keyword}目标防御{f.end}，你会失去1颗{f.keyword}心心{f.end}然后获得一个额外回合。 \n当你耗尽{f.keyword}心心{f.end}时，你就会输掉游戏。"
+  },
+  "ScorePanel_Desc": {
+   "en": "When time runs out, you must have more {f.keyword}ATTACK SCORE{f.end} than {f.keyword}TARGET DEFENSE{f.end}.\nIf you fail, you will lose 1 {f.keyword}HEART{f.end} and gain an extra turn to complete your objective.",
+   "zh": "在到达时限时，你必须要拥有与{f.keyword}目标防御{f.end}相等或更高的{f.keyword}攻击分数{f.end}。 \n如果你失败，你会失去1颗{f.keyword}心心{f.end}然后获得一个额外的回合来完成这一使命。"
+  },
+  "MapPanel_Desc": {
+   "en": "At the end of every {f.keyword}ACT{f.end}, a {f.keyword}PILOT{f.end} will try to slow you down with special abilities.\nTo {f.keyword}WIN{f.end}, you must survive until {f.keyword}ACT 4{f.end} and defeat the final {f.keyword}PILOT{f.end}!",
+   "zh": "在每一{f.keyword}幕{f.end}的最后，一名{f.keyword}驾驶员{f.end}将会试图用自身的特别能力来阻挠你。 \n要在游戏中{f.keyword}取胜{f.end}，你必须存活到{f.keyword}第四幕{f.end}并打败最后一位{f.keyword}驾驶员{f.end}！"
+  },
+  "DiceMult_Desc": {
+   "en": "When you score a unit, gain {f.keyword}Attack Score{f.end} equal to the current {k.DicePower} x that unit's {k.Attack}.\nEach dice contributes +1 {k.DicePower} to its column.",
+   "zh": "当你计算一个单位的得分时，最终得到的{f.keyword}攻击分数{f.end}等于当前的{k.DicePower}×该单位的{k.Attack}。 每个骰子会给所在的列提供+1{k.DicePower}。"
+  },
+  "GlobalMult_Desc": {
+   "en": "When your turn ends, you multiply all {f.keyword}Attack Score{f.end} gained this turn with your {k.GlobalMult} gained this turn.",
+   "zh": "在你的回合结束时，你会将本回合获得的所有{f.keyword}攻击分数{f.end}乘以你在本回合得到的{k.GlobalMult}。"
+  },
+  "Budge_Desc": {
+   "en": "You can spend {k.Budge} to change the value of any dice by 1, once per roll.",
+   "zh": "你可以花费{k.Budge}来将任意骰子的点数上下调整1点，每个骰子每次掷骰限一次。"
+  },
+  "Reroll_Desc": {
+   "en": "You can spend {k.Chrono} to reroll the shop or {k.BaseDice}.",
+   "zh": "你可以花费{k.Chrono}来重掷商店或{k.BaseDice}。"
+  },
+  "SkipForIncome_Desc": {
+   "en": "Skip to get +1 {k.ShopToken} each turn.",
+   "zh": "跳过来获得每回合+1{k.ShopToken}。"
+  },
+  "DoomBar_Desc": {
+   "en": "To win, you must fill up the <b>Doom Bar</b>!\nEach time you surpass the {f.keyword}Target Defense{f.end}, you get +1 <b>Doom</b> and your attack score resets to 0.\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\nYou have {f.keyword}+3 EXTRA TURNS{f.end} to do this!",
+   "zh": "想要获胜，你必须填满<b>末日槽</b>！ \n你每次超过{f.keyword}目标防御{f.end}时，就会获得+1<b>末日值</b>，然后将你的攻击分数重置为0。 \n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n你拥有{f.keyword}+3额外回合{f.end}来完成这个任务！"
+  },
+  "Endless_Desc": {
+   "en": "Continue playing with exponential difficulty!\nYou can abandon the run at any time, your progress will be saved and count as VICTORY.",
+   "zh": "继续游玩，面对指数级成长的难度！ \n你可以在任意时候放弃这一局游戏，所有进展都会被保存，并且本局游戏会被记为一次胜利。"
+  },
+  "Sandbox_Desc": {
+   "en": "Sandbox Settings are NOT the intended way to play the game!\nThey also do not disable achievements. Use at your own risk!",
+   "zh": "沙盒设置不是游戏最初设计的玩法！ \n同时这些设置也不会禁用成就。使用风险请自行考虑！"
+  },
+  "Sandbox_SkipAnims": {
+   "en": "Skip Invasion Animations (except OTKO)",
+   "zh": "跳过侵略动画（单回合击杀除外）"
+  },
+  "Sandbox_AssistMode": {
+   "en": "Assist Mode (+1 Budge & +1 Chrono each turn)",
+   "zh": "辅助模式（每回合+1挪移和+1时空点）"
+  },
+  "Sandbox_RichMode": {
+   "en": "Rich Mode (+2 Cash each turn)",
+   "zh": "富裕模式（每回合+2货币）"
+  },
+  "Sandbox_GrowMode": {
+   "en": "Grow Mode (+5% Shop Rarity each turn)",
+   "zh": "成长模式（每回合+5%商店稀有度）"
+  },
+  "Sandbox_RemoveHardPilots": {
+   "en": "Remove Shun, Garu, & Xenn from random pilots",
+   "zh": "从随机驾驶员中移除Shun、Garu和Xenn"
+  },
+  "Sandbox_DisableConstellation": {
+   "en": "Disable Constellations System",
+   "zh": "禁用星座系统"
+  },
+  "Sandbox_DisableLockedArtifacts": {
+   "en": "Disable Locked Artifact Slots",
+   "zh": "禁用锁定神器栏位"
+  },
+  "ReplaceTippyWithGaru_Misc": {
+   "en": "Replace Tippy with Garu",
+   "zh": "将 Tippy 替换为 Garu"
+  },
+  "Hearts_Title": {
+   "en": "Commander Hearts",
+   "zh": "指挥官之心"
+  },
+  "ConstellationSystem_Desc": {
+   "en": "At the start of each run, you will get up to 3 random modifiers to change up the game!\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\nBeware, rarer units will also be harder to find...",
+   "zh": "在每局游戏开始时，你会获得最多3个调整项来改变游戏的体验！ \n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n请注意，稀有度更高的单位也更难遇到……"
+  },
+  "HeartRageTooltip_Title": {
+   "en": "Hearts / Rage",
+   "zh": "心心/怒火"
+  },
+  "HeartRageTooltip_Desc": {
+   "en": "If you run out of {f.keyword}HEARTS{f.end}, you lose.\nIf you have as much <b>RAGE</b> as <b>Hearts</b>, enter <color=#C01E20><b>BEAST MODE</b></color> !!!",
+   "zh": "当你耗尽{f.keyword}心心{f.end}时，你会输掉游戏。 \n当你的<b>怒火</b>不低于<b>心心</b>时，进入<color=#C01E20><b>狂兽模式</b></color>！！！"
+  },
+  "ShopRarity_Desc_Misc": {
+   "en": "Increases the chance of finding more rare spells, artifacts, and units!\nCurrent chances:<b>  [C]  |  [U]  |  [R]  |  [L]",
+   "zh": "增加找到更多稀有法术、神器和单位的几率！ \n当前几率：<b>  [C]  |  [U]  |  [R]  |  [L]"
+  }
+ },
+ "commanders": [
+  {
+   "k": "Mothership",
+   "name": {
+    "en": "The Captain",
+    "zh": "舰长"
+   },
+   "perk": "Mothership",
+   "unlockTitle": {
+    "en": "Locked - The Invasion Begins!",
+    "zh": "锁定——侵略开始！"
+   },
+   "unlock": {
+    "en": "Reach Chapter 1 to unlock!",
+    "zh": "到达第1章来解锁！"
+   },
+   "art": 0,
+   "ic": 268
+  },
+  {
+   "k": "Megablob",
+   "name": {
+    "en": "Blob-Girl",
+    "zh": "团块姑娘"
+   },
+   "perk": "MegaBlob",
+   "unlockTitle": {
+    "en": "Locked - Unfathomable Hunger",
+    "zh": "锁定——无尽饥饿"
+   },
+   "unlock": {
+    "en": "Reach Chapter 1 to unlock!",
+    "zh": "到达第1章来解锁！"
+   },
+   "art": 1,
+   "ic": 269
+  },
+  {
+   "k": "Kraken",
+   "name": {
+    "en": "The Core",
+    "zh": "核心"
+   },
+   "perk": "Kraken",
+   "unlockTitle": {
+    "en": "Locked - Release the Kraken!",
+    "zh": "锁定——海怪来袭！"
+   },
+   "unlock": {
+    "en": "Reach Chapter 1 to unlock!",
+    "zh": "到达第1章来解锁！"
+   },
+   "art": 2,
+   "ic": 270
+  },
+  {
+   "k": "Shambler",
+   "name": {
+    "en": "Riftmaker",
+    "zh": "裂隙制造师"
+   },
+   "perk": "Shamby",
+   "unlockTitle": {
+    "en": "Locked - In Shambles!",
+    "zh": "锁定——蹒跚前行！"
+   },
+   "unlock": {
+    "en": "Defeat {f.keyword}Kaia{f.end} (the third pilot of Chapter 2) to unlock!",
+    "zh": "打败{f.keyword}Kaia{f.end}（第2章的第三位驾驶员）来解锁！"
+   },
+   "art": 3,
+   "ic": 271
+  },
+  {
+   "k": "Nessie",
+   "name": {
+    "en": "Whisperer",
+    "zh": "低语者"
+   },
+   "perk": "Nessie",
+   "unlockTitle": {
+    "en": "Locked - An Apple a Day",
+    "zh": "锁定——每日苹果"
+   },
+   "unlock": {
+    "en": "Sacrifice 10 units to unlock! ([X]/10)",
+    "zh": "牺牲10个单位来解锁！（[X]/10）"
+   },
+   "art": 4,
+   "ic": 272
+  },
+  {
+   "k": "Grandmaster",
+   "name": {
+    "en": "The Duchess",
+    "zh": "女公爵"
+   },
+   "perk": "Grandmaster",
+   "unlockTitle": {
+    "en": "Locked - Checkmate",
+    "zh": "锁定——将死"
+   },
+   "unlock": {
+    "en": "Spawn each {f.keyword}Legendary{f.end} unit at least once to unlock:",
+    "zh": "生成每一个{f.keyword}传说{f.end}单位至少一次来解锁："
+   },
+   "art": 5,
+   "ic": 273
+  },
+  {
+   "k": "Eclipse",
+   "name": {
+    "en": "The Exalted",
+    "zh": "超凡者"
+   },
+   "perk": "Eclipse",
+   "unlockTitle": {
+    "en": "Locked - That's No Moon!",
+    "zh": "锁定——那不是月亮！"
+   },
+   "unlock": {
+    "en": "Defeat {f.keyword}Xenn{f.end} (the final pilot of Chapter 3) to unlock!",
+    "zh": "打败{f.keyword}Xenn{f.end}（第3章的最后一位驾驶员）来解锁！"
+   },
+   "art": 6,
+   "ic": 274
+  },
+  {
+   "k": "Hive",
+   "name": {
+    "en": "Hex Prince",
+    "zh": "六角王子"
+   },
+   "perk": "Hive",
+   "unlockTitle": {
+    "en": "Locked - It Stings",
+    "zh": "锁定——蜇刺之痛"
+   },
+   "unlock": {
+    "en": "Defeat the Act 4 pilot with a {f.keyword}Shop Rarity{f.end} of 200% or more.",
+    "zh": "在打败第4幕的驾驶员时，拥有200%或更高{f.keyword}商店稀有度{f.end}。"
+   },
+   "art": 7,
+   "ic": 275
+  },
+  {
+   "k": "Hemophage",
+   "name": {
+    "en": "Blood Beast",
+    "zh": "血怒兽"
+   },
+   "perk": "Hemophage",
+   "unlockTitle": {
+    "en": "Locked - From Beyond",
+    "zh": "锁定——彼岸来客"
+   },
+   "unlock": {
+    "en": "Lose 15 {f.keyword}Hearts{f.end} from buying cursed items in the shop to unlock. ([X]/15)",
+    "zh": "在商店中购买诅咒物品失去总计15颗{f.keyword}心心{f.end}来解锁。（[X]/15）"
+   },
+   "art": 8,
+   "ic": 276
+  },
+  {
+   "k": "Overseer",
+   "name": {
+    "en": "Overseer",
+    "zh": "天理"
+   },
+   "perk": "Overseer",
+   "unlockTitle": {
+    "en": "Locked - Timeline Split",
+    "zh": "锁定——无限时间线"
+   },
+   "unlock": {
+    "en": "Win a run with at least 6 commanders to unlock:",
+    "zh": "以至少6名指挥官赢得一局游戏来解锁："
+   },
+   "art": 9,
+   "ic": 277
+  }
+ ],
+ "unlocks": {
+  "build": "25892943",
+  "firstLevel": 2,
+  "levelReq": {
+   "0": 0,
+   "1": 0,
+   "2": 2,
+   "3": 4,
+   "4": 6,
+   "5": 8,
+   "6": 12,
+   "7": 16
+  },
+  "commanders": {
+   "Mothership": [
+    "Monocle",
+    "SkyArbiter",
+    "Torpedo",
+    "RocketShip",
+    "Bunker",
+    "WingsOfFury"
+   ],
+   "Megablob": [
+    "BlobCutter",
+    "SlushoMax",
+    "AcidTown",
+    "SpikyGel",
+    "Oozone",
+    "Mycelium"
+   ],
+   "Kraken": [
+    "HydraHead",
+    "BoneEater",
+    "RibCannon",
+    "Cavities",
+    "DreadKnot",
+    "LoneDragon"
+   ],
+   "Shambler": [
+    "SuperNova",
+    "GammaRay",
+    "Moonflower",
+    "Sunblock",
+    "Cyclotron",
+    "MassRelay"
+   ],
+   "Nessie": [
+    "Wormfection",
+    "Bogland",
+    "Parasite",
+    "RatPoison",
+    "BigApple",
+    "Whalefall"
+   ],
+   "Grandmaster": [
+    "Usurper",
+    "Tableflipper",
+    "StoneChisel",
+    "Fortress",
+    "EnPassant",
+    "BlitzArmor"
+   ],
+   "Eclipse": [
+    "BrokenLens",
+    "DarkMedal",
+    "GoldenHalo",
+    "GalacticWeb",
+    "DarkTower",
+    "RedSpice"
+   ],
+   "Hive": [
+    "RoyalJelly",
+    "Apiary",
+    "FlowerPot",
+    "HotBuzz",
+    "FlyingStinger",
+    "SugarCube"
+   ],
+   "Hemophage": [
+    "MarkOfTheBeast",
+    "TwoWolves",
+    "LizardTail",
+    "BloodClot",
+    "MeatStick",
+    "RageVirus"
+   ]
+  }
+ },
+ "artifacts": [
+  {
+   "key": "Engi89",
+   "kind": "artifact",
+   "en": "Engi-89",
+   "zh": "工程师-89",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "One of your {k.BaseDice} gets +[#] {k.DicePower}.",
+   "zh_desc": "你的一个{k.BaseDice}获得+[#]{k.DicePower}。",
+   "alias_zh": "工程师89",
+   "note": "",
+   "icon": 16
+  },
+  {
+   "key": "Seraphim",
+   "kind": "perk",
+   "en": "Seraphim",
+   "zh": "炽天使",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Give a {k.Shield} to ALL units in the bottom row.",
+   "zh_desc": "你的回合开始时{k.A}给予所有最下排的单位一个{k.Shield}。",
+   "alias_zh": "炽天使",
+   "note": "需要 Blitz Armor/Ectoplasm/Guardian/Aegis 才值得",
+   "icon": 17
+  },
+  {
+   "key": "DeathRattle",
+   "kind": "perk",
+   "en": "Death Rattle",
+   "zh": "死亡残音",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your \"{f.keyword}On Death{f.end}\" abilities trigger twice.",
+   "zh_desc": "你的“{f.keyword}死亡时{f.end}”能力触发两次。",
+   "alias_zh": "亡语",
+   "note": "",
+   "icon": 18
+  },
+  {
+   "key": "Wormhole",
+   "kind": "artifact",
+   "en": "Wormhole",
+   "zh": "虫洞",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "When you buy this and when this levels up {k.A} Get +3 {k.Chrono} and +[#] {k.GlobalMult}.",
+   "zh_desc": "当你购买该神器以及当该神器升级时{k.A}获得+3{k.Chrono}和+[#]{k.GlobalMult}。",
+   "alias_zh": "虫洞",
+   "note": "",
+   "icon": 19
+  },
+  {
+   "key": "Peashooter",
+   "kind": "artifact",
+   "en": "Peashooter",
+   "zh": "微型炮",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "After you score a pair in this column {k.A} Score [#] random units in other columns.",
+   "zh_desc": "你以对子在该列得分后{k.A}让其他列的随机[#]个单位得分。",
+   "alias_zh": "豌豆射手",
+   "note": "",
+   "icon": 20
+  },
+  {
+   "key": "Nemesis",
+   "kind": "perk",
+   "en": "Nemesis",
+   "zh": "天罚",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Spawn an <b>Auto-Bomb</b> with 500 {k.Attack} on a random tile.",
+   "zh_desc": "你的回合开始时{k.A}在随机格子生成一个500{k.Attack}的<b>自动炸弹</b>。",
+   "alias_zh": "宿敌",
+   "note": "",
+   "icon": 21
+  },
+  {
+   "key": "MegaBlob",
+   "kind": "starter",
+   "en": "Amalgam",
+   "zh": "聚合体",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Get +3 {k.MiniDice}.\nAfter you score {k.MiniDice} {k.A} Give that column's artifact {f.xp}+[#] XP{f.end}.",
+   "zh_desc": "你的回合开始时{k.A}获得+3{k.MiniDice}。 \n当你以{k.MiniDice}得分时{k.A}给予该列的神器{f.xp}+[#]经验{f.end}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 22
+  },
+  {
+   "key": "Kraken",
+   "kind": "starter",
+   "en": "From The Deep",
+   "zh": "深渊之物",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "You have an extra <b>Kraken</b> {k.BaseDice} which gives {f.xp}+[#] XP{f.end} to its column's artifact when launched.",
+   "zh_desc": "你有一个额外<b>海怪</b>{k.BaseDice}，发射时会给其所在列的神器{f.xp}+[#]经验{f.end}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 23
+  },
+  {
+   "key": "VoltaicCoil",
+   "kind": "perk",
+   "en": "Voltaic Coil",
+   "zh": "伏特线圈",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When a unit spends {k.Charge} {k.A} 50% chance of keeping that {k.Charge}.",
+   "zh_desc": "当有单位花费{k.Charge}时{k.A}50%几率不失去{k.Charge}。",
+   "alias_zh": "伏打线圈",
+   "note": "",
+   "icon": 24
+  },
+  {
+   "key": "Landlord",
+   "kind": "perk",
+   "en": "Landlord",
+   "zh": "房东",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Shuffle the positions of all units and get +3 {k.ShopToken}.",
+   "zh_desc": "你的回合开始时{k.A}打乱所有单位的位置然后获得+3{k.ShopToken}。",
+   "alias_zh": "房东",
+   "note": "血怒兽很合适；经济选项",
+   "icon": 25
+  },
+  {
+   "key": "RoboParrot",
+   "kind": "artifact",
+   "en": "Robo-Parrot",
+   "zh": "机器鹦鹉",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "When you begin scoring this column {k.A} The next unit gets +2 {k.Repeat} and gains +[#] {k.Attack}.",
+   "zh_desc": "当你开始在该列得分时{k.A}下一个单位获得+2{k.Repeat}并获得+[#]{k.Attack}。",
+   "alias_zh": "机械鹦鹉",
+   "note": "",
+   "icon": 26
+  },
+  {
+   "key": "TrinityStar",
+   "kind": "artifact",
+   "en": "Trinity Star",
+   "zh": "三一之星",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "After you score ANY triple with {k.BaseDice} {k.A} Get +[#] {k.MiniDice} and +1 {k.Chrono}.",
+   "zh_desc": "当你用{k.BaseDice}在任意地方以三条得分时{k.A}获得+[#]{k.MiniDice}和+1{k.Chrono}。",
+   "alias_zh": "三位一体星",
+   "note": "",
+   "icon": 27
+  },
+  {
+   "key": "Ocarina",
+   "kind": "artifact",
+   "en": "Ocarina",
+   "zh": "陶笛",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "The first time you spend {k.Chrono} each turn {k.A} Get +[#] {k.MiniDice}.",
+   "zh_desc": "每回合你第一次使用{k.Chrono}时{k.A}获得+[#]{k.MiniDice}。",
+   "alias_zh": "陶笛",
+   "note": "",
+   "icon": 28
+  },
+  {
+   "key": "CosmicDice",
+   "kind": "artifact",
+   "en": "Cosmic Dice",
+   "zh": "宇宙骰子",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "Your pairs and triples of {k.BaseDice} have + [#] {k.DicePower}.",
+   "zh_desc": "你{k.BaseDice}的对子和三条拥有+[#]{k.DicePower}。",
+   "alias_zh": "宇宙骰",
+   "note": "",
+   "icon": 29
+  },
+  {
+   "key": "ToadHead",
+   "kind": "artifact",
+   "en": "Toad Head",
+   "zh": "蟾蜍头",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "After you score ANY pair with {k.BaseDice} {k.A} Get +[#] {k.MiniDice}.",
+   "zh_desc": "当你用{k.BaseDice}在任意地方以对子得分时{k.A}获得+[#]{k.MiniDice}。",
+   "alias_zh": "蟾蜍头",
+   "note": "",
+   "icon": 30
+  },
+  {
+   "key": "BlobCutter",
+   "kind": "perk",
+   "en": "Blob Cutter",
+   "zh": "团块切割器",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your {k.MiniDice} have +1 {k.DicePower} and can only roll 1, 2 or 3.",
+   "zh_desc": "你的{k.MiniDice}拥有+1{k.DicePower}但只能掷出1、2、3点。",
+   "alias_zh": "史莱姆切割器",
+   "note": "配超凡者或迷你骰三条流",
+   "icon": 31
+  },
+  {
+   "key": "RedHorns",
+   "kind": "artifact",
+   "en": "Red Horns",
+   "zh": "红角",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When your turn begins {k.A} Give +[#] {k.Attack} to all units in the bottom row.",
+   "zh_desc": "你的回合开始时{k.A}给予最下排的所有单位+[#]{k.Attack}。",
+   "alias_zh": "红角",
+   "note": "",
+   "icon": 32
+  },
+  {
+   "key": "Timekeeper",
+   "kind": "perk",
+   "en": "Timekeeper",
+   "zh": "计时器",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Get +1 {k.Budge} and +1 {k.Chrono}.",
+   "zh_desc": "你的回合开始时{k.A}获得+1{k.Budge}和+1{k.Chrono}。",
+   "alias_zh": "计时员",
+   "note": "“最平均的好专长”，可当比较基准",
+   "icon": 33
+  },
+  {
+   "key": "Mothership",
+   "kind": "starter",
+   "en": "Mothership",
+   "zh": "母舰",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Get +1 {k.Budge}.\nAfter you score a pair {k.A} Give that column's artifact {f.xp}+[#] XP{f.end}.",
+   "zh_desc": "你的回合开始时{k.A}获得+1{k.Budge}。 \n当你以对子得分时{k.A}给予该列的神器{f.xp}+[#]经验{f.end}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 34
+  },
+  {
+   "key": "MoonBeam",
+   "kind": "perk",
+   "en": "Moon Beam",
+   "zh": "月亮光束",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your {k.ShopToken} carries over each turn instead of being converted into {k.MiniDice}.\nWhen your turn begins {k.A} For each {k.ShopToken} carried over, get +1 {k.GlobalMult}.",
+   "zh_desc": "你的{k.ShopToken}不再被转化为{k.MiniDice}而是可以跨回合保留。 \n你的回合开始时{k.A}每个被保留的{k.ShopToken}让你获得+1{k.GlobalMult}。",
+   "alias_zh": "月光",
+   "note": "配 Gemstone",
+   "icon": 35
+  },
+  {
+   "key": "Megabrain",
+   "kind": "perk",
+   "en": "Megabrain",
+   "zh": "超级大脑",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When any artifact gains {f.xp}XP{f.end} {k.A} It gains {f.xp}+10 XP{f.end}.",
+   "zh_desc": "当任意神器获得{f.xp}经验{f.end}时{k.A}额外获得{f.xp}+10经验{f.end}。",
+   "alias_zh": "超级大脑",
+   "note": "团块姑娘很需要",
+   "icon": 36
+  },
+  {
+   "key": "CocoonShield",
+   "kind": "artifact",
+   "en": "Cocoon Shield",
+   "zh": "茧之盾",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When any unit gains a {k.Shield} {k.A} Give ALL units +[#] {k.Attack}.",
+   "zh_desc": "任意单位获得{k.Shield}时{k.A}给予所有单位+[#]{k.Attack}。",
+   "alias_zh": "茧盾",
+   "note": "",
+   "icon": 37
+  },
+  {
+   "key": "Vroomba",
+   "kind": "artifact",
+   "en": "Vroomba",
+   "zh": "吸尘机器人",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "Each time a unit moves, they gain +[#] {k.Attack}.",
+   "zh_desc": "单位移动时获得+[#]{k.Attack}。",
+   "alias_zh": "扫地机",
+   "note": "",
+   "icon": 38
+  },
+  {
+   "key": "HelixShell",
+   "kind": "artifact",
+   "en": "Helix Shell",
+   "zh": "螺旋壳",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "While you have this artifact, units with a {k.Shield} have [#] additional {k.Attack}.",
+   "zh_desc": "拥有这件神器时，有{k.Shield}的单位拥有[#]额外{k.Attack}。",
+   "alias_zh": "螺旋壳",
+   "note": "",
+   "icon": 39
+  },
+  {
+   "key": "Buzzsaw",
+   "kind": "artifact",
+   "en": "Buzzsaw",
+   "zh": "圆锯",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "ALL units gain {f.high} \"{f.keyword}On Death{f.end} {k.A} Immediately score [#]x that unit's {k.Attack}.\" {f.endhigh}",
+   "zh_desc": "所有单位获得{f.high}“{f.keyword}死亡时{f.end}{k.A}立即获得该单位{k.Attack}[#]倍的分数。”{f.endhigh}",
+   "alias_zh": "圆锯",
+   "note": "",
+   "icon": 40
+  },
+  {
+   "key": "CrypticPattern",
+   "kind": "artifact",
+   "en": "Cryptic Pattern",
+   "zh": "隐秘构造",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "When you would get {k.Budge} or {k.Chrono} over the limit {k.A} Get +[#] {k.GlobalMult}.",
+   "zh_desc": "当你将要获得超出上限的{k.Budge}或{k.Chrono}时{k.A}获得+[#]{k.GlobalMult}。",
+   "alias_zh": "神秘图案",
+   "note": "",
+   "icon": 41
+  },
+  {
+   "key": "SlushoMax",
+   "kind": "perk",
+   "en": "Slusho-Max",
+   "zh": "雪泥杯",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "After {k.BaseDice} have been scored {k.A} Get +2 {k.GlobalMult} for each {k.MiniDice}.",
+   "zh_desc": "{k.BaseDice}得分后{k.A}每有一个{k.MiniDice}获得+2{k.GlobalMult}。",
+   "alias_zh": "Slusho-Max",
+   "note": "",
+   "icon": 42
+  },
+  {
+   "key": "CloneArmy",
+   "kind": "perk",
+   "en": "Clone Army",
+   "zh": "克隆军团",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Units scored during a triple have +2 {k.Repeat}.",
+   "zh_desc": "以三条得分的单位拥有+2{k.Repeat}。",
+   "alias_zh": "克隆军团",
+   "note": "",
+   "icon": 43
+  },
+  {
+   "key": "MeteorShower",
+   "kind": "artifact",
+   "en": "Meteor",
+   "zh": "陨石",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "After you score a pair in this column {k.A} Give ALL units +[#] {k.Attack}.",
+   "zh_desc": "当你在此列以对子得分时{k.A}给所有单位+[#]{k.Attack}。",
+   "alias_zh": "流星",
+   "note": "",
+   "icon": 44
+  },
+  {
+   "key": "Comet",
+   "kind": "artifact",
+   "en": "Comet",
+   "zh": "彗星",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "After you score ANY pair with {k.BaseDice} {k.A} Get +[#] {k.GlobalMult}.",
+   "zh_desc": "当你用{k.BaseDice}以对子得分时{k.A}获得+[#]{k.GlobalMult}。",
+   "alias_zh": "彗星",
+   "note": "",
+   "icon": 45
+  },
+  {
+   "key": "BrokenLens",
+   "kind": "perk",
+   "en": "Broken Lens",
+   "zh": "破损透镜",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your pairs count as triples.\nYour {k.BaseDice} start cracked.",
+   "zh_desc": "你的对子同时算作三条。 \n你的{k.BaseDice}初始有裂痕。",
+   "alias_zh": "破碎镜片",
+   "note": "天理组合里极强",
+   "icon": 46
+  },
+  {
+   "key": "BoltHead",
+   "kind": "artifact",
+   "en": "Bolt-Head",
+   "zh": "螺栓头",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "Each time a unit spends {k.Charge}, they gain +[#] {k.Attack} for each {k.Charge} spent.",
+   "zh_desc": "当有单位花费{k.Charge}时，每花费一格{k.Charge}该单位获得+[#]{k.Attack}。",
+   "alias_zh": "螺栓头",
+   "note": "",
+   "icon": 47
+  },
+  {
+   "key": "BookOfTheDead",
+   "kind": "artifact",
+   "en": "Book of Death",
+   "zh": "死亡之书",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "Your <b>Migo</b> units gain {f.high} \"{f.keyword}On Death{f.end} {k.A} Get +[#] {k.GlobalMult} and +1 {k.ShopToken}.\" {f.endhigh}",
+   "zh_desc": "你的<b>米戈</b>单位获得{f.high}“{f.keyword}死亡时{f.end}{k.A}获得+[#]{k.GlobalMult}和+1{k.ShopToken}。”{f.endhigh}",
+   "alias_zh": "死亡之书",
+   "note": "",
+   "icon": 48
+  },
+  {
+   "key": "BookOfTheLiving",
+   "kind": "artifact",
+   "en": "Book of Life",
+   "zh": "生命之书",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "While you have this artifact, your <b>Migo</b> units have [#] additional {k.Attack}.",
+   "zh_desc": "拥有这件神器时，你的<b>米戈</b>单位拥有[#]额外{k.Attack}。",
+   "alias_zh": "生命之书",
+   "note": "",
+   "icon": 49
+  },
+  {
+   "key": "GlassTeeth",
+   "kind": "artifact",
+   "en": "Glass Teeth",
+   "zh": "玻璃牙齿",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "Units spawn with +[#] {k.Attack}.",
+   "zh_desc": "单位生成时+[#]{k.Attack}。",
+   "alias_zh": "玻璃牙",
+   "note": "",
+   "icon": 50
+  },
+  {
+   "key": "Antimatter",
+   "kind": "artifact",
+   "en": "Antimatter",
+   "zh": "反物质",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "When you leave the shop, if you had unused {k.ShopToken} {k.A} Get +[#] {k.GlobalMult}.",
+   "zh_desc": "当你离开商店时，如果你还有未使用的{k.ShopToken}{k.A}获得+[#]{k.GlobalMult}。",
+   "alias_zh": "反物质",
+   "note": "",
+   "icon": 51
+  },
+  {
+   "key": "DreamEye",
+   "kind": "artifact",
+   "en": "Dream Eye",
+   "zh": "梦之眼",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "When you buy this and when this levels up {k.A} Give {f.xp}+[#] XP{f.end} to adjacent artifacts.",
+   "zh_desc": "当你购买该神器以及当该神器升级时{k.A}给予相邻神器{f.xp}+[#]经验{f.end}。",
+   "alias_zh": "梦之眼",
+   "note": "",
+   "icon": 52
+  },
+  {
+   "key": "WhiteSpace",
+   "kind": "artifact",
+   "en": "White Space",
+   "zh": "白色空间",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "When you score an empty tile {k.A} Give a random unit +[#] {k.Attack}.",
+   "zh_desc": "当你在空格子得分时{k.A}给予一个随机单位+[#]{k.Attack}。",
+   "alias_zh": "留白",
+   "note": "",
+   "icon": 53
+  },
+  {
+   "key": "TheBait",
+   "kind": "artifact",
+   "en": "The Bait",
+   "zh": "诱饵",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "When you begin scoring this column with {k.BaseDice} {k.A} Increase the {k.Attack} of the bottom unit in this column by +[#]%.",
+   "zh_desc": "当你开始在该列以{k.BaseDice}得分时{k.A}使该列最下排单位的{k.Attack}增加+[#]%。",
+   "alias_zh": "诱饵",
+   "note": "",
+   "icon": 54
+  },
+  {
+   "key": "Stowaway",
+   "kind": "artifact",
+   "en": "Stowaway",
+   "zh": "偷渡者",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "After {k.BaseDice} have been scored {k.A} Score the unit with the highest {k.Attack} and give it +[#] {k.Attack}",
+   "zh_desc": "{k.BaseDice}得分结束后{k.A}让{k.Attack}最高的单位得分并给予它+[#]{k.Attack}",
+   "alias_zh": "偷渡者",
+   "note": "",
+   "icon": 55
+  },
+  {
+   "key": "RoguePlanet",
+   "kind": "artifact",
+   "en": "Rogue Planet",
+   "zh": "叛离行星",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "After you score a pair of {k.BaseDice} in this column {k.A} Get {k.ShopToken} and +[#] {k.GlobalMult}.",
+   "zh_desc": "当你在此列以{k.BaseDice}对子得分后{k.A}获得{k.ShopToken}和+[#]{k.GlobalMult}。",
+   "alias_zh": "流浪行星",
+   "note": "",
+   "icon": 56
+  },
+  {
+   "key": "EldritchTome",
+   "kind": "perk",
+   "en": "Eldritch Tome",
+   "zh": "邪异魔典",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "After you obtain an artifact {k.A} Give it {f.xp}+45 XP{f.end}.",
+   "zh_desc": "当你获得神器时{k.A}给予其{f.xp}+45经验{f.end}。",
+   "alias_zh": "邪典",
+   "note": "新神器直接约 4 级，换神器很顺；Dirty Sludge 无限核心",
+   "icon": 57
+  },
+  {
+   "key": "GrowthSerum",
+   "kind": "perk",
+   "en": "Growth Serum",
+   "zh": "生长血清",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When obtained {k.A} Level up your {f.keyword}Starter{f.end} perk 3 times.",
+   "zh_desc": "获取时{k.A}将你的{f.keyword}初始{f.end}专长升级3次。",
+   "alias_zh": "生长血清",
+   "note": "天理会同时升级两个初始专长",
+   "icon": 58
+  },
+  {
+   "key": "SuperMigo",
+   "kind": "perk",
+   "en": "Super-Migo",
+   "zh": "超级米戈",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "After you score a <b>Migo</b> unit during or before {k.BaseDice} {k.A} Get +1 {k.ShopToken}.",
+   "zh_desc": "当你使用{k.BaseDice}或在此前用<b>米戈</b>得分时{k.A}获得+1{k.ShopToken}。",
+   "alias_zh": "超级米格",
+   "note": "配 Peashooter 很疯；不吃重复",
+   "icon": 59
+  },
+  {
+   "key": "FusionReactor",
+   "kind": "perk",
+   "en": "Fusion Reactor",
+   "zh": "聚变反应堆",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "After you score a pair with {k.BaseDice} {k.A} Trigger the artifact in that column.",
+   "zh_desc": "当你用{k.BaseDice}以对子得分时{k.A}触发该列的神器。",
+   "alias_zh": "聚变堆",
+   "note": "配 Gamma Ray 可在后期触发强力神器",
+   "icon": 60
+  },
+  {
+   "key": "Universe",
+   "kind": "perk",
+   "en": "Universe",
+   "zh": "一元宇宙",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When you trigger the artifact in column #1 {k.A} Spend 1 {k.Budge} to trigger a random other artifact.",
+   "zh_desc": "当你触发第1列的神器时{k.A}花费1{k.Budge}来触发一个随机其他神器。",
+   "alias_zh": "宇宙",
+   "note": "挪移无限的核心",
+   "icon": 61
+  },
+  {
+   "key": "Duoprism",
+   "kind": "perk",
+   "en": "Duoprism",
+   "zh": "二重棱镜",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When you trigger the artifact in column #2 {k.A} Repeat its effect.",
+   "zh_desc": "当你触发第2列的神器时{k.A}重复其效果。",
+   "alias_zh": "双棱镜",
+   "note": "把核心可触发神器放第 2 列",
+   "icon": 62
+  },
+  {
+   "key": "Trisolaris",
+   "kind": "perk",
+   "en": "Trisolaris",
+   "zh": "三体恒星",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When you trigger the artifact in column #3 {k.A} Spend 1 {k.Budge} to increase the {k.Attack} of ALL units by 10%.",
+   "zh_desc": "当你触发第3列的神器时{k.A}花费1{k.Budge}将所有单位的{k.Attack}增加10%。",
+   "alias_zh": "三体",
+   "note": "",
+   "icon": 63
+  },
+  {
+   "key": "Quadruped",
+   "kind": "perk",
+   "en": "Quadruped",
+   "zh": "四足生灵",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When you trigger the artifact in column #4 {k.A} Spend 1 {k.Budge} to get +6 {k.MiniDice}.",
+   "zh_desc": "当你触发第4列的神器时{k.A}花费1{k.Budge}来获得+6{k.MiniDice}。",
+   "alias_zh": "四足兽",
+   "note": "",
+   "icon": 64
+  },
+  {
+   "key": "Pentagram",
+   "kind": "perk",
+   "en": "Pentagram",
+   "zh": "五星法阵",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When you trigger the artifact in column #5 {k.A} Spend 1 {k.Budge} to multiply {k.GlobalMult} by 1.2x.",
+   "zh_desc": "当你触发第5列的神器时{k.A}花费1{k.Budge}来将{k.GlobalMult}乘以1.2。",
+   "alias_zh": "五芒星",
+   "note": "",
+   "icon": 65
+  },
+  {
+   "key": "Hexafoil",
+   "kind": "perk",
+   "en": "Hexafoil",
+   "zh": "六方薄片",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When you trigger the artifact in column #6 {k.A} Spend 1 {k.Budge} to give {f.xp}+5 XP{f.end} per act to ALL artifacts.",
+   "zh_desc": "当你触发第6列的神器时{k.A}花费1{k.Budge}来给予所有神器{f.xp}+当前幕数×5的经验{f.end}。",
+   "alias_zh": "六叶饰",
+   "note": "配 Last Train",
+   "icon": 66
+  },
+  {
+   "key": "DustCloud",
+   "kind": "artifact",
+   "en": "Dust Cloud",
+   "zh": "尘埃云",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "After you score a pair in this column {k.A} Give a random unit a {k.Shield} and +[#] {k.Attack}.",
+   "zh_desc": "以对子在该列得分后{k.A}给予一个随机单位{k.Shield}和+[#]{k.Attack}。",
+   "alias_zh": "尘云",
+   "note": "",
+   "icon": 67
+  },
+  {
+   "key": "Deimos",
+   "kind": "artifact",
+   "en": "Deimos",
+   "zh": "得摩斯",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "After you score ANY pair with {k.BaseDice} {k.A} Trigger the \"{f.keyword}On Death{f.end}\" effect of the bottom unit in this column and give it +[#] {k.Attack}.",
+   "zh_desc": "当你用{k.BaseDice}以对子得分时{k.A}触发该列最下排单位的“{f.keyword}死亡时{f.end}”效果并给予其+[#]{k.Attack}。",
+   "alias_zh": "戴摩斯",
+   "note": "",
+   "icon": 68
+  },
+  {
+   "key": "RocketShip",
+   "kind": "artifact",
+   "en": "Rocket Ship",
+   "zh": "火箭飞船",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "Each time you get a {k.Budge} {k.A} Give a random unit +[#] {k.Attack}.",
+   "zh_desc": "每次你获得{k.Budge}时{k.A}给一个随机单位+[#]{k.Attack}。",
+   "alias_zh": "火箭",
+   "note": "",
+   "icon": 69
+  },
+  {
+   "key": "LeftHand",
+   "kind": "artifact",
+   "en": "Left Hand",
+   "zh": "左手",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "When your turn begins {k.A} Spend 1 {k.Budge} to trigger the artifact to the left of this and give it {f.xp}+[#] XP{f.end}.",
+   "zh_desc": "你的回合开始时{k.A}花费1{k.Budge}来触发该神器左边相邻的神器并给予其{f.xp}+[#]经验{f.end}。",
+   "alias_zh": "左手",
+   "note": "",
+   "icon": 70
+  },
+  {
+   "key": "SpaceRock",
+   "kind": "artifact",
+   "en": "Space Rock",
+   "zh": "太空岩石",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "After you score a pair in this column {k.A} Get 1 {k.Budge} and +[#] {k.GlobalMult}.",
+   "zh_desc": "当你在这一列以对子得分时{k.A}获得1{k.Budge}和+[#]{k.GlobalMult}。",
+   "alias_zh": "太空岩",
+   "note": "",
+   "icon": 71
+  },
+  {
+   "key": "Mycelium",
+   "kind": "artifact",
+   "en": "Mycelium",
+   "zh": "菌丝",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "After {k.BaseDice} have been scored {k.A} Give 1 {k.Charge} to 3 random units and give them +[#] {k.Attack}.",
+   "zh_desc": "在{k.BaseDice}得分后{k.A}给予3个随机单位1{k.Charge}并给予它们+[#]{k.Attack}。",
+   "alias_zh": "菌丝",
+   "note": "",
+   "icon": 72
+  },
+  {
+   "key": "Teleporter",
+   "kind": "artifact",
+   "en": "Teleporter",
+   "zh": "传送器",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When your turn begins {k.A} Swap the bottom two units in this column and give them both +[#] {k.Attack}.",
+   "zh_desc": "你的回合开始时{k.A}交换该列最下方的两个单位，并给予它们+[#]{k.Attack}。",
+   "alias_zh": "传送器",
+   "note": "",
+   "icon": 73
+  },
+  {
+   "key": "Gluttony",
+   "kind": "artifact",
+   "en": "Gluttony",
+   "zh": "暴食",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "Units scored during or before {k.BaseDice} gain +[#] {k.Attack}.",
+   "zh_desc": "在{k.BaseDice}得分前和得分期间，得分的单位获得+[#]{k.Attack}。",
+   "alias_zh": "暴食",
+   "note": "",
+   "icon": 74
+  },
+  {
+   "key": "Solman",
+   "kind": "artifact",
+   "en": "Solman",
+   "zh": "山文鱼",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "After you score this column with {k.BaseDice} {k.A} Trigger a random artifact and give it {f.xp}+[#] XP{f.end}.",
+   "zh_desc": "在你用{k.BaseDice}在该列得分后{k.A}触发一个随机神器并给予其{f.xp}+[#]经验{f.end}。",
+   "alias_zh": "索尔曼",
+   "note": "",
+   "icon": 75
+  },
+  {
+   "key": "TrailPot",
+   "kind": "artifact",
+   "en": "Trail Pot",
+   "zh": "野营锅",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "When your turn begins {k.A} Get +[#] {k.GlobalMult}.",
+   "zh_desc": "你的回合开始时{k.A}获得+[#]{k.GlobalMult}。",
+   "alias_zh": "路边罐",
+   "note": "",
+   "icon": 76
+  },
+  {
+   "key": "RedValve",
+   "kind": "artifact",
+   "en": "Red Valve",
+   "zh": "红色阀门",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "When you spend {k.Charge}, for each {k.Charge} you spend {k.A} Get +[#] {k.GlobalMult}.",
+   "zh_desc": "当你花费{k.Charge}时，每花费1{k.Charge}{k.A}获得+[#]{k.GlobalMult}。",
+   "alias_zh": "红阀",
+   "note": "",
+   "icon": 77
+  },
+  {
+   "key": "Saterpillar",
+   "kind": "artifact",
+   "en": "Saterpillar",
+   "zh": "卫星毛毛虫",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "The first time you break a {k.Shield} each turn {k.A} Give a {k.Shield} to a random unit and get +[#] {k.GlobalMult}.",
+   "zh_desc": "每回合你第一次破坏{k.Shield}时{k.A}给予一个随机单位{k.Shield}并+[#]{k.GlobalMult}。",
+   "alias_zh": "土星毛虫",
+   "note": "",
+   "icon": 78
+  },
+  {
+   "key": "Pyramid",
+   "kind": "artifact",
+   "en": "Pyramid",
+   "zh": "金字塔",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "After you score ANY triple {k.A} Get +[#] {k.GlobalMult}.",
+   "zh_desc": "在你以任何三条得分后{k.A}获得+[#]{k.GlobalMult}。",
+   "alias_zh": "金字塔",
+   "note": "",
+   "icon": 79
+  },
+  {
+   "key": "XenoSeed",
+   "kind": "artifact",
+   "en": "Xeno Seed",
+   "zh": "异星种子",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "When you buy this and when this levels up {k.A} Get +10% {f.keyword}Shop Rarity{f.end} and +[#] {k.MiniDice}.",
+   "zh_desc": "当你购买该神器以及其升级时{k.A}获得+10% {f.keyword}商店稀有度{f.end}和+[#]{k.MiniDice}。",
+   "alias_zh": "异种子",
+   "note": "",
+   "icon": 80
+  },
+  {
+   "key": "DoomRitual",
+   "kind": "artifact",
+   "en": "Doom Ritual",
+   "zh": "毁灭仪式",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When your turn begins, if a pilot is defending the target {k.A} Get +[#] {k.GlobalMult}.",
+   "zh_desc": "你的回合开始时，如果对方是驾驶员{k.A}获得+[#]{k.GlobalMult}。",
+   "alias_zh": "末日仪式",
+   "note": "",
+   "icon": 81
+  },
+  {
+   "key": "LabTube",
+   "kind": "perk",
+   "en": "Lab Tube",
+   "zh": "实验管",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When you spend {k.Charge} {k.A} Get +1 {k.MiniDice}.",
+   "zh_desc": "当你花费{k.Charge}时{k.A}获得+1{k.MiniDice}。",
+   "alias_zh": "试管",
+   "note": "",
+   "icon": 82
+  },
+  {
+   "key": "Pomegranate",
+   "kind": "artifact",
+   "en": "Pomegranate",
+   "zh": "石榴",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "When your turn begins {k.A} Spawn a <b>Auto-Bomb</b> on a random tile and give +[#] {k.Attack} to all {f.keyword}Token{f.end} units.",
+   "zh_desc": "你的回合开始时{k.A}在随机格子生成一个<b>自动炸弹</b>并给予所有{f.keyword}衍生{f.end}单位+[#]{k.Attack}。",
+   "alias_zh": "石榴",
+   "note": "",
+   "icon": 83
+  },
+  {
+   "key": "KingMigo",
+   "kind": "artifact",
+   "en": "King Migo",
+   "zh": "米戈之王",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "While you have this artifact, your <b>Migo</b> units have +[#] {k.Repeat} when scored.",
+   "zh_desc": "拥有这件神器时，你的<b>米戈</b>单位在得分时拥有+[#]{k.Repeat}。",
+   "alias_zh": "米格王",
+   "note": "",
+   "icon": 84
+  },
+  {
+   "key": "FourDPrinter",
+   "kind": "artifact",
+   "en": "4D Printer",
+   "zh": "4D打印机",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "After you score a pair in this column {k.A} Build a random tile and get +[#] {k.GlobalMult}.",
+   "zh_desc": "当你以对子在该列得分时{k.A}随机建造一个新格子并获得+[#]{k.GlobalMult}。",
+   "alias_zh": "4D打印机",
+   "note": "",
+   "icon": 85
+  },
+  {
+   "key": "Astroflora",
+   "kind": "artifact",
+   "en": "Astroflora",
+   "zh": "太空植被",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "While you have this artifact, you have [#]% additional {f.keyword}Shop Rarity{f.end}.",
+   "zh_desc": "拥有这件神器时，你拥有[#]%额外{f.keyword}商店稀有度{f.end}。",
+   "alias_zh": "星际植物",
+   "note": "",
+   "icon": 86
+  },
+  {
+   "key": "TheWatcher",
+   "kind": "artifact",
+   "en": "The Watcher",
+   "zh": "观察者",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "The first time you destroy a unit each turn {k.A} Spawn 3 <b>Void Rifts</b> on random tiles with +[#] {k.Attack}.",
+   "zh_desc": "每回合你第一次摧毁单位时{k.A}在随机格子生成3个拥有+[#]{k.Attack}的<b>虚空裂隙</b>。",
+   "alias_zh": "守望者",
+   "note": "",
+   "icon": 87
+  },
+  {
+   "key": "LongNose",
+   "kind": "artifact",
+   "en": "Long Nose",
+   "zh": "长鼻",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "After you score ANY pair {k.A} Give +[#] {k.Attack} to the unit with the most {k.Attack}.",
+   "zh_desc": "在你以任意对子得分后{k.A}给予{k.Attack}最高的单位+[#]{k.Attack}。",
+   "alias_zh": "长鼻子",
+   "note": "",
+   "icon": 88
+  },
+  {
+   "key": "Pawnmower",
+   "kind": "artifact",
+   "en": "Pawnmower",
+   "zh": "割草兵",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "When a unit is moved or swapped {k.A} Get +[#] {k.GlobalMult}.",
+   "zh_desc": "当有单位被移动或交换位置时{k.A}获得+[#]{k.GlobalMult}。",
+   "alias_zh": "割兵机",
+   "note": "",
+   "icon": 89
+  },
+  {
+   "key": "CompostBin",
+   "kind": "artifact",
+   "en": "Compost Bin",
+   "zh": "堆肥箱",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "When you destroy ANY unit {k.A} Get +[#] {k.GlobalMult}.",
+   "zh_desc": "当你摧毁任意单位时{k.A}获得+[#]{k.GlobalMult}。",
+   "alias_zh": "堆肥桶",
+   "note": "",
+   "icon": 90
+  },
+  {
+   "key": "GoldenBell",
+   "kind": "artifact",
+   "en": "Golden Bell",
+   "zh": "金铃铛",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "After you spawn a {f.keyword}Rare{f.end} or {f.keyword}Legendary{f.end} unit {k.A} Give ALL units +[#] {k.Attack}.",
+   "zh_desc": "当你生成一个{f.keyword}稀有{f.end}或{f.keyword}传说{f.end}单位时{k.A}给予所有单位+[#]{k.Attack}。",
+   "alias_zh": "金铃",
+   "note": "",
+   "icon": 91
+  },
+  {
+   "key": "VenusFlytrap",
+   "kind": "artifact",
+   "en": "Venus Flytrap",
+   "zh": "捕蝇草",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When you destroy a non-{f.keyword}Token{f.end} unit {k.A} Get +5% {f.keyword}Shop Rarity{f.end} and +[#] {k.GlobalMult}.",
+   "zh_desc": "当你摧毁一个非{f.keyword}衍生{f.end}单位时{k.A}获得+5%{f.keyword}商店稀有度{f.end}和+[#]{k.GlobalMult}。",
+   "alias_zh": "捕蝇草",
+   "note": "",
+   "icon": 92
+  },
+  {
+   "key": "OrbitalLaser",
+   "kind": "artifact",
+   "en": "Orbital Laser",
+   "zh": "轨道激光",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "For each {k.Chrono} you spend {k.A} Give a random unit +[#] {k.Attack}.",
+   "zh_desc": "每花费一{k.Chrono}{k.A}给予随机单位+[#]{k.Attack}。",
+   "alias_zh": "轨道激光",
+   "note": "",
+   "icon": 93
+  },
+  {
+   "key": "Syzygy",
+   "kind": "artifact",
+   "en": "Syzygy",
+   "zh": "朔望",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "After {k.BaseDice} have been scored {k.A} Multiply your {k.GlobalMult} by [#]x.",
+   "zh_desc": "在{k.BaseDice}得分之后{k.A}将你的{k.GlobalMult}变为[#]倍。",
+   "alias_zh": "朔望",
+   "note": "",
+   "icon": 94
+  },
+  {
+   "key": "Voracity",
+   "kind": "artifact",
+   "en": "Voracity",
+   "zh": "贪婪",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "Get +[#] {k.GlobalMult} for each unit scored during or before {k.BaseDice}.",
+   "zh_desc": "在{k.BaseDice}得分前和得分期间，每个单位得分获得+[#]{k.GlobalMult}。",
+   "alias_zh": "贪婪",
+   "note": "",
+   "icon": 95
+  },
+  {
+   "key": "Prospect",
+   "kind": "special",
+   "en": "The Tutorial",
+   "zh": "教程",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Give {f.xp}+[#] XP{f.end} to ALL artifacts.",
+   "zh_desc": "你的回合开始时{k.A}给予所有神器{f.xp}+[#]经验{f.end}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 96
+  },
+  {
+   "key": "XMutation",
+   "kind": "artifact",
+   "en": "X-Mutation",
+   "zh": "X变异",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "While you have this artifact, your {f.keyword}Token{f.end} units have +1 {k.Repeat} and +[#] {k.Attack}.",
+   "zh_desc": "拥有这件神器时，你的{f.keyword}衍生{f.end}单位拥有+1{k.Repeat}和+[#]{k.Attack}。",
+   "alias_zh": "X突变",
+   "note": "",
+   "icon": 97
+  },
+  {
+   "key": "Greenhouse",
+   "kind": "artifact",
+   "en": "Greenhouse",
+   "zh": "温室",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "After you score a pair in this column {k.A} Get +[#] {k.GlobalMult} for every 10% {f.keyword}Shop Rarity{f.end}.",
+   "zh_desc": "在你以对子在该列得分后{k.A}每有10%{f.keyword}商店稀有度{f.end}，获得+[#]{k.GlobalMult}。",
+   "alias_zh": "温室",
+   "note": "",
+   "icon": 98
+  },
+  {
+   "key": "ThornCrest",
+   "kind": "perk",
+   "en": "Thorn Crest",
+   "zh": "荆棘徽章",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Spend 10% {f.keyword}Shop Rarity{f.end} to give ALL units +20% {k.Attack}.",
+   "zh_desc": "你的回合开始时{k.A}消耗10%{f.keyword}商店稀有度{f.end}来给予所有单位+20%{k.Attack}。",
+   "alias_zh": "荆棘冠",
+   "note": "前期单位不大时收益低，开发者不推荐在毁灭世界拿",
+   "icon": 99
+  },
+  {
+   "key": "DeusExMachina",
+   "kind": "artifact",
+   "en": "Deus Ex Machina",
+   "zh": "机械降神",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "Must be placed in the leftmost column and cannot be swapped.\nAfter you score this column with a triple of {k.BaseDice}, swap itself with the artifact to its right if possible {k.A} If at the rightmost column when triggered, get +[#] {k.GlobalMult}.",
+   "zh_desc": "必须被放在最左边的一列，且无法被交换位置。 \n当你以三条{k.BaseDice}在该列得分后，试图与右边的神器交换位置{k.A}如果位于最右列，则获得+[#]{k.GlobalMult}。",
+   "alias_zh": "机械降神",
+   "note": "",
+   "icon": 100
+  },
+  {
+   "key": "Pitchfork",
+   "kind": "artifact",
+   "en": "Pitchfork",
+   "zh": "草叉",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "When you destroy a non-{f.keyword}Token{f.end} unit {k.A} Give ALL units +[#] {k.Attack}.",
+   "zh_desc": "当你摧毁非{f.keyword}衍生{f.end}单位时{k.A}给予所有单位+[#]{k.Attack}。",
+   "alias_zh": "干草叉",
+   "note": "",
+   "icon": 101
+  },
+  {
+   "key": "DeadRinger",
+   "kind": "perk",
+   "en": "Dead Ringer",
+   "zh": "双生之魂",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When a unit in the bottom row is destroyed {k.A} 75% chance to respawn it on a random tile.",
+   "zh_desc": "当最下排的单位被摧毁时{k.A}75%几率使其在随机格子重生。",
+   "alias_zh": "敲钟人",
+   "note": "毁灭世界的“免检票”",
+   "icon": 102
+  },
+  {
+   "key": "Pincushion",
+   "kind": "artifact",
+   "en": "Pincushion",
+   "zh": "针垫",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "After you score a pair in this column {k.A} Score a random {k.Shielded} unit with +[#] {k.Repeat} and break its {k.Shield}.",
+   "zh_desc": "在你以对子在该列得分后{k.A}让一个随机{k.Shielded}单位以+[#]{k.Repeat}得分然后破坏其{k.Shield}。",
+   "alias_zh": "针垫",
+   "note": "",
+   "icon": 103
+  },
+  {
+   "key": "TripleRainbow",
+   "kind": "artifact",
+   "en": "Triple Rainbow",
+   "zh": "三重彩虹",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "After you score ANY triple {k.A} Get +1 {k.Budge}, +1 {k.Chrono}, and +[#] {k.GlobalMult}.",
+   "zh_desc": "在你以任何三条得分后{k.A}获得+1{k.Budge}、+1{k.Chrono}和+[#]{k.GlobalMult}。",
+   "alias_zh": "三重彩虹",
+   "note": "",
+   "icon": 104
+  },
+  {
+   "key": "Locked",
+   "kind": "special",
+   "en": "Locked Slot",
+   "zh": "锁定栏位",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "After you score this column with a triple {k.A} Destroy this.",
+   "zh_desc": "在你以三条在该列得分后{k.A}摧毁自身。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "Locked2",
+   "kind": "special",
+   "en": "Locked Slot",
+   "zh": "锁定栏位",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "After you score this column with a triple {k.A} Destroy this.",
+   "zh_desc": "在你以三条在该列得分后{k.A}摧毁自身。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "Locked3",
+   "kind": "special",
+   "en": "Locked Slot",
+   "zh": "锁定栏位",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "After you score this column with a triple {k.A} Destroy this.",
+   "zh_desc": "在你以三条在该列得分后{k.A}摧毁自身。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "Torpedo",
+   "kind": "artifact",
+   "en": "Torpedo",
+   "zh": "鱼雷",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "You can {k.Budge} between 6 and 1.\nEach time you get a {k.Budge} {k.A} Score [#] random units.",
+   "zh_desc": "你可以将1点和6点{k.Budge}到彼此点数。 每次你获得{k.Budge}时{k.A}让随机[#]个单位得分。",
+   "alias_zh": "鱼雷",
+   "note": "",
+   "icon": 105
+  },
+  {
+   "key": "Monocle",
+   "kind": "perk",
+   "en": "Monocle",
+   "zh": "单片眼镜",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your {k.BaseDice} that are alone count as pairs.",
+   "zh_desc": "你的单个{k.BaseDice}视为对子。",
+   "alias_zh": "单片眼镜",
+   "note": "",
+   "icon": 106
+  },
+  {
+   "key": "SkyArbiter",
+   "kind": "perk",
+   "en": "Sky Arbiter",
+   "zh": "天空仲裁者",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your {f.high}\"When your turn begins\"{f.endhigh} effects trigger twice.",
+   "zh_desc": "你的{f.high}“你的回合开始时”{f.endhigh}效果会触发两次。",
+   "alias_zh": "天空仲裁者",
+   "note": "注意会让 Teleporter 交换两次",
+   "icon": 107
+  },
+  {
+   "key": "Bunker",
+   "kind": "artifact",
+   "en": "Bunker",
+   "zh": "掩体",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "You keep your excess {k.Budge}.\nWhen your turn begins {k.A} Get +[#] {k.GlobalMult} for each {k.Budge} you have.",
+   "zh_desc": "你能够保留超出上限的{k.Budge}。 \n你的回合开始时{k.A}每有一次{k.Budge}获得+[#]{k.GlobalMult}。",
+   "alias_zh": "地堡",
+   "note": "",
+   "icon": 108
+  },
+  {
+   "key": "WingsOfFury",
+   "kind": "artifact",
+   "en": "Wings of Fury",
+   "zh": "愤怒之翼",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "When you score a pair in this column {k.A} Get +[#] {k.GlobalMult} and spend 1 {k.Budge} to level up this artifact.",
+   "zh_desc": "当你以对子在该列得分时{k.A}获得+[#]{k.GlobalMult}然后花费1{k.Budge}来升级这件神器。",
+   "alias_zh": "狂怒之翼",
+   "note": "",
+   "icon": 109
+  },
+  {
+   "key": "Oozone",
+   "kind": "artifact",
+   "en": "Oozone",
+   "zh": "双臭氧层",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "Your {k.MiniDice} that score in this column get +[#] {k.DicePower}.",
+   "zh_desc": "你的{k.MiniDice}在该列得分时获得+[#]{k.DicePower}。",
+   "alias_zh": "软泥区",
+   "note": "",
+   "icon": 110
+  },
+  {
+   "key": "LeakyFaucet",
+   "kind": "artifact",
+   "en": "Leaky Faucet",
+   "zh": "漏水龙头",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "After you score ANY pair with {k.BaseDice} {k.A} Spawn a <b>Mini-Blob</b> on a random tile and get +[#] {k.GlobalMult}.",
+   "zh_desc": "当你用{k.BaseDice}以任何对子得分时{k.A}在一个随机格子生成一个<b>小型团块</b>并获得+[#]{k.GlobalMult}。",
+   "alias_zh": "漏水龙头",
+   "note": "",
+   "icon": 111
+  },
+  {
+   "key": "SpikyGel",
+   "kind": "artifact",
+   "en": "Spiky Gel",
+   "zh": "带刺凝胶",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When you get {k.MiniDice} {k.A} Give a random unit +[#] {k.Attack}.",
+   "zh_desc": "当你获得{k.MiniDice}时{k.A}给予一个随机单位+[#]{k.Attack}。",
+   "alias_zh": "尖刺凝胶",
+   "note": "",
+   "icon": 112
+  },
+  {
+   "key": "AcidTown",
+   "kind": "artifact",
+   "en": "Acid Town",
+   "zh": "酸液小镇",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "After this column is scored by {k.MiniDice} {k.A} Score [#] random units in other columns.",
+   "zh_desc": "用{k.MiniDice}在该列得分后{k.A}让[#]个在其他列的随机单位得分。",
+   "alias_zh": "酸城",
+   "note": "",
+   "icon": 113
+  },
+  {
+   "key": "HydraHead",
+   "kind": "perk",
+   "en": "Hydra Head",
+   "zh": "九头蛇首",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "You have a second <b>Kraken</b> {k.BaseDice}.",
+   "zh_desc": "你有第二个<b>海怪</b>{k.BaseDice}。",
+   "alias_zh": "九头蛇头",
+   "note": "",
+   "icon": 114
+  },
+  {
+   "key": "BoneEater",
+   "kind": "perk",
+   "en": "Bone Eater",
+   "zh": "噬骨者",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When you launch <b>Kraken</b> {k.BaseDice} {k.A} Increase the {k.Attack} of the bottom unit in its column by 50%.",
+   "zh_desc": "当你发射<b>海怪</b>{k.BaseDice}时{k.A}使该列最下排单位的{k.Attack}提高50%。",
+   "alias_zh": "噬骨者",
+   "note": "“能直接赢”的专属专长之一",
+   "icon": 115
+  },
+  {
+   "key": "Cavities",
+   "kind": "artifact",
+   "en": "Cavities",
+   "zh": "蛀牙",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "Units that are scored during <b>Kraken</b> {k.BaseDice} gain +[#] {k.Attack}.",
+   "zh_desc": "用<b>海怪</b>{k.BaseDice}得分的单位获得+[#]{k.Attack}。",
+   "alias_zh": "蛀牙",
+   "note": "",
+   "icon": 116
+  },
+  {
+   "key": "DreadKnot",
+   "kind": "artifact",
+   "en": "Dread Knot",
+   "zh": "恐惧之结",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When you score ANY quadruple {k.A} Give ALL units +[#] {k.Attack}.",
+   "zh_desc": "当你以任何四条得分时{k.A}给予所有单位+[#]{k.Attack}。",
+   "alias_zh": "恐惧之结",
+   "note": "",
+   "icon": 117
+  },
+  {
+   "key": "LoneDragon",
+   "kind": "artifact",
+   "en": "Lone Dragon",
+   "zh": "独龙",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "Your <b>Kraken</b> {k.BaseDice} has +[#] {k.DicePower} when it is alone in its column.",
+   "zh_desc": "你的<b>海怪</b>{k.BaseDice}如果独自存在于一列，则拥有+[#]{k.DicePower}。",
+   "alias_zh": "孤龙",
+   "note": "",
+   "icon": 118
+  },
+  {
+   "key": "RibCannon",
+   "kind": "artifact",
+   "en": "Rib Cannon",
+   "zh": "肋骨大炮",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "After you score this column with <b>Kraken</b> {k.BaseDice} {k.A} Get +2 {k.Budge} and +[#] {k.GlobalMult}.",
+   "zh_desc": "在你用<b>海怪</b>{k.BaseDice}在该列得分后{k.A}获得+2{k.Budge}和+[#]{k.GlobalMult}。",
+   "alias_zh": "肋骨炮",
+   "note": "",
+   "icon": 119
+  },
+  {
+   "key": "Roxy",
+   "kind": "pilot",
+   "en": "Trailblazer",
+   "zh": "灼热先锋",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your dice start cracked. (cannot be budged until they are rerolled)",
+   "zh_desc": "你的骰子初始有裂痕。（在被重掷之前无法被挪移）",
+   "alias_zh": "",
+   "note": "",
+   "icon": 256
+  },
+  {
+   "key": "Garu",
+   "kind": "pilot",
+   "en": "Turret",
+   "zh": "炮塔",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn ends {k.A} Strike the bottom tile in a random column.",
+   "zh_desc": "你的回合结束时{k.A}打击随机列的最下排。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 248
+  },
+  {
+   "key": "Noel",
+   "kind": "pilot",
+   "en": "Hyperfreeze",
+   "zh": "超冻结",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your dice are frozen and cannot unfreeze. (does not reroll)",
+   "zh_desc": "你的骰子被冻结，无法解冻。（不能被重掷）",
+   "alias_zh": "",
+   "note": "",
+   "icon": 254
+  },
+  {
+   "key": "Zeke",
+   "kind": "pilot",
+   "en": "Theorycraft",
+   "zh": "验证假设",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "{f.high}Has +50% defense.{f.endhigh}\nWhen you level up an artifact {k.A} Get +[#] {k.GlobalMult}.",
+   "zh_desc": "{f.high}拥有+50%防御值。{f.endhigh}\n当你升级神器时{k.A}获得+[#]{k.GlobalMult}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 262
+  },
+  {
+   "key": "Min",
+   "kind": "pilot",
+   "en": "Accelerator",
+   "zh": "加速器",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When you launch without a pair of {k.BaseDice}{k.A} +30% defense.",
+   "zh_desc": "当你发射时没有一对{k.BaseDice}时{k.A}+30%防御值。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 253
+  },
+  {
+   "key": "Shun",
+   "kind": "pilot",
+   "en": "Mitochondria",
+   "zh": "线粒体",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Each turn, {k.Shock} x[#] random units (skip first time scored).",
+   "zh_desc": "每回合，{k.Shock}×[#]个随机单位（跳过该单位的第一次得分）。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 257
+  },
+  {
+   "key": "Hali",
+   "kind": "pilot",
+   "en": "Coral Reef",
+   "zh": "珊瑚礁",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Spawn a <b>Coral</b> on a random empty tile.",
+   "zh_desc": "你的回合开始时{k.A}在随机空格子上生成一个珊瑚。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 249
+  },
+  {
+   "key": "Iris",
+   "kind": "pilot",
+   "en": "Poof!",
+   "zh": "砰！",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Spawn a <b>Puppet</b> if there are none.",
+   "zh_desc": "你的回合开始时{k.A}如果地图上没有<b>魔偶</b>，则生成一个。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 250
+  },
+  {
+   "key": "Kaia",
+   "kind": "pilot",
+   "en": "Booby Trap",
+   "zh": "陷阱",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When trapped column is scored with {k.BaseDice} {k.A} +30% defense.",
+   "zh_desc": "当{k.BaseDice}在被布置陷阱的列得分{k.A}+30%防御值。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 251
+  },
+  {
+   "key": "Max",
+   "kind": "pilot",
+   "en": "Dive Suit",
+   "zh": "潜水服",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "{f.high}Has +100% defense.{f.endhigh}\nAfter you score a triple {k.A} Get +[#] {k.GlobalMult}.",
+   "zh_desc": "{f.high}拥有+100%防御值。{f.endhigh}\n在你以三条得分后{k.A}获得+[#]{k.GlobalMult}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 252
+  },
+  {
+   "key": "Sura",
+   "kind": "pilot",
+   "en": "Overload",
+   "zh": "过载",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "{f.high}Has +50% defense.{f.endhigh}\nWhen you destroy a non-{f.keyword}Token{f.end} unit {k.A} Get +[#] {k.GlobalMult}.",
+   "zh_desc": "{f.high}拥有+50%防御。{f.endhigh}\n当你摧毁一个非{f.keyword}衍生{f.end}单位时{k.A}获得+[#]{k.GlobalMult}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 259
+  },
+  {
+   "key": "Xenn",
+   "kind": "pilot",
+   "en": "Sol & Luna",
+   "zh": "太阳与月亮",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Each turn, block 2 random artifacts from triggering. ( \"{k.A}\" )",
+   "zh_desc": "每回合，阻止2个随机神器触发。（触发=“{k.A}”）",
+   "alias_zh": "",
+   "note": "",
+   "icon": 261
+  },
+  {
+   "key": "PandoraBox",
+   "kind": "artifact",
+   "en": "Pandora's Box",
+   "zh": "潘多拉的魔盒",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When this levels up {k.A} Get +[#] {k.GlobalMult} and spawn a random {f.keyword}Common{f.end} unit on a random tile.",
+   "zh_desc": "这件神器升级时{k.A}获得+[#]{k.GlobalMult}并在随机格子生成一个随机{f.keyword}普通{f.end}单位。",
+   "alias_zh": "潘多拉魔盒",
+   "note": "",
+   "icon": 120
+  },
+  {
+   "key": "Protoship",
+   "kind": "artifact",
+   "en": "Protoship",
+   "zh": "原型飞船",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "After you score a pair of {k.BaseDice} in this column {k.A} Get +1 {k.Chrono} and give a random unit +[#] {k.Attack}",
+   "zh_desc": "在你用{k.BaseDice}以对子在该列得分后{k.A}获得+1{k.Chrono}并给予一个随机单位+[#]{k.Attack}",
+   "alias_zh": "原型舰",
+   "note": "",
+   "icon": 121
+  },
+  {
+   "key": "Boombox",
+   "kind": "artifact",
+   "en": "Boombox",
+   "zh": "录音机",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "After you score ANY triple {k.A} Get +2 {k.Budge} and give +[#] {k.Attack} to ALL units.",
+   "zh_desc": "在你以任何三条得分后{k.A}获得+2 {k.Budge}并给予所有单位+[#]{k.Attack}。",
+   "alias_zh": "音箱",
+   "note": "",
+   "icon": 122
+  },
+  {
+   "key": "DysonSphere",
+   "kind": "artifact",
+   "en": "Dyson Sphere",
+   "zh": "戴森球",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "After you score ANY triple {k.A} Get {k.ShopToken} {k.ShopToken} {k.ShopToken} and +[#] {k.GlobalMult}.",
+   "zh_desc": "在你以任何三条得分后{k.A}获得+3{k.ShopToken}和+[#]{k.GlobalMult}。",
+   "alias_zh": "戴森球",
+   "note": "",
+   "icon": 123
+  },
+  {
+   "key": "JupiterBrain",
+   "kind": "artifact",
+   "en": "Jupiter Brain",
+   "zh": "木星大脑",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "Each time this gains {f.xp}XP{f.end}, get +[#] {k.GlobalMult} for each {f.xp}XP{f.end} gained.",
+   "zh_desc": "每次这件神器获得{f.xp}经验{f.end}时，每点{f.xp}经验{f.end}获得+[#]{k.GlobalMult}。",
+   "alias_zh": "木星脑",
+   "note": "",
+   "icon": 124
+  },
+  {
+   "key": "Neuron",
+   "kind": "artifact",
+   "en": "Neuron",
+   "zh": "神经元",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "When any artifact levels up {k.A} Give +[#] {k.Attack} to the bottom unit in this column.",
+   "zh_desc": "当任意神器升级时{k.A}给予该列最下排单位+[#]{k.Attack}。",
+   "alias_zh": "神经元",
+   "note": "",
+   "icon": 125
+  },
+  {
+   "key": "GreyMatter",
+   "kind": "artifact",
+   "en": "Grey Matter",
+   "zh": "灰质",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "The first time an artifact levels up this turn {k.A} Get +1 {k.ShopToken} and +[#] {k.MiniDice}.",
+   "zh_desc": "本回合第一次有神器升级时{k.A}获得+1{k.ShopToken}和+[#]{k.MiniDice}。",
+   "alias_zh": "灰质",
+   "note": "",
+   "icon": 126
+  },
+  {
+   "key": "TimeCapsule",
+   "kind": "artifact",
+   "en": "Time Capsule",
+   "zh": "时间胶囊",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When your turn begins {k.A}  If this artifact is {f.xp}LV.7{f.end}, replace it with a random {f.keyword}Legendary{f.end} artifact. Otherwise, this gains {f.xp}+[#] XP{f.end}.",
+   "zh_desc": "你的回合开始时{k.A}如果这件神器达到{f.xp}7级{f.end}，则将其替换为一件随机{f.keyword}传说{f.end}神器。否则，这件神器获得{f.xp}+[#]经验{f.end}。",
+   "alias_zh": "时间胶囊",
+   "note": "",
+   "icon": 127
+  },
+  {
+   "key": "ShyPluto",
+   "kind": "artifact",
+   "en": "Shy Pluto",
+   "zh": "害羞冥王星",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "After you score this column, if there are no units in this column {k.A} Get +[#] {k.GlobalMult}.",
+   "zh_desc": "在你在该列得分后，如果该列没有任何单位{k.A}获得+[#]{k.GlobalMult}。",
+   "alias_zh": "害羞冥王星",
+   "note": "",
+   "icon": 128
+  },
+  {
+   "key": "FishLegs",
+   "kind": "artifact",
+   "en": "Fish Legs",
+   "zh": "鱼腿",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "The first time a unit moves each turn {k.A} Get +3 {k.MiniDice} and +[#] {k.GlobalMult}.",
+   "zh_desc": "每回合第一次有单位移动时{k.A}获得+3{k.MiniDice}和+[#]{k.GlobalMult}。",
+   "alias_zh": "鱼腿",
+   "note": "",
+   "icon": 129
+  },
+  {
+   "key": "Whalefall",
+   "kind": "artifact",
+   "en": "Whalefall",
+   "zh": "鲸落",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "Each time a unit is destroyed, give [#]% of its {k.Attack} to a random unit.",
+   "zh_desc": "每次有单位被摧毁时，将其{k.Attack}的[#]%给予一个随机单位。",
+   "alias_zh": "鲸落",
+   "note": "",
+   "icon": 130
+  },
+  {
+   "key": "Shimmer",
+   "kind": "perk",
+   "en": "Shimmer",
+   "zh": "闪烁",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your {k.Shielded} units have +1 {k.Repeat}.",
+   "zh_desc": "{k.Shielded}的单位获得+1{k.Repeat}。",
+   "alias_zh": "微光",
+   "note": "",
+   "icon": 131
+  },
+  {
+   "key": "PiggyBank",
+   "kind": "artifact",
+   "en": "Piggy Bank",
+   "zh": "存钱罐",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "After you score a triple in this column, destroy this {k.A} Get +1 {k.Chrono} and +[#] {k.ShopToken}.",
+   "zh_desc": "在你以三条在该列得分后，摧毁这件神器{k.A}获得+1{k.Chrono}和+[#]{k.ShopToken}。",
+   "alias_zh": "存钱罐",
+   "note": "",
+   "icon": 132
+  },
+  {
+   "key": "Gemstone",
+   "kind": "artifact",
+   "en": "Gemstone",
+   "zh": "宝石",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When you leave the shop, for each unused {k.ShopToken} {k.A} Give a random unit +[#] {k.Attack}.",
+   "zh_desc": "当你离开商店时，每一个未使用的{k.ShopToken}{k.A}给予一个随机单位+[#]{k.Attack}。",
+   "alias_zh": "宝石",
+   "note": "",
+   "icon": 133
+  },
+  {
+   "key": "Nessie",
+   "kind": "starter",
+   "en": "Frugivore",
+   "zh": "食果者",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Spawn an <b>Apple</b> on a random tile if there are none.\nWhen you destroy an <b>Apple</b> {k.A} Give {f.xp}+[#]XP{f.end} to ALL artifacts.",
+   "zh_desc": "你的回合开始时{k.A}如果地图上没有<b>苹果</b>，则在随机格子上生成一个<b>苹果</b>。 \n当你摧毁<b>苹果</b>时{k.A}给予所有神器{f.xp}+[#]经验{f.end}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 134
+  },
+  {
+   "key": "Grandmaster",
+   "kind": "starter",
+   "en": "The Art of War",
+   "zh": "棋子兵法",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "You can build up to the 4th row and have access to unique {f.keyword}Chess{f.end} units.\nWhen you spawn a non-{f.keyword}Token{f.end} unit {k.A} Give it a {k.Shield} and give {f.xp}+[#] XP{f.end} to the artifact in its column.",
+   "zh_desc": "你可以建造最多4排格子，并且可以获得独特的{f.keyword}国际象棋{f.end}单位。 \n当你生成非{f.keyword}衍生{f.end}单位时{k.A}给予其一个{k.Shield}并给予其所在列的神器{f.xp}+[#]经验{f.end}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 135
+  },
+  {
+   "key": "Tableflipper",
+   "kind": "perk",
+   "en": "Tableflipper",
+   "zh": "掀桌",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Trigger the \"{f.keyword}On Bought{f.end}\" or \"{f.keyword}On Spawn{f.end}\" abilities of all units in the bottom row.",
+   "zh_desc": "你的回合开始时{k.A}触发最下排所有单位的“{f.keyword}购买时{f.end}”和“{f.keyword}生成时{f.end}”能力。",
+   "alias_zh": "掀桌者",
+   "note": "被称为几乎自动胜利",
+   "icon": 136
+  },
+  {
+   "key": "StoneChisel",
+   "kind": "artifact",
+   "en": "Stone Chisel",
+   "zh": "石凿",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When you gain this and when this levels up {k.A} Spawn a <b>Pawn</b> on a random tile and give it +[#] {k.Attack}.",
+   "zh_desc": "当你购买该神器以及其升级时{k.A}在随机格子生成一个<b>兵</b>然后给予它+[#]{k.Attack}。",
+   "alias_zh": "石凿",
+   "note": "",
+   "icon": 137
+  },
+  {
+   "key": "Fortress",
+   "kind": "artifact",
+   "en": "Fortress",
+   "zh": "要塞",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "When you spawn a non-{f.keyword}Token{f.end} unit {k.A} Build a random tile and give +[#] {k.Attack} to a random unit.",
+   "zh_desc": "当你生成非{f.keyword}衍生{f.end}单位时{k.A}建造一个随机格子并给予一个随机单位+[#]{k.Attack}。",
+   "alias_zh": "堡垒",
+   "note": "",
+   "icon": 138
+  },
+  {
+   "key": "GreatWall",
+   "kind": "perk",
+   "en": "The Great Wall",
+   "zh": "巨墙",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "If at least 3 units in the bottom row are the same, they have +1 {k.Repeat}.",
+   "zh_desc": "如果最下排有至少3个相同的单位，则让它们拥有+1{k.Repeat}。",
+   "alias_zh": "长城",
+   "note": "",
+   "icon": 139
+  },
+  {
+   "key": "Wormfection",
+   "kind": "perk",
+   "en": "Wormfection",
+   "zh": "蠕虫感染",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When you destroy an <b>Apple</b> {k.A} Spawn 2 <b>Worms</b> on random tiles.",
+   "zh_desc": "当你摧毁<b>苹果</b>时{k.A}在随机格子生成2个<b>蠕虫</b>。",
+   "alias_zh": "蠕虫感染",
+   "note": "",
+   "icon": 140
+  },
+  {
+   "key": "Bogland",
+   "kind": "perk",
+   "en": "Bogland",
+   "zh": "沼地",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your non-{f.keyword}Token{f.end} units gain {f.high} \"{f.keyword}On Death{f.end} {k.A} Get +1 {k.Budge} and +1 {k.ShopToken}.\" {f.endhigh}",
+   "zh_desc": "你的非{f.keyword}衍生{f.end}单位获得{f.high}“{f.keyword}死亡时{f.end}{k.A}获得+1{k.Budge}和+1{k.ShopToken}。”{f.endhigh}",
+   "alias_zh": "沼泽地",
+   "note": "毁灭世界好用",
+   "icon": 141
+  },
+  {
+   "key": "Overseer",
+   "kind": "starter",
+   "en": "Convergence",
+   "zh": "时间线融合",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Merges two different commanders and has access to all their uniques, but the target defense scales much faster! \n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n{f.high}The possible commanders are randomized every run.{f.endhigh}",
+   "zh_desc": "融合两名不同指挥官并可以遇见他们的所有专属物品，但是目标防御上升得快许多！ \n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n{f.high}可选的指挥官每次会随机出现。{f.endhigh}",
+   "alias_zh": "",
+   "note": "",
+   "icon": 142
+  },
+  {
+   "key": "RedSpice",
+   "kind": "artifact",
+   "en": "Red Spice",
+   "zh": "红色香料",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "When your turn ends {k.A} Reduce the level of the artifact to the left of this by 2. If you did, multiply your {k.GlobalMult} by x[#].",
+   "zh_desc": "你的回合结束时{k.A}将左侧邻近神器的等级降低2级。如果生效，则将{k.GlobalMult}×[#]。",
+   "alias_zh": "红香料",
+   "note": "",
+   "icon": 143
+  },
+  {
+   "key": "BigBang",
+   "kind": "artifact",
+   "en": "Big Bang",
+   "zh": "大爆炸",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "After you score a triple in this column, destroy this {k.A} Give ALL units +[#] {k.Attack}.",
+   "zh_desc": "在你以三条在该列得分后，摧毁这件神器{k.A}给予所有单位+[#]{k.Attack}。",
+   "alias_zh": "大爆炸",
+   "note": "",
+   "icon": 144
+  },
+  {
+   "key": "Guillotine",
+   "kind": "artifact",
+   "en": "Guillotine",
+   "zh": "断头台",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "After you score ANY pair with {k.BaseDice} {k.A} Destroy the bottom unit, give its {k.Attack} to the unit above. If you did, +[#] {k.Budge}.",
+   "zh_desc": "在你用{k.BaseDice}以任何对子得分后{k.A}摧毁该列最下排的单位，将其{k.Attack}给予其上方的单位。成功触发时+[#]{k.Budge}。",
+   "alias_zh": "断头台",
+   "note": "",
+   "icon": 145
+  },
+  {
+   "key": "Leatherback",
+   "kind": "artifact",
+   "en": "Leatherback",
+   "zh": "棱皮",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When your turn begins {k.A} Give a {k.Shield} to a random unit and give ALL artifacts {f.xp}+[#] XP{f.end}",
+   "zh_desc": "你的回合开始时{k.A}给予一个随机单位{k.Shield}，给予所有神器{f.xp}+[#]经验{f.end}",
+   "alias_zh": "棱皮龟",
+   "note": "",
+   "icon": 146
+  },
+  {
+   "key": "DarkTower",
+   "kind": "artifact",
+   "en": "Dark Tower",
+   "zh": "黑暗塔",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "After you score ANY triple {k.A} Score the unit with the highest {k.Attack} with +[#] {k.Repeat}.",
+   "zh_desc": "在你以任意三条得分后{k.A}让{k.Attack}最高的单位以+[#]{k.Repeat}得分。",
+   "alias_zh": "暗塔",
+   "note": "",
+   "icon": 147
+  },
+  {
+   "key": "AngelFeather",
+   "kind": "artifact",
+   "en": "Angel Feather",
+   "zh": "天使之羽",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When you destroy a non-{f.keyword}Token{f.end} unit {k.A} Give the bottom unit in this column a {k.Shield} and +[#] {k.Attack}.",
+   "zh_desc": "当你摧毁一个非{f.keyword}衍生{f.end}单位时{k.A}给予该列最下排单位{k.Shield}和+[#]{k.Attack}。",
+   "alias_zh": "天使羽毛",
+   "note": "",
+   "icon": 148
+  },
+  {
+   "key": "HiddenPortal",
+   "kind": "artifact",
+   "en": "Hidden Portal",
+   "zh": "隐秘传送门",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "Can only be triggered by something else {k.A} Get +6 {k.MiniDice} and +[#] {k.GlobalMult}.",
+   "zh_desc": "只能被其他东西触发{k.A}获得+6{k.MiniDice}和+[#]{k.GlobalMult}。",
+   "alias_zh": "隐藏传送门",
+   "note": "",
+   "icon": 149
+  },
+  {
+   "key": "RubyShard",
+   "kind": "artifact",
+   "en": "Ruby Shard",
+   "zh": "红宝石碎片",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "While you have this artifact, units in this column have +1 {k.Repeat} and +[#] {k.Attack}.",
+   "zh_desc": "拥有这件神器时，该列的单位拥有+1{k.Repeat}和+[#]{k.Attack}。",
+   "alias_zh": "红宝石碎片",
+   "note": "",
+   "icon": 150
+  },
+  {
+   "key": "WickedMirror",
+   "kind": "artifact",
+   "en": "Wicked Mirror",
+   "zh": "邪恶魔镜",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "While you have this artifact, you have +[#]% more chance of finding {f.keyword}Warped{f.end} units.",
+   "zh_desc": "当你拥有这件神器时，你找到{f.keyword}异界{f.end}单位的几率+[#]%。",
+   "alias_zh": "邪镜",
+   "note": "",
+   "icon": 151
+  },
+  {
+   "key": "CuckooClock",
+   "kind": "artifact",
+   "en": "Cuckoo Clock",
+   "zh": "布谷鸟钟",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "When your turn ends {k.A} Get +2 {k.Chrono}. If you have 10 or more, spend them all to multiply your {k.GlobalMult} by x[#].",
+   "zh_desc": "当你的回合结束时{k.A}获得+2{k.Chrono}。如果你拥有10或更多{k.Chrono}，则将其全部消耗来将你的{k.GlobalMult}×[#]。",
+   "alias_zh": "布谷钟",
+   "note": "",
+   "icon": 152
+  },
+  {
+   "key": "Blossom",
+   "kind": "artifact",
+   "en": "Blossom",
+   "zh": "花簇",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "After you score a triple in this column, destroy this {k.A} Get +3 {k.Chrono} and +[#]% {f.keyword}Shop Rarity{f.end}.",
+   "zh_desc": "在你以三条在该列得分时，摧毁这件神器{k.A}获得+3{k.Chrono}和+[#]%{f.keyword}商店稀有度{f.end}。",
+   "alias_zh": "绽放",
+   "note": "",
+   "icon": 153
+  },
+  {
+   "key": "LoneStar",
+   "kind": "artifact",
+   "en": "Lone Star",
+   "zh": "孤星",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "After you score ANY pair {k.A} Get {k.ShopToken} and +[#] {k.GlobalMult}.",
+   "zh_desc": "在你以任意对子得分后{k.A}获得{k.ShopToken}和+[#]{k.GlobalMult}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 154
+  },
+  {
+   "key": "BarrenRock",
+   "kind": "artifact",
+   "en": "Barren Rock",
+   "zh": "荒芜岩石",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "After you score this column with {k.BaseDice} {k.A} Give a random unit +[#] {k.Attack}.",
+   "zh_desc": "在你用{k.BaseDice}在该列得分后{k.A}给予随机单位+[#]{k.Attack}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 155
+  },
+  {
+   "key": "Microbe",
+   "kind": "artifact",
+   "en": "Microbe",
+   "zh": "微生物",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "After you score this column with a pair of {k.BaseDice} {k.A} Get +[#] {k.MiniDice}.",
+   "zh_desc": "在你用{k.BaseDice}以对子在该列得分时{k.A}获得+[#]{k.MiniDice}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 156
+  },
+  {
+   "key": "Eclipse",
+   "kind": "starter",
+   "en": "Divine Touch",
+   "zh": "神圣之触",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When an artifact at {f.xp}LV.3{f.end} or below levels up {k.A} Trigger it.\nWhen you launch a triple with {k.BaseDice} {k.A} Give ALL artifacts {f.xp}+[#] XP{f.end}.",
+   "zh_desc": "当{f.xp}3级{f.end}或更低等级的神器升级时{k.A}触发那件神器。 \n当你发射三条{k.BaseDice}时{k.A}给予所有神器{f.xp}+[#]经验{f.end}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 157
+  },
+  {
+   "key": "SuperNova",
+   "kind": "perk",
+   "en": "Rift Nova",
+   "zh": "裂隙新星",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your {icons.Chrono} {f.keyword}Rift{f.end} faces give +4 {k.DicePower}.",
+   "zh_desc": "你的 {icons.Chrono} {f.keyword}裂隙{f.end}骰面给予+4{k.DicePower}。",
+   "alias_zh": "裂隙新星",
+   "note": "",
+   "icon": 158
+  },
+  {
+   "key": "GammaRay",
+   "kind": "perk",
+   "en": "Gamma Ray",
+   "zh": "伽马射线",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When you roll into a {icons.Chrono} {f.keyword}Rift{f.end} face {k.A} Trigger a random artifact.",
+   "zh_desc": "当你掷出{icons.Chrono}{f.keyword}裂隙{f.end}骰面时{k.A}触发一件随机神器。",
+   "alias_zh": "伽马射线",
+   "note": "",
+   "icon": 159
+  },
+  {
+   "key": "Sunblock",
+   "kind": "artifact",
+   "en": "Timeblock",
+   "zh": "时间方块",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "When you roll into a {icons.Chrono} {f.keyword}Rift{f.end} face {k.A} Give a random unit a {k.Shield} and +[#] {k.Attack}.",
+   "zh_desc": "当你掷出{icons.Chrono}{f.keyword}裂隙{f.end}骰面时{k.A}给予随机单位{k.Shield}和+[#]{k.Attack}。",
+   "alias_zh": "时间方块",
+   "note": "",
+   "icon": 160
+  },
+  {
+   "key": "ExoMagnet",
+   "kind": "artifact",
+   "en": "Exo Magnet",
+   "zh": "奇异磁铁",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When a {k.BaseDice} rolls into this column's value, reroll it {k.A} Get +[#] {k.GlobalMult}.",
+   "zh_desc": "当有{k.BaseDice}掷出该列的点数时，将其重掷{k.A}获得+[#]{k.GlobalMult}。",
+   "alias_zh": "外星磁铁",
+   "note": "",
+   "icon": 161
+  },
+  {
+   "key": "Cyclotron",
+   "kind": "artifact",
+   "en": "Cyclotron",
+   "zh": "循环机器人",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "When a {k.BaseDice} rolls into this column's value, reroll it {k.A} Get +1 {k.Budge} and +[#] {k.MiniDice}.",
+   "zh_desc": "当有{k.BaseDice}掷出该列的点数时，将其重掷{k.A}获得+1{k.Budge}和+[#]{k.MiniDice}。",
+   "alias_zh": "回旋加速器",
+   "note": "",
+   "icon": 162
+  },
+  {
+   "key": "Moonflower",
+   "kind": "artifact",
+   "en": "Eon Moss",
+   "zh": "世代青苔",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When you spend {k.Chrono} {k.A} Get +[#] {k.GlobalMult} and +10% {f.keyword}Shop Rarity{f.end} until next turn.",
+   "zh_desc": "当你花费{k.Chrono}时{k.A}获得+[#]{k.GlobalMult}，并在本回合获得+10%{f.keyword}商店稀有度{f.end}。",
+   "alias_zh": "永恒苔藓",
+   "note": "",
+   "icon": 163
+  },
+  {
+   "key": "Shamby",
+   "kind": "starter",
+   "en": "Chrono Rift",
+   "zh": "时空裂隙",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "You can roll into a {icons.Chrono} {f.keyword}Rift{f.end} face, which counts as extra dice for all columns with dice.\nWhen you launch a {icons.Chrono} {f.keyword}Rift{f.end} face {k.A} Get +1 {k.Chrono} and give {f.xp}+[#] XP{f.end} to ALL artifacts.",
+   "zh_desc": "你有几率通过掷骰获得 {icons.Chrono} {f.keyword}裂隙{f.end}骰面，这个骰面对所有已经有骰子的列都算作一个额外骰子。 \n当你发射{icons.Chrono}{f.keyword}裂隙{f.end}骰面时{k.A}获得+1{k.Chrono}并给予所有神器{f.xp}+[#]经验{f.end}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 164
+  },
+  {
+   "key": "PermaLocked1",
+   "kind": "special",
+   "en": "Perma Locked",
+   "zh": "永久锁定",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "You cannot build or move artifacts into this slot.",
+   "zh_desc": "你无法在这一栏建造或移动神器。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "PermaLocked2",
+   "kind": "special",
+   "en": "Perma Locked",
+   "zh": "永久锁定",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "You cannot build or move artifacts into this slot.",
+   "zh_desc": "你无法在这一栏建造或移动神器。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "Hive",
+   "kind": "starter",
+   "en": "Honeycomb",
+   "zh": "蜂窝",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your columns have <b>Honey</b>, which can be collected by scoring {k.BaseDice}, and respawn when there are none left. \nWhen you collect <b>Honey</b> {k.A} Get +1 {k.ShopToken} and give the artifact in its column {f.xp}+[#] XP{f.end}",
+   "zh_desc": "你的列中会出现<b>蜂蜜</b>，可以通过用{k.BaseDice}得分来采集，当地图上没有时就会重生。 \n当你采集<b>蜂蜜</b>时{k.A}获得+1{k.ShopToken}并给予该列神器{f.xp}+[#]经验{f.end}",
+   "alias_zh": "",
+   "note": "",
+   "icon": 165
+  },
+  {
+   "key": "Apiary",
+   "kind": "perk",
+   "en": "Apiary",
+   "zh": "蜂房",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Spawn a <b>Worker Bee</b> on a random tile.",
+   "zh_desc": "你的回合开始时{k.A}在随机格子生成一个<b>工蜂</b>。",
+   "alias_zh": "养蜂场",
+   "note": "",
+   "icon": 166
+  },
+  {
+   "key": "RoyalJelly",
+   "kind": "perk",
+   "en": "Royal Jelly",
+   "zh": "蜂皇浆",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When you collect <b>Honey</b> {k.A} +1 {k.MiniDice}.\nYour {k.MiniDice} can also collect <b>Honey</b>.",
+   "zh_desc": "当你采集<b>蜂蜜</b>时{k.A}+1{k.MiniDice}。 你的{k.MiniDice}也可以采集<b>蜂蜜</b>。",
+   "alias_zh": "蜂王浆",
+   "note": "社区认为是六角王子最关键的专长",
+   "icon": 167
+  },
+  {
+   "key": "FlowerPot",
+   "kind": "artifact",
+   "en": "Flower Pot",
+   "zh": "花盆",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When you score ANY triple {k.A} Respawn ALL <b>Honey</b> and get +[#]% {f.keyword}Shop Rarity{f.end} until next turn.",
+   "zh_desc": "当你以任何三条得分时{k.A}重新生成所有<b>蜂蜜</b>并在下回合结束前获得+[#]%{f.keyword}商店稀有度{f.end}。",
+   "alias_zh": "花盆",
+   "note": "",
+   "icon": 168
+  },
+  {
+   "key": "Hemophage",
+   "kind": "starter",
+   "en": "Insatiable Curse",
+   "zh": "饥渴诅咒",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When you destroy a non-{f.keyword}Token{f.end} unit {k.A} Get +1 <b>Rage</b> and give {f.xp}+[#] XP{f.end} to ALL artifacts.\nIf you have as much <b>Rage</b> as <b>Hearts</b>, you lose control and enter <color=#C01E20><b>BEAST MODE</b></color> !!!\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\nWhile you are in <color=#C01E20><b>BEAST MODE</b></color> ...\n- <indent=3%>Your {k.BaseDice} have +1 {k.DicePower} but are automatically launched.</indent>\n- <indent=3%>Cursed shop items no longer cost a <b>Heart</b> and you have access to a special {f.keyword}Blood Sacrifice{f.end} spell.</indent>\n- <indent=3%>After 3 turns {k.A} Reset your <b>Rage</b> to 0.</indent>",
+   "zh_desc": "当你摧毁非{f.keyword}衍生{f.end}单位时{k.A}获得+1<b>怒火</b>并给予所有神器{f.xp}+[#]经验{f.end}。 如果你的<b>怒火</b>数量不少于<b>心心</b>，你就会失控进入<color=#C01E20><b>狂兽模式</b></color>！！！ \n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n当你处于<color=#C01E20><b>狂兽模式</b></color>时…… \n- <indent=3%>你的{k.BaseDice}拥有+1{k.DicePower}但会自动掷出。</indent> \n- <indent=3%>商店中的诅咒物品不再花费<b>心心</b>，并且你有机会获得一个特别的{f.keyword}浴血牺牲{f.end}法术。</indent> \n- <indent=3%>3回合后{k.A}将你的<b>怒火</b>重置为0。</indent>",
+   "alias_zh": "",
+   "note": "",
+   "icon": 169
+  },
+  {
+   "key": "BloodClot",
+   "kind": "artifact",
+   "en": "Blood Clot",
+   "zh": "血栓",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "When your turn begins {k.A} Spawn a <b>Hemocyte</b> on a random tile with +[#] {k.Attack}.",
+   "zh_desc": "你的回合开始时{k.A}在随机格子生成一个<b>血细胞</b>并给予其+[#]{k.Attack}。",
+   "alias_zh": "血凝块",
+   "note": "",
+   "icon": 170
+  },
+  {
+   "key": "LizardTail",
+   "kind": "artifact",
+   "en": "Lizard Tail",
+   "zh": "蜥蜴尾巴",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "When you would lose a {f.keyword}HEART{f.end}, destroy this instead {k.A} Get +1 <b>Rage</b> and +[#] {k.MiniDice}.",
+   "zh_desc": "当你将要失去一颗{f.keyword}心心{f.end}时，改为摧毁这件神器{k.A}获得+1<b>Rage</b>和+[#]{k.MiniDice}。",
+   "alias_zh": "蜥蜴尾",
+   "note": "",
+   "icon": 171
+  },
+  {
+   "key": "TwoWolves",
+   "kind": "perk",
+   "en": "Two Wolves",
+   "zh": "双狼",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "While you are in <color=#C01E20><b>BEAST MODE</b></color>, double the {k.Attack} gain of all units.",
+   "zh_desc": "当你处于<color=#C01E20><b>狂兽模式</b></color>时，所有单位在获得{k.Attack}时将获得双倍。",
+   "alias_zh": "二狼",
+   "note": "",
+   "icon": 172
+  },
+  {
+   "key": "MarkOfTheBeast",
+   "kind": "perk",
+   "en": "Mark of the Beast",
+   "zh": "兽之印记",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "While you are in <color=#C01E20><b>BEAST MODE</b></color>, your {k.BaseDice} always roll 6s, but no longer get extra {k.DicePower}.",
+   "zh_desc": "当你处于<color=#C01E20><b>狂兽模式</b></color>时，你的{k.BaseDice}必定掷出6，但不再获得额外{k.DicePower}。",
+   "alias_zh": "兽之印记",
+   "note": "让狂兽模式可控：基础骰先全部掷出 6，但只有这一次，重掷后照常随机",
+   "icon": 173
+  },
+  {
+   "key": "RageVirus",
+   "kind": "artifact",
+   "en": "Rage Virus",
+   "zh": "怒火病毒",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "After you score this column with {k.BaseDice} {k.A} Get +[#] {k.GlobalMult}. If you are in <color=#C01E20><b>BEAST MODE</b></color>, multiply your {k.GlobalMult} by 2x.",
+   "zh_desc": "当你用{k.BaseDice}在该列得分时{k.A}获得+[#]{k.GlobalMult}。如果你处于<color=#C01E20><b>狂兽模式</b></color>，则将{k.GlobalMult}×2。",
+   "alias_zh": "狂怒病毒",
+   "note": "",
+   "icon": 174
+  },
+  {
+   "key": "MeatStick",
+   "kind": "artifact",
+   "en": "Meat Stick",
+   "zh": "肉串",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "After you score this column {k.A} Give ({k.DicePower} x [#]) {k.Attack} to ALL units.",
+   "zh_desc": "你在该列得分后{k.A}给予所有单位（{k.DicePower}×[#]）{k.Attack}。",
+   "alias_zh": "肉棒",
+   "note": "",
+   "icon": 175
+  },
+  {
+   "key": "FaeMajor",
+   "kind": "constellation",
+   "en": "Fae Major",
+   "zh": "大妖精座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Pixie</b> units are <b>Rare</b> and have a regenerating {k.Shield}.",
+   "zh_desc": "你的<b>小精灵</b>单位稀有度变为<b>稀有</b>且拥有会重生的{k.Shield}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "GaleaMajor",
+   "kind": "constellation",
+   "en": "Galea Major",
+   "zh": "大盔座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Shelled</b> units are <b>Rare</b> and have +1 {k.Repeat}.",
+   "zh_desc": "你的<b>硬壳怪</b>单位稀有度变为<b>稀有</b>且拥有+1{k.Repeat}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "Volcanus",
+   "kind": "constellation",
+   "en": "Volcanus",
+   "zh": "火山座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "You can find these unique <b>BUDGE</b> related artifacts during this run.",
+   "zh_desc": "你在本局游戏中能够找到以下特殊的<b>挪移</b>相关神器。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "Glacialis",
+   "kind": "constellation",
+   "en": "Glacialis",
+   "zh": "冰川座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "You can find these unique <b>FREEZE</b> related artifacts during this run.",
+   "zh_desc": "你在本局游戏中能够找到以下特殊的<b>冻结</b>相关神器。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "CapraMax",
+   "kind": "constellation",
+   "en": "Capra Max",
+   "zh": "大山羊座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Broodmother</b> units are <b>Legendary</b> and give +1 {k.DicePower} to its column.",
+   "zh_desc": "你的<b>母虫</b>单位稀有度变为<b>传说</b>且给予自身所在列+1{k.DicePower}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "MigoMajor",
+   "kind": "constellation",
+   "en": "Migo Major",
+   "zh": "大米戈座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Migo</b> units are <b>Uncommon</b> and cost 0 {k.ShopToken}.",
+   "zh_desc": "你的<b>米戈</b>单位稀有度变为<b>罕见</b>且费用为0{k.ShopToken}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "PluribusMajor",
+   "kind": "constellation",
+   "en": "Pluribus Major",
+   "zh": "大数座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Swarmer</b> units are <b>Uncommon</b> and give ALL units +10 {k.Attack} on spawn.",
+   "zh_desc": "你的<b>蜂涌怪</b>单位稀有度变为<b>罕见</b>且在生成时给予所有单位+10{k.Attack}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "IgnisMajor",
+   "kind": "constellation",
+   "en": "Ignis Major",
+   "zh": "大炎座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Rocketeer</b> units are <b>Rare</b> and have a regenerating {k.Shield}.",
+   "zh_desc": "你的<b>火箭手</b>单位稀有度变为<b>稀有</b>且拥有会重生的{k.Shield}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "QuadraMajor",
+   "kind": "constellation",
+   "en": "Quadra Major",
+   "zh": "大框座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Sponge</b> units are <b>Rare</b> and recharge {k.Charge} each turn.",
+   "zh_desc": "你的<b>海绵</b>单位稀有度变为<b>稀有</b>且每回合充电{k.Charge}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "InsectumMax",
+   "kind": "constellation",
+   "en": "Insectum Max",
+   "zh": "极虫座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Spikebug</b> units are <b>Legendary</b> and give +2 {k.DicePower}.",
+   "zh_desc": "你的<b>尖刺虫</b>单位稀有度变为<b>传说</b>且给予+2{k.DicePower}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "VindictusMax",
+   "kind": "constellation",
+   "en": "Vindictus Max",
+   "zh": "极仇座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Vengoid</b> units are <b>Legendary</b> and spawn with +500 {k.Attack}.",
+   "zh_desc": "你的<b>复仇者</b>单位稀有度变为<b>传说</b>且生成时+500{k.Attack}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "StellaMax",
+   "kind": "constellation",
+   "en": "Stella Max",
+   "zh": "极星座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Pulsar</b> units are <b>Legendary</b> and have +3 {k.Repeat}.",
+   "zh_desc": "你的<b>脉冲星</b>单位稀有度变为<b>传说</b>且拥有+3{k.Repeat}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "EchoMax",
+   "kind": "constellation",
+   "en": "Echo Max",
+   "zh": "极响座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Echo</b> units are <b>Legendary</b> and get {k.GlobalMult} based on {k.Charge} spent.",
+   "zh_desc": "你的<b>回声</b>单位稀有度变为<b>传说</b>且会根据花费的{k.Charge}获得{k.GlobalMult}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "TextumMajor",
+   "kind": "constellation",
+   "en": "Textum Max",
+   "zh": "极织座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Weaver</b> units are <b>Legendary</b> and spawn 2 extra <b>Webs</b>.",
+   "zh_desc": "你的<b>编织者</b>单位稀有度变为<b>传说</b>且会额外生成2个<b>网</b>。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "MassRelay",
+   "kind": "artifact",
+   "en": "Mass Relay",
+   "zh": "质量中继器",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "Your {k.BaseDice} that rolls into this column's value are rerolled into a {f.keyword}Rift{f.end} face.\nWhen you launch a triple of {f.keyword}Rift{f.end} faces {k.A} Score [#] random units.",
+   "zh_desc": "你掷到该列点数的{k.BaseDice}会被重掷成一个{f.keyword}裂隙{f.end}骰面。 \n当你发射出三条{f.keyword}裂隙{f.end}骰面时{k.A}让[#]个随机单位得分。",
+   "alias_zh": "质量中继",
+   "note": "",
+   "icon": 176
+  },
+  {
+   "key": "SugarCube",
+   "kind": "artifact",
+   "en": "Sugar Cube",
+   "zh": "方糖",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "Your columns that have <b>Honey</b> give +[#] {k.DicePower} when scoring {k.BaseDice}.",
+   "zh_desc": "你拥有<b>蜂蜜</b>的列在用{k.BaseDice}得分时会给予+[#]{k.DicePower}。",
+   "alias_zh": "方糖",
+   "note": "",
+   "icon": 177
+  },
+  {
+   "key": "HotBuzz",
+   "kind": "artifact",
+   "en": "Hot Buzz",
+   "zh": "炽热嗡声",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "Each time you collect <b>Honey</b>, give 1 {k.Charge} to a random unit {k.A}  Get +[#] {k.GlobalMult}.",
+   "zh_desc": "你每次采集<b>蜂蜜</b>时，给予一个随机单位1格{k.Charge}{k.A}获得+[#]{k.GlobalMult}。",
+   "alias_zh": "嗡嗡热",
+   "note": "",
+   "icon": 178
+  },
+  {
+   "key": "Usurper",
+   "kind": "perk",
+   "en": "Usurper",
+   "zh": "篡位者",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Capturing and sacrificing gives +50% {k.Attack}.",
+   "zh_desc": "吃子和牺牲会给予+50%{k.Attack}。",
+   "alias_zh": "篡位者",
+   "note": "被称为几乎自动胜利",
+   "icon": 179
+  },
+  {
+   "key": "EnPassant",
+   "kind": "artifact",
+   "en": "En Passant",
+   "zh": "吃过路兵",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "When you destroy a non-{f.keyword}Token{f.end} unit {k.A} Get +1 {k.Chrono} and +[#] {k.MiniDice}.",
+   "zh_desc": "当你摧毁一个非{f.keyword}衍生{f.end}单位时{k.A}获得+1{k.Chrono}和+[#]{k.MiniDice}。",
+   "alias_zh": "吃过路兵",
+   "note": "",
+   "icon": 180
+  },
+  {
+   "key": "BlitzArmor",
+   "kind": "artifact",
+   "en": "Blitz Armor",
+   "zh": "超快护甲",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "When you score a unit with a {k.Shield}, break its {k.Shield} {k.A} Get +1 {k.Budge} and +[#] {k.GlobalMult}.",
+   "zh_desc": "当你用有{k.Shield}的单位得分时，破坏其{k.Shield}{k.A}获得+1{k.Budge}和+[#]{k.GlobalMult}。",
+   "alias_zh": "闪击装甲",
+   "note": "",
+   "icon": 181
+  },
+  {
+   "key": "RatPoison",
+   "kind": "artifact",
+   "en": "Rat Poison",
+   "zh": "老鼠药",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "When you score a pair in this column {k.A} Score a random {f.keyword}Token{f.end} unit with +[#] {k.Repeat}.",
+   "zh_desc": "以对子在该列得分时{k.A}让一个随机{f.keyword}衍生{f.end}单位以+[#]{k.Repeat}得分。",
+   "alias_zh": "鼠药",
+   "note": "",
+   "icon": 182
+  },
+  {
+   "key": "FlyingStinger",
+   "kind": "artifact",
+   "en": "Flying Stinger",
+   "zh": "飞刺",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "When you collect the <b>Honey</b> in this column, if it's the last <b>Honey</b> {k.A} Get +2 {k.ShopToken} and give ALL units +[#] {k.Attack}.",
+   "zh_desc": "当你在此列采集<b>蜂蜜</b>时，如果该<b>蜂蜜</b>是场上最后一个{k.A}获得+2{k.ShopToken}并给予所有单位+[#]{k.Attack}。",
+   "alias_zh": "飞刺",
+   "note": "",
+   "icon": 183
+  },
+  {
+   "key": "BigApple",
+   "kind": "artifact",
+   "en": "Big Apple",
+   "zh": "大苹果",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "When your turn begins {k.A} Give +[#] {k.Attack} to <b>Apple</b> units.",
+   "zh_desc": "你的回合开始时{k.A}给予<b>苹果</b>单位+[#]{k.Attack}。",
+   "alias_zh": "大苹果",
+   "note": "",
+   "icon": 184
+  },
+  {
+   "key": "Parasite",
+   "kind": "artifact",
+   "en": "Parasite",
+   "zh": "寄生虫",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When you destroy ANY unit in this column {k.A} Get +1 {k.MiniDice} and +[#] {k.GlobalMult}.",
+   "zh_desc": "当你摧毁此列任意单位时{k.A}获得+1{k.MiniDice}和+[#]{k.GlobalMult}。",
+   "alias_zh": "寄生虫",
+   "note": "",
+   "icon": 185
+  },
+  {
+   "key": "GoldenHalo",
+   "kind": "artifact",
+   "en": "Golden Halo",
+   "zh": "黄金光环",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "Adjacent artifacts have \"<b>+[#]</b>\" to their number that scales.",
+   "zh_desc": "相邻神器所有按等级成长的数字拥有“<b>+[#]</b>”。",
+   "alias_zh": "金色光环",
+   "note": "",
+   "icon": 186
+  },
+  {
+   "key": "ArcusMajor",
+   "kind": "constellation",
+   "en": "Arcus Major",
+   "zh": "大弓座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Shooter</b> units are <b>Uncommon</b> and have a regenerating {k.Shield}.",
+   "zh_desc": "你的<b>射手</b>单位稀有度变为<b>罕见</b>且拥有会重生的{k.Shield}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "OrchidaeMax",
+   "kind": "constellation",
+   "en": "Orchidae Max",
+   "zh": "极兰座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Orchid</b> units are <b>Legendary</b> and give +1 {k.ShopToken} each turn.",
+   "zh_desc": "你的<b>幻兰</b>单位稀有度变为<b>传说</b>且每回合给予+1{k.ShopToken}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "PowerPlant",
+   "kind": "artifact",
+   "en": "Power Plant",
+   "zh": "发电站",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "When your turn begins {k.A} Spend 50% {f.keyword}Shop Rarity{f.end} to increase the {k.Attack} of ALL units by +[#]% .",
+   "zh_desc": "你的回合开始时{k.A}花费50%{f.keyword}商店稀有度{f.end}来给予所有单位+[#]%{k.Attack}。",
+   "alias_zh": "核电站",
+   "note": "",
+   "icon": 187
+  },
+  {
+   "key": "Grimoire",
+   "kind": "perk",
+   "en": "Grimoire",
+   "zh": "魔法书",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Get +1 {k.ShopToken}.\nAfter you buy anything from the <b>SHOP</b> {k.A} Create a random different <b>Spell</b> in its place.",
+   "zh_desc": "你的回合开始时{k.A}获得+1{k.ShopToken}。 \n你从<b>商店</b>购买任何物品后{k.A}在留下的空位生成一个随机不同的<b>法术</b>。",
+   "alias_zh": "魔典",
+   "note": "商店稳定性好；毁灭世界推荐",
+   "icon": 188
+  },
+  {
+   "key": "WorldEater",
+   "kind": "perk",
+   "en": "World Eater",
+   "zh": "吞世者",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When you launch a pair of {k.BaseDice} {k.A} If the topmost tile is empty, destroy it to get +10% {f.keyword}Shop Rarity{f.end} and +3 {k.ShopToken}.",
+   "zh_desc": "当你发射一对{k.BaseDice}时{k.A}如果最上方的格子是空格子，则将其摧毁来获得+10%{f.keyword}商店稀有度{f.end}和+3{k.ShopToken}。",
+   "alias_zh": "噬界者",
+   "note": "",
+   "icon": 189
+  },
+  {
+   "key": "ToyMaker",
+   "kind": "perk",
+   "en": "Toy Maker",
+   "zh": "玩具制造商",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "The next time you buy a unit from the shop {k.A} Spawn 2 more base copies of that unit on random tiles, get +6 {k.ShopToken}, and destroy this.",
+   "zh_desc": "下一次你从商店中购买单位时{k.A}在随机格子生成2个该单位的基础副本，获得+6{k.ShopToken}，然后摧毁这个专长。",
+   "alias_zh": "玩具匠",
+   "note": "用完腾出专长槽，CH6 应对 Bud 锁",
+   "icon": 190
+  },
+  {
+   "key": "Ectoplasm",
+   "kind": "perk",
+   "en": "Ectoplasm",
+   "zh": "灵体外质",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When a {k.Shield} breaks {k.A} Get +1 {k.MiniDice} and trigger that unit's \"{f.keyword}On Death{f.end}\" ability if it has one.",
+   "zh_desc": "当有{k.Shield}被破坏时{k.A}获得+1{k.MiniDice}并触发该单位的“{f.keyword}死亡时{f.end}”能力（如果有）。",
+   "alias_zh": "灵质",
+   "note": "",
+   "icon": 191
+  },
+  {
+   "key": "BlobusMajor",
+   "kind": "constellation",
+   "en": "Blobus Major",
+   "zh": "大团座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Blob</b> units are <b>Rare</b> and give +2 {k.MiniDice} each turn.",
+   "zh_desc": "你的<b>团块</b>单位稀有度变为<b>稀有</b>且每回合给予+2{k.MiniDice}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "DisruptusMajor",
+   "kind": "constellation",
+   "en": "Disruptus Major",
+   "zh": "大破座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Boomer</b> units are <b>Rare</b> and give its {k.Attack} to all other units {f.keyword}On Death{f.end}.",
+   "zh_desc": "你的<b>轰天雷</b>单位稀有度变为<b>稀有</b>且在{f.keyword}死亡时{f.end}将自身的{k.Attack}给予所有其他单位。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "Income",
+   "kind": "special",
+   "en": "Income",
+   "zh": "收入",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Get +1 {k.ShopToken}.",
+   "zh_desc": "你的回合开始时{k.A}获得+1{k.ShopToken}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "Income2",
+   "kind": "special",
+   "en": "Income",
+   "zh": "收入",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Get +1 {k.ShopToken}.",
+   "zh_desc": "你的回合开始时{k.A}获得+1{k.ShopToken}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "Income3",
+   "kind": "special",
+   "en": "Income",
+   "zh": "收入",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Get +1 {k.ShopToken}.",
+   "zh_desc": "你的回合开始时{k.A}获得+1{k.ShopToken}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "LastTrain",
+   "kind": "perk",
+   "en": "Last Train",
+   "zh": "末班列车",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Level up the artifact in column #6.",
+   "zh_desc": "你的回合开始时{k.A}升级第6列的神器。",
+   "alias_zh": "末班车",
+   "note": "被认为是最强专长之一，对被动神器也有效",
+   "icon": 192
+  },
+  {
+   "key": "Commonwealth",
+   "kind": "perk",
+   "en": "Commonwealth",
+   "zh": "联合体",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your {f.keyword}Common{f.end} units have +2 {k.Repeat} and have a much higher chance to appear in the <b>SHOP</b>.",
+   "zh_desc": "你的{f.keyword}普通{f.end}单位拥有+2{k.Repeat}并且有高得多的几率在<b>商店</b>中出现。",
+   "alias_zh": "共同体",
+   "note": "注意星座（如 Pluribus Major）会改变单位稀有度",
+   "icon": 193
+  },
+  {
+   "key": "AsteroidBelt",
+   "kind": "perk",
+   "en": "Asteroid Belt",
+   "zh": "小行星带",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When you destroy a non-{f.keyword}Token{f.end} unit {k.A} Spawn an <b>Asteroid</b> on a random tile.",
+   "zh_desc": "当你摧毁一个非{f.keyword}衍生{f.end}单位时{k.A}在随机格子生成一个<b>小行星</b>。",
+   "alias_zh": "小行星带",
+   "note": "毁灭世界中配可触发的经济神器很疯",
+   "icon": 194
+  },
+  {
+   "key": "StrangePortal",
+   "kind": "perk",
+   "en": "Strange Portal",
+   "zh": "奇异传送门",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When obtained {k.A} Spawn 2 random {f.keyword}Warped{f.end} units on random tiles.",
+   "zh_desc": "获取时{k.A}在随机格子生成2个随机{f.keyword}异界{f.end}单位。",
+   "alias_zh": "奇异传送门",
+   "note": "开发者：毁灭世界里基本能直接赢一幕",
+   "icon": 195
+  },
+  {
+   "key": "PhoenixAsh",
+   "kind": "perk",
+   "en": "Phoenix Ash",
+   "zh": "不死鸟之灰",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When you would lose your final {f.keyword}Heart{f.end} {k.A} Set your {f.keyword}Hearts{f.end} to 3, destroy this, and replace it with a random perk.",
+   "zh_desc": "当你将要失去你的最后一颗{f.keyword}心心{f.end}时{k.A}将你的{f.keyword}心心{f.end}数变为3，摧毁这个专长并将其替换为一个随机专长。",
+   "alias_zh": "凤凰灰",
+   "note": "与 Lizard Tail 同时有时蜥蜴尾先触发",
+   "icon": 196
+  },
+  {
+   "key": "ColdStar",
+   "kind": "perk",
+   "en": "Cold Star",
+   "zh": "冷星",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When you reroll {k.BaseDice} {k.A} Your frozen dice get +1 {k.DicePower}.",
+   "zh_desc": "当你重掷{k.BaseDice}时{k.A}你的冻结骰子获得+1{k.DicePower}。",
+   "alias_zh": "冷星",
+   "note": "",
+   "icon": 197
+  },
+  {
+   "key": "TitanMigo",
+   "kind": "artifact",
+   "en": "Titan Migo",
+   "zh": "泰坦米戈",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "After you score a triple in this column, destroy this {k.A} Spawn a <b>Migo</b> with [#]% of the combined {k.Attack} of non-<b>Migo</b> units.",
+   "zh_desc": "在此列以三条得分后，摧毁这件神器{k.A}生成一个<b>米戈</b>，它拥有所有非<b>米戈</b>单位{k.Attack}总合的[#]%。",
+   "alias_zh": "泰坦米格",
+   "note": "",
+   "icon": 198
+  },
+  {
+   "key": "SupplyDrop",
+   "kind": "perk",
+   "en": "Supply Drop",
+   "zh": "空投补给",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Spawn an <b>Supply Drop</b> on a random tile if there are none.",
+   "zh_desc": "你的回合开始时{k.A}如果地图上没有<b>空投补给</b>，则在随机格子生成一个。",
+   "alias_zh": "空投",
+   "note": "",
+   "icon": 199
+  },
+  {
+   "key": "Egg",
+   "kind": "perk",
+   "en": "Egg",
+   "zh": "蛋",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When obtained {k.A} Spawn an <b>Egg</b> on a random tile.",
+   "zh_desc": "获取时{k.A}在随机格子生成一个<b>蛋</b>。",
+   "alias_zh": "蛋",
+   "note": "前期伤害成长，能带飞；龙继承最终力量（含临时力量）",
+   "icon": 200
+  },
+  {
+   "key": "Tippy",
+   "kind": "pilot",
+   "en": "Call Tippy!",
+   "zh": "呼叫Tippy！",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Tippy blocks the screen!\n(Artifacts can't trigger, units can't score.)",
+   "zh_desc": "Tippy会挡住屏幕！ \n（神器不生效、单位不得分。）",
+   "alias_zh": "",
+   "note": "",
+   "icon": 260
+  },
+  {
+   "key": "RoboMin",
+   "kind": "pilot",
+   "en": "Glitch Bomb",
+   "zh": "漏洞炸弹",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Spawn a <b>Glitch</b> if possible. Otherwise, +100% defense.",
+   "zh_desc": "你的回合开始时{k.A}尽可能生成一个<b>漏洞</b>。如无法生成，则+100%防御值。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 255
+  },
+  {
+   "key": "Bud",
+   "kind": "pilot",
+   "en": "Bud",
+   "zh": "Bud",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Locks your 2 perk slots. You cannot gain new perks if you have no slots available!",
+   "zh_desc": "锁定你的2个专长栏位。如果没有空栏位，你就无法获得新专长！",
+   "alias_zh": "",
+   "note": "",
+   "icon": 247
+  },
+  {
+   "key": "PerkLocked1",
+   "kind": "special",
+   "en": "Locked (Empty Launch)",
+   "zh": "锁定（空射）",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Launch ALL {k.BaseDice} into a single column without units to unlock.",
+   "zh_desc": "将所有{k.BaseDice}发射到没有单位的同一列来解锁。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "PerkLocked2",
+   "kind": "special",
+   "en": "Locked (Destroy Artifact)",
+   "zh": "锁定（摧毁神器）",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Destroy or replace an artifact at {f.xp}Level 7{f.end} or higher to unlock.",
+   "zh_desc": "摧毁或替换一个{f.xp}7级{f.end}或更高等级的神器来解锁。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "PerkLocked3",
+   "kind": "special",
+   "en": "Locked (One-Turn KO)",
+   "zh": "摧毁（单回合击杀）",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Perform a {f.keyword}One-Turn KO{f.end} and skip all remaining turns to unlock.",
+   "zh_desc": "完成一次{f.keyword}单回合击杀{f.end}并跳过所有剩余回合来解锁。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "ChainLightning",
+   "kind": "pilot",
+   "en": "Chain Lightning",
+   "zh": "连环闪电",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Each turn, {k.Shock} 5 random units (skip first time scored).",
+   "zh_desc": "每回合，{k.Shock}5个随机单位（跳过其第一次得分）。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 263
+  },
+  {
+   "key": "Overclock",
+   "kind": "pilot",
+   "en": "Overclock",
+   "zh": "超频",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} +20% defense.",
+   "zh_desc": "你的回合开始时{k.A}+20%防御值。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 264
+  },
+  {
+   "key": "TakeHeart",
+   "kind": "pilot",
+   "en": "Take Heart",
+   "zh": "夺心",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When obtained {k.A} Lose 2 {f.keyword}Hearts{f.end}. If you can't, +100% defense.",
+   "zh_desc": "获取时{k.A}失去2颗{f.keyword}心心{f.end}。如果无法如此做，则+100%防御值。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 265
+  },
+  {
+   "key": "Devour",
+   "kind": "pilot",
+   "en": "Devour",
+   "zh": "吞噬",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When obtained {k.A} Destroy the left-most perk and +20% defense.",
+   "zh_desc": "获取时{k.A}摧毁最左侧的专长并+20%防御值。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 266
+  },
+  {
+   "key": "Tornado",
+   "kind": "pilot",
+   "en": "Tornado",
+   "zh": "飓风",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "When your turn begins {k.A} Randomly swap 2 of your artifacts.",
+   "zh_desc": "你的回合开始时{k.A}随机交换你2件神器的位置。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 267
+  },
+  {
+   "key": "Bab",
+   "kind": "special",
+   "en": "Bab",
+   "zh": "哔",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Cannot be replaced.\nWhen your turn begins {k.A} Give +[#] {k.Attack} to a random unit.",
+   "zh_desc": "不能被替换。 \n你的回合开始时{k.A}给予一个随机单位+[#]{k.Attack}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 201
+  },
+  {
+   "key": "RespuoMax",
+   "kind": "constellation",
+   "en": "Respuo Max",
+   "zh": "极喷座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Spitter</b> units are <b>Legendary</b> and have +1 {k.Repeat}.",
+   "zh_desc": "你的<b>喷吐者</b>单位稀有度变为<b>传说</b>且拥有+1{k.Repeat}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "HispidusMajor",
+   "kind": "constellation",
+   "en": "Hispidus Major",
+   "zh": "大棘座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Virus</b> units are <b>Rare</b> and give +2 {k.MiniDice} each turn.",
+   "zh_desc": "你的<b>病毒</b>单位稀有度变为<b>稀有</b>且每回合给予+2{k.MiniDice}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "JubatusMajor",
+   "kind": "constellation",
+   "en": "Jubatus Major",
+   "zh": "大冠座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Martian</b> units are <b>Rare</b> and spawn 2 copies when bought.",
+   "zh_desc": "你的<b>火星人</b>单位稀有度变为<b>稀有</b>且在购买时生成2个复本。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "LuminosMajor",
+   "kind": "constellation",
+   "en": "Luminos Major",
+   "zh": "大光座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your <b>Time Angel</b> units are <b>Uncommon</b>. They move and gain a {k.Shield} when scored.",
+   "zh_desc": "你的<b>时间天使</b>单位稀有度变为<b>罕见</b>。它们在得分时将会移动并获得一个{k.Shield}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "Decimator",
+   "kind": "artifact",
+   "en": "Decimator",
+   "zh": "歼灭者",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "After you score a pair in this column, spend 2 {k.Budge} {k.A} Get +[#] {k.GlobalMult}.",
+   "zh_desc": "以对子在该列得分后，花费2{k.Budge}{k.A}获得+[#]{k.GlobalMult}。",
+   "alias_zh": "歼灭者",
+   "note": "",
+   "icon": 202
+  },
+  {
+   "key": "ToxicPlume",
+   "kind": "artifact",
+   "en": "Toxic Plume",
+   "zh": "毒羽毛",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "When you launch {k.BaseDice}, if you have no {k.Budge} {k.A} Get +[#] {k.MiniDice}.",
+   "zh_desc": "发射{k.BaseDice}时，如果你没有{k.Budge}{k.A}获得+[#]{k.MiniDice}。",
+   "alias_zh": "毒雾",
+   "note": "",
+   "icon": 203
+  },
+  {
+   "key": "Brinicles",
+   "kind": "artifact",
+   "en": "Brinicles",
+   "zh": "死亡冰柱",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When you leave the shop, for each {f.keyword}Frozen{f.end} item {k.A} Give +[#] {k.Attack} to the unit with the most {k.Attack}.",
+   "zh_desc": "离开商店时，每有一个{f.keyword}冻结{f.end}的物品{k.A}给予{k.Attack}最高的单位+[#]{k.Attack}。",
+   "alias_zh": "盐冰柱",
+   "note": "",
+   "icon": 204
+  },
+  {
+   "key": "FrostCubes",
+   "kind": "artifact",
+   "en": "Frost Cubes",
+   "zh": "冰冻方块",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "When you reroll {k.BaseDice}, for each {f.keyword}Frozen{f.end} dice you have {k.A} Get +[#] {k.MiniDice}.",
+   "zh_desc": "当你重掷{k.BaseDice}时，每有一个{f.keyword}冻结{f.end}的骰子{k.A}获得+[#]{k.MiniDice}。",
+   "alias_zh": "冰块",
+   "note": "",
+   "icon": 205
+  },
+  {
+   "key": "BigFridge",
+   "kind": "artifact",
+   "en": "Big Fridge",
+   "zh": "大冰箱",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "One of your {k.BaseDice} gets +[#] {k.DicePower} but is permanently frozen.",
+   "zh_desc": "你的一个{k.BaseDice}获得+[#]{k.DicePower}但会永远冻结。",
+   "alias_zh": "大冰箱",
+   "note": "",
+   "icon": 206
+  },
+  {
+   "key": "Corvus",
+   "kind": "constellation",
+   "en": "Corvus",
+   "zh": "乌鸦座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "You can find these unique <b>DESTROY</b> related artifacts during this run.",
+   "zh_desc": "你在本局游戏中能够找到以下特殊的<b>摧毁</b>相关神器。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "ReAnimator",
+   "kind": "artifact",
+   "en": "Re-Animator",
+   "zh": "复活器",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "Your non-{f.keyword}Token{f.end} units gain {f.high} \"{f.keyword}On Death{f.end} {k.A} Get +[#] {k.MiniDice}.\" {f.endhigh}",
+   "zh_desc": "你的非{f.keyword}衍生{f.end}单位获得{f.high}“{f.keyword}死亡时{f.end}{k.A}获得+[#]{k.MiniDice}。”{f.endhigh}",
+   "alias_zh": "复生者",
+   "note": "",
+   "icon": 207
+  },
+  {
+   "key": "RitualBlade",
+   "kind": "artifact",
+   "en": "Ritual Blade",
+   "zh": "仪式刀刃",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "The <b>Sacrifice</b> spell from the shop gives +[#]% {k.Attack}.",
+   "zh_desc": "商店里的<b>牺牲</b>法术会给予+[#]%{k.Attack}。",
+   "alias_zh": "仪式匕首",
+   "note": "",
+   "icon": 208
+  },
+  {
+   "key": "Firewall",
+   "kind": "artifact",
+   "en": "Firewall",
+   "zh": "防火墙",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "After you score a pair in this column {k.A} Give all units in this column a {k.Shield} and +[#] {k.Attack}.",
+   "zh_desc": "以对子在该列得分后{k.A}给予该列所有单位一个{k.Shield}和+[#]{k.Attack}。",
+   "alias_zh": "防火墙",
+   "note": "",
+   "icon": 209
+  },
+  {
+   "key": "PineHead",
+   "kind": "artifact",
+   "en": "Pine Head",
+   "zh": "松果头",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "When a {k.Shield} breaks {k.A} Get +[#]% {f.keyword}Shop Rarity{f.end}.",
+   "zh_desc": "当有{k.Shield}被破坏时{k.A}获得+[#]{f.keyword}商店稀有度{f.end}。",
+   "alias_zh": "松果头",
+   "note": "",
+   "icon": 210
+  },
+  {
+   "key": "Phalanx",
+   "kind": "artifact",
+   "en": "Phalanx",
+   "zh": "密集方阵",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "When you score a {k.Shielded} unit {k.A} Get +[#] {k.GlobalMult}.",
+   "zh_desc": "以{k.Shielded}单位得分时{k.A}获得+[#]{k.GlobalMult}。",
+   "alias_zh": "方阵",
+   "note": "",
+   "icon": 211
+  },
+  {
+   "key": "Aegis",
+   "kind": "constellation",
+   "en": "Aegis",
+   "zh": "神盾座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "You can find these unique <b>SHIELD</b> related artifacts during this run.",
+   "zh_desc": "你在本局游戏中能够找到以下特殊的<b>护盾</b>相关神器。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "Exodium",
+   "kind": "constellation",
+   "en": "Exodium",
+   "zh": "封印座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "You can find these unique <b>EXODIUM</b> artifacts during this run.",
+   "zh_desc": "你在本局游戏中能够找到以下特殊的<b>封印座</b>相关神器。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "AlphaBot",
+   "kind": "artifact",
+   "en": "Alphazod",
+   "zh": "阿尔法佐德",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "Units in this column have +[#] {k.Attack}. \nThis effect also applies to all other columns with an <b>EXODIUM</b> artifact.",
+   "zh_desc": "该列的单位拥有+[#]{k.Attack}。  \n这一效果对其他拥有<b>封印座</b>神器的列也会起效。",
+   "alias_zh": "阿尔法佐德",
+   "note": "",
+   "icon": 212
+  },
+  {
+   "key": "BetaBot",
+   "kind": "artifact",
+   "en": "Betazod",
+   "zh": "贝塔佐德",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "Units in this column give +[#] {k.GlobalMult} when scored. \nThis effect also applies to all other columns with an <b>EXODIUM</b> artifact.",
+   "zh_desc": "该列的单位在得分时给予+[#]{k.GlobalMult}。 \n这一效果对其他拥有<b>封印座</b>神器的列也会起效。",
+   "alias_zh": "贝塔佐德",
+   "note": "",
+   "icon": 213
+  },
+  {
+   "key": "OmegaBot",
+   "kind": "artifact",
+   "en": "Omegazod",
+   "zh": "欧米伽佐德",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "This column gives +[#] {k.DicePower} when scoring {k.BaseDice}. \nThis effect also applies to all other columns with an <b>EXODIUM</b> artifact.",
+   "zh_desc": "该列在以{k.BaseDice}得分时给予+[#]{k.DicePower}。 \n这一效果对其他拥有<b>封印座</b>神器的列也会起效。",
+   "alias_zh": "欧米伽佐德",
+   "note": "",
+   "icon": 214
+  },
+  {
+   "key": "Tempus",
+   "kind": "constellation",
+   "en": "Tempus",
+   "zh": "时光座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "You can find these unique <b>CHRONO</b> related artifacts during this run.",
+   "zh_desc": "你在本局游戏中能够找到以下特殊的<b>时空点</b>相关神器。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "StasisCube",
+   "kind": "artifact",
+   "en": "Stasis Cube",
+   "zh": "静滞方块",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When a {k.BaseDice} rolls into this column's value, perma-freeze it {k.A} Give +[#] {k.Attack} to ALL units.",
+   "zh_desc": "当有{k.BaseDice}掷出该列的点数时，将其永久冻结{k.A}给所有单位+[#]{k.Attack}。",
+   "alias_zh": "静滞立方",
+   "note": "",
+   "icon": 215
+  },
+  {
+   "key": "Quendulum",
+   "kind": "artifact",
+   "en": "Quendulum",
+   "zh": "纠缠摆",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "When you launch {k.BaseDice}, if you have no {k.Chrono} {k.A} Get +1 {k.Chrono} and +[#] {k.GlobalMult}.",
+   "zh_desc": "发射{k.BaseDice}时,如果你没有{k.Chrono}{k.A}获得+1{k.Chrono}和+[#]{k.GlobalMult}。",
+   "alias_zh": "摆钟",
+   "note": "",
+   "icon": 216
+  },
+  {
+   "key": "SunflowerDial",
+   "kind": "artifact",
+   "en": "Sunflower Dial",
+   "zh": "向日晷",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "When you gain {k.Chrono}, for each {k.Chrono} gained {k.A} Get +1 {k.Budge} and +[#]% {f.keyword}Shop Rarity{f.end}.",
+   "zh_desc": "当你获得{k.Chrono}时，每获得一点{k.Chrono}{k.A}获得+1{k.Budge}和+[#]%{f.keyword}商店稀有度{f.end}。",
+   "alias_zh": "向日葵日晷",
+   "note": "",
+   "icon": 217
+  },
+  {
+   "key": "Fortuna",
+   "kind": "constellation",
+   "en": "Fortuna",
+   "zh": "幸运座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "You can find these unique <b>SHOP</b> related artifacts during this run.",
+   "zh_desc": "你在本局游戏中能够找到以下特殊的<b>商店</b>相关神器。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "SteamPipe",
+   "kind": "artifact",
+   "en": "Steam Pipe",
+   "zh": "蒸汽管",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "When your turn begins {k.A} Get +[#] {k.ShopToken}.",
+   "zh_desc": "你的回合开始时{k.A}获得+[#]{k.ShopToken}。",
+   "alias_zh": "蒸汽管",
+   "note": "",
+   "icon": 218
+  },
+  {
+   "key": "BronzeWings",
+   "kind": "artifact",
+   "en": "Bronze Wings",
+   "zh": "青铜翅膀",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "When you skip turns, for each turn skipped {k.A} Get +3 {k.ShopToken} and +[#] {k.MiniDice}.",
+   "zh_desc": "当你跳过回合时，每跳过一个回合{k.A}获得+3{k.ShopToken}和+[#]{k.MiniDice}。",
+   "alias_zh": "青铜之翼",
+   "note": "",
+   "icon": 219
+  },
+  {
+   "key": "Lemonade",
+   "kind": "artifact",
+   "en": "Lemonade",
+   "zh": "柠檬水",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When you spawn a non-{f.keyword}Token{f.end} unit {k.A} Get +1 {k.ShopToken} and +[#] {k.GlobalMult}.",
+   "zh_desc": "当你生成非{f.keyword}衍生{f.end}单位时{k.A}获得+1{k.ShopToken}和+[#]{k.GlobalMult}。",
+   "alias_zh": "柠檬水",
+   "note": "",
+   "icon": 220
+  },
+  {
+   "key": "Ruina",
+   "kind": "constellation",
+   "en": "Ruina",
+   "zh": "废墟座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "You can find these unique <b>ARTIFACT</b> related artifacts during this run.",
+   "zh_desc": "你在本局游戏中能够找到以下特殊的<b>神器</b>相关神器。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "AshenArrow",
+   "kind": "artifact",
+   "en": "Ashen Arrow",
+   "zh": "灰烬箭矢",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When an artifact is replaced or destroyed {k.A} Get +1 {k.Budge} and give +[#] {k.Attack} to ALL units.",
+   "zh_desc": "当有神器被替换或摧毁时{k.A}获得+1{k.Budge}并给予所有单位+[#]{k.Attack}。",
+   "alias_zh": "灰烬之箭",
+   "note": "",
+   "icon": 221
+  },
+  {
+   "key": "FocusFuel",
+   "kind": "artifact",
+   "en": "Focus Fuel",
+   "zh": "集中燃料",
+   "rarity": "Common",
+   "rarity_code": "C",
+   "en_desc": "The artifact that replaces this will immediately gain {f.xp}+[#] XP{f.end}.",
+   "zh_desc": "替换这件神器的神器会立即获得{f.xp}+[#]经验{f.end}。",
+   "alias_zh": "聚焦燃料",
+   "note": "",
+   "icon": 222
+  },
+  {
+   "key": "DirtySludge",
+   "kind": "artifact",
+   "en": "Dirty Sludge",
+   "zh": "污秽泥浆",
+   "rarity": "Rare",
+   "rarity_code": "R",
+   "en_desc": "When an artifact is replaced or destroyed, for each level it had {k.A} Get +1 {k.ShopToken} and +[#] {k.MiniDice}.",
+   "zh_desc": "当有神器被替换或摧毁时，该神器每有一级{k.A}获得+1{k.ShopToken}和+[#]{k.MiniDice}。",
+   "alias_zh": "肮脏淤泥",
+   "note": "",
+   "icon": 223
+  },
+  {
+   "key": "Magus",
+   "kind": "constellation",
+   "en": "Magus",
+   "zh": "法师座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "You can find these unique <b>SPELL</b> related artifacts during this run.",
+   "zh_desc": "你在本局游戏中能够找到以下特殊的<b>法术</b>相关神器。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "Cantrip",
+   "kind": "artifact",
+   "en": "Cantrip",
+   "zh": "戏法",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "The first time you buy a spell each turn {k.A} Get +1 {k.ShopToken} and give +[#] {k.Attack} to a random unit.",
+   "zh_desc": "你每回合第一次购买法术时{k.A}获得+1{k.ShopToken}并给予随机单位+[#]{k.Attack}。",
+   "alias_zh": "戏法",
+   "note": "",
+   "icon": 224
+  },
+  {
+   "key": "SignMagick",
+   "kind": "artifact",
+   "en": "Sign Magick",
+   "zh": "法印",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "The <b>Give XP</b> spell from the shop gives {f.xp}+[#] XP{f.end}.",
+   "zh_desc": "商店中的<b>给予经验</b>法术会给予{f.xp}+[#]经验{f.end}。",
+   "alias_zh": "符印魔法",
+   "note": "",
+   "icon": 225
+  },
+  {
+   "key": "Nullus",
+   "kind": "constellation",
+   "en": "Nullus",
+   "zh": "虚无座",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "You can find these unique <b>GRID</b> related artifacts during this run.",
+   "zh_desc": "你在本局游戏中能够找到以下特殊的<b>格子</b>相关神器。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "PlanetX",
+   "kind": "artifact",
+   "en": "Planet X",
+   "zh": "行星X",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "After you score this column, if there are no units in this column {k.A} Multiply your {k.GlobalMult} by [#]x.",
+   "zh_desc": "当你在该列得分后，如果该列中没有任何单位{k.A}将你的{k.GlobalMult}乘以[#]。",
+   "alias_zh": "X行星",
+   "note": "",
+   "icon": 226
+  },
+  {
+   "key": "SolarSail",
+   "kind": "artifact",
+   "en": "Solar Sail",
+   "zh": "太阳帆",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "Each turn, you get +1 {k.ShopToken} and +[#] {k.MiniDice} per empty tile on your grid.",
+   "zh_desc": "每回合，你的地图上每有一个空格子，获得+1{k.ShopToken}和+[#]{k.MiniDice}。",
+   "alias_zh": "太阳帆",
+   "note": "",
+   "icon": 227
+  },
+  {
+   "key": "Galactory",
+   "kind": "artifact",
+   "en": "Galactory",
+   "zh": "星系工厂",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "When you would build a tile or spawn a unit but there's no more space {k.A} Give +[#] {k.Attack} to ALL units.",
+   "zh_desc": "当你在没有更多空间的情况下试图建造格子或生成单位时{k.A}给予所有单位+[#]{k.Attack}。",
+   "alias_zh": "银河工厂",
+   "note": "",
+   "icon": 228
+  },
+  {
+   "key": "Silverheart",
+   "kind": "artifact",
+   "en": "Silverheart",
+   "zh": "银心",
+   "rarity": "Legendary",
+   "rarity_code": "L",
+   "en_desc": "The <b>Give Shield</b> spell from the shop appears more often and increases the unit's {k.Attack} by +[#]% when used.",
+   "zh_desc": "商店中的<b>给予护盾</b>法术更常出现，并会在使用时给予单位+[#]%{k.Attack}。",
+   "alias_zh": "银心",
+   "note": "",
+   "icon": 229
+  },
+  {
+   "key": "FullHouse",
+   "kind": "artifact",
+   "en": "Full House",
+   "zh": "满员",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "After you score a pair in this column {k.A} Spawn a <b>Migo</b> on a random tile. If the grid was full, get +[#] {k.GlobalMult} instead.",
+   "zh_desc": "当你在这一列以对子得分后{k.A}在一个随机格子生成一个<b>米戈</b>。如果没有空格子，则改为获得+[#]{k.GlobalMult}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 230
+  },
+  {
+   "key": "PerkLocked1Alt",
+   "kind": "special",
+   "en": "Locked (Destroy Unit)",
+   "zh": "锁定（摧毁单位）",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Destroy a non-{f.keyword}Token{f.end} unit with at least 300 {k.Attack} to unlock.",
+   "zh_desc": "摧毁一个拥有至少300{k.Attack}的非{f.keyword}衍生{f.end}单位来解锁。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "PerkLocked2Alt",
+   "kind": "special",
+   "en": "Locked (Destroy Legendary)",
+   "zh": "解锁（摧毁传说）",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Destroy a {f.keyword}Legendary{f.end} unit with at least 3000 {k.Attack} to unlock.",
+   "zh_desc": "摧毁一个拥有至少3000{k.Attack}的{f.keyword}传说{f.end}单位来解锁。",
+   "alias_zh": "",
+   "note": "",
+   "icon": null
+  },
+  {
+   "key": "GalacticWeb",
+   "kind": "artifact",
+   "en": "Galactic Web",
+   "zh": "星系之网",
+   "rarity": "Uncommon",
+   "rarity_code": "U",
+   "en_desc": "Your <b>Web</b> units give {f.xp}+[#] XP{f.end} to the artifact in its column when scored.\nWhen your turn begins {k.A} Spawn a <b>Web</b> on a random tile.",
+   "zh_desc": "你的<b>网</b>单位在得分时给予其所在列的神器{f.xp}+[#]经验{f.end}。 \n你的回合开始时{k.A}在随机格子生成一个<b>网</b>。",
+   "alias_zh": "银河之网",
+   "note": "",
+   "icon": 231
+  },
+  {
+   "key": "DarkMedal",
+   "kind": "perk",
+   "en": "Dark Medal",
+   "zh": "黑暗勋章",
+   "rarity": null,
+   "rarity_code": "",
+   "en_desc": "Your {f.keyword}Starter{f.end} perk now works for artifacts {f.xp}LV.4{f.end} or above.",
+   "zh_desc": "你的{f.keyword}初始{f.end}专长现在能对{f.xp}4级{f.end}和更高级别的神器起效。",
+   "alias_zh": "暗之勋章",
+   "note": "",
+   "icon": 232
+  }
+ ],
+ "spells": [
+  {
+   "k": "BuildTile",
+   "en": "Build Tile",
+   "zh": "建造格子",
+   "den": "Expand your grid to have more space to build your army.",
+   "dzh": "扩建你的地图，以获得更多摆放军队的空间。",
+   "ic": 233
+  },
+  {
+   "k": "Swap",
+   "en": "Swap or Move",
+   "zh": "交换或移动",
+   "den": "Change the position of a unit or artifact.",
+   "dzh": "改变一个单位或神器的位置。",
+   "ic": 234
+  },
+  {
+   "k": "Shield",
+   "en": "Give Shield",
+   "zh": "给予护盾",
+   "den": "When scored, gives +0.5 {k.GlobalMult} but has 25% chance to break.",
+   "dzh": "得分时，给予+0.5{k.GlobalMult}但有25%几率破损。",
+   "ic": 235
+  },
+  {
+   "k": "Sacrifice",
+   "en": "Sacrifice Unit",
+   "zh": "牺牲单位",
+   "den": "Destroy a unit and give its {k.Attack} to the unit above it.",
+   "dzh": "摧毁一个单位，把它的{k.Attack}给予其上方的单位。",
+   "ic": 237
+  },
+  {
+   "k": "BloodSacrifice",
+   "en": "Blood Sacrifice",
+   "zh": "浴血牺牲",
+   "den": "Destroy a unit and give its {k.Attack} to ALL adjacent units.",
+   "dzh": "摧毁一个单位，并将其{k.Attack}给予所有相邻单位。",
+   "ic": 238
+  },
+  {
+   "k": "Clone",
+   "en": "Clone Unit",
+   "zh": "克隆单位",
+   "den": "Create a base copy of any unit on a tile.",
+   "dzh": "在一个格子上创造任何一个单位的基础副本。",
+   "ic": 239
+  },
+  {
+   "k": "XP",
+   "en": "Give +5 XP",
+   "zh": "给予+5经验",
+   "den": "Give {f.xp}+5 XP{f.end} to an artifact. \nEach level up increases the power of an artifact.",
+   "dzh": "给予一个神器{f.xp}+5经验{f.end}。 \n每次升级都会强化神器的能力。",
+   "ic": 240
+  },
+  {
+   "k": "XP_Uncommon",
+   "en": "Give +10 XP",
+   "zh": "给予+10经验",
+   "den": "Give {f.xp}+10 XP{f.end} to an artifact. \nEach level up increases the power of an artifact.",
+   "dzh": "给予一个神器{f.xp}+10经验{f.end}。 \n每次升级都会强化神器的能力。",
+   "ic": 240
+  },
+  {
+   "k": "XP_Rare",
+   "en": "Give +15 XP",
+   "zh": "给予+15经验",
+   "den": "Give {f.xp}+15 XP{f.end} to an artifact. \nEach level up increases the power of an artifact.",
+   "dzh": "给予一个神器{f.xp}+15经验{f.end}。 \n每次升级都会强化神器的能力。",
+   "ic": 240
+  },
+  {
+   "k": "XP_Legendary",
+   "en": "Give +25 XP",
+   "zh": "给予+25经验",
+   "den": "Give {f.xp}+25 XP{f.end} to an artifact. \nEach level up increases the power of an artifact.",
+   "dzh": "给予一个神器{f.xp}+25经验{f.end}。 每次升级都会强化神器的能力。",
+   "ic": 240
+  },
+  {
+   "k": "GainBudge",
+   "en": "Get +2 Budge",
+   "zh": "获得+2挪移",
+   "den": "You can spend {k.Budge} to change the value of any dice by 1, once per roll.",
+   "dzh": "你可以花费{k.Budge}来将任意骰子的点数上下调整1点，每个骰子每次掷骰限一次。",
+   "ic": 241
+  },
+  {
+   "k": "Gain3Budge",
+   "en": "Get +3 Budge",
+   "zh": "获得+3挪移",
+   "den": "You can spend {k.Budge} to change the value of any dice by 1, once per roll.",
+   "dzh": "你可以花费{k.Budge}来将任意骰子的点数上下调整1点，每个骰子每次掷骰限一次。",
+   "ic": 242
+  },
+  {
+   "k": "GainReroll",
+   "en": "Get +1 Chrono",
+   "zh": "获得+1时空点",
+   "den": "You can spend {k.Chrono} to reroll the shop or {k.BaseDice}.",
+   "dzh": "你可以花费{k.Chrono}来重掷商店或{k.BaseDice}。",
+   "ic": 243
+  },
+  {
+   "k": "Gain2Reroll",
+   "en": "Get +2 Chrono",
+   "zh": "获得+2时空点",
+   "den": "You can spend {k.Chrono} to reroll the shop or {k.BaseDice}.",
+   "dzh": "你可以花费{k.Chrono}来重掷商店或{k.BaseDice}。",
+   "ic": 243
+  },
+  {
+   "k": "Gain3Reroll",
+   "en": "Get +3 Chrono",
+   "zh": "获得+3时空点",
+   "den": "You can spend {k.Chrono} to reroll the shop or {k.BaseDice}.",
+   "dzh": "你可以花费{k.Chrono}来重掷商店或{k.BaseDice}。",
+   "ic": 244
+  },
+  {
+   "k": "Gain9Reroll",
+   "en": "Get +9 Chrono",
+   "zh": "获得+9时空点",
+   "den": "You can spend {k.Chrono} to reroll the shop or {k.BaseDice}.",
+   "dzh": "你可以花费{k.Chrono}来重掷商店或{k.BaseDice}。",
+   "ic": 245
+  },
+  {
+   "k": "GainHeart",
+   "en": "Get +1 Heart",
+   "zh": "获得+1心心",
+   "den": "{f.keyword}Hearts{f.end} give you extra turns to defeat the target if you fail to do so in time!",
+   "dzh": "{f.keyword}心心{f.end}会在你没能在时限内战胜目标时给予你额外的回合！",
+   "ic": 246
+  }
+ ],
+ "units": [
+  {
+   "key": "Migo",
+   "en": "Migo",
+   "zh": "米戈",
+   "cat": "unit",
+   "en_desc": "Does nothing special.",
+   "zh_desc": "没有特殊能力。",
+   "alias_zh": "米格",
+   "note": "最基础的单位，局初自带；与 Book of Life、Book of Death、King Migo、Super-Migo 联动；民调 73% 玩家选择“牺牲它们”",
+   "icon": 0
+  },
+  {
+   "key": "Swarmer",
+   "en": "Swarmer",
+   "zh": "蜂涌怪",
+   "cat": "unit",
+   "en_desc": "{k.S}{k.A} Also counts the {k.Attack} of all connecting <b>Swarmers</b>.",
+   "zh_desc": "{k.S}{k.A}得到所有相连<b>蜂涌怪</b>{k.Attack}的分数。",
+   "alias_zh": "虫群",
+   "note": "相连的蜂涌怪共享力量增长；任何“全体 +力量”都很赚；低稀有度才刷得到，或靠复制",
+   "icon": 1
+  },
+  {
+   "key": "Shooter",
+   "en": "Shooter",
+   "zh": "射手",
+   "cat": "unit",
+   "en_desc": "If it's in the bottom row, +3 {k.Repeat}.",
+   "zh_desc": "如果位于最下排，则+3{k.Repeat}。",
+   "alias_zh": "射手",
+   "note": "自带重复，前期好用，有力量后成长不错；开发者开局：放在起始 Migo 上方再牺牲 Migo",
+   "icon": 2
+  },
+  {
+   "key": "Rocketeer",
+   "en": "Rocketeer",
+   "zh": "火箭手",
+   "cat": "unit",
+   "en_desc": "Each turn, recharge {k.Charge}.\n{k.S} Spend {k.Charge}{k.Charge} {k.A} Get +1 {k.Budge}.",
+   "zh_desc": "每回合，充电{k.Charge}。 \n{k.S}花费{k.Charge}{k.Charge}{k.A}获得+1{k.Budge}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 3
+  },
+  {
+   "key": "Boomer",
+   "en": "Boomer",
+   "zh": "轰天雷",
+   "cat": "unit",
+   "en_desc": "{f.keyword}On Death{f.end} {k.A} Get +3 {k.Budge}.",
+   "zh_desc": "{f.keyword}死亡时{f.end}{k.A}获得+3{k.Budge}。",
+   "alias_zh": "爆破者",
+   "note": "死亡时有效果；Warped Boomer 让全体获得其死亡效果；某星座下可与幽灵形成翻倍引擎",
+   "icon": 4
+  },
+  {
+   "key": "Vengoid",
+   "en": "Vengoid",
+   "zh": "复仇者",
+   "cat": "unit",
+   "en_desc": "After a non-{f.keyword}Token{f.end} unit is destroyed {k.A} Increase this unit's {k.Attack} by 30%.",
+   "zh_desc": "当一个非{f.keyword}衍生{f.end}单位被摧毁时{k.A}增加这个单位的{k.Attack}30%。",
+   "alias_zh": "复仇者",
+   "note": "单位被牺牲时获得其部分力量（异界版约 30%）；召唤型指挥官（女公爵/低语者/血怒兽）更好用",
+   "icon": 5
+  },
+  {
+   "key": "Airship",
+   "en": "Airship",
+   "zh": "飞艇",
+   "cat": "unit",
+   "en_desc": "{k.S} Move to a random other column {k.A} Get +1 {k.GlobalMult}.",
+   "zh_desc": "{k.S}随机移动到另一列{k.A}获得+1{k.GlobalMult}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 6
+  },
+  {
+   "key": "FallenAngel",
+   "en": "Fallen Angel",
+   "zh": "堕落天使",
+   "cat": "unit",
+   "en_desc": "{f.keyword}On Death{f.end} {k.A} Give {f.xp}+10 XP{f.end} to ALL artifacts.",
+   "zh_desc": "{f.keyword}死亡时{f.end}{k.A}给予所有神器{f.xp}+10经验{f.end}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 7
+  },
+  {
+   "key": "Pixie",
+   "en": "Pixie",
+   "zh": "小精灵",
+   "cat": "unit",
+   "en_desc": "{k.S} Move to a random other column {k.A} Gain +10 {k.Attack}.",
+   "zh_desc": "{k.S}随机移动到另一列{k.A}获得+10{k.Attack}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 8
+  },
+  {
+   "key": "Martian",
+   "en": "Martian",
+   "zh": "火星人",
+   "cat": "unit",
+   "en_desc": "For each {k.Budge} or {k.Chrono} you gain {k.A} Gain +15 {k.Attack}.",
+   "zh_desc": "你每获得一点{k.Budge}或{k.Chrono}{k.A}获得+15{k.Attack}。",
+   "alias_zh": "火星人",
+   "note": "获得挪移/时空点时成长；叠放多个可乘法成长；舰长很爱",
+   "icon": 9
+  },
+  {
+   "key": "TimeAngel",
+   "en": "Time Angel",
+   "zh": "时间天使",
+   "cat": "unit",
+   "en_desc": "{f.keyword}On Death{f.end} {k.A} Get +2 {k.Chrono}.",
+   "zh_desc": "{f.keyword}死亡时{f.end}{k.A}获得+2{k.Chrono}。",
+   "alias_zh": "时间天使",
+   "note": "死亡时给时空点；唯一没有异界版的普通单位",
+   "icon": 10
+  },
+  {
+   "key": "Ghost",
+   "en": "Ghost",
+   "zh": "幽灵",
+   "cat": "unit",
+   "en_desc": "Each turn, recharge {k.Charge}.\n{k.S} Spend {k.Charge} {k.A} Trigger all adjacent “{f.keyword}On Death{f.end}” abilities.",
+   "zh_desc": "每回合，充电{k.Charge}。 \n{k.S}花费{k.Charge}{k.A}触发所有相邻的“{f.keyword}死亡时{f.end}”能力。",
+   "alias_zh": "幽灵",
+   "note": "可在不牺牲的情况下触发“死亡时”效果；Warped Ghost（粉色）不能触发死亡效果，但自身无限成长",
+   "icon": 11
+  },
+  {
+   "key": "Mimic",
+   "en": "Mimic",
+   "zh": "拟态怪",
+   "cat": "unit",
+   "en_desc": "{k.S}{k.A} The next unit scored this turn has +1 {k.Repeat}.",
+   "zh_desc": "{k.S}{k.A}本回合下一个得分的单位拥有+1{k.Repeat}。",
+   "alias_zh": "模仿者",
+   "note": "被触发时为后续计分单位提供额外重复；Spitter + Mimic 引擎",
+   "icon": 12
+  },
+  {
+   "key": "Orchid",
+   "en": "Orchid",
+   "zh": "幻兰",
+   "cat": "unit",
+   "en_desc": "Each turn, recharge {k.Charge}.\n{k.S} Spend {k.Charge}{k.Charge} {k.A} Get +5% {f.keyword}Shop Rarity{f.end}.",
+   "zh_desc": "每回合，充电{k.Charge}。 \n{k.S}花费{k.Charge}{k.Charge}{k.A}获得+5%{f.keyword}商店稀有度{f.end}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 13
+  },
+  {
+   "key": "Shelled",
+   "en": "Shelled",
+   "zh": "硬壳怪",
+   "cat": "unit",
+   "en_desc": "Each turn, recharge {k.Charge}.\n{k.S} Spend {k.Charge} {k.A} Give a {k.Shield} to a random unit.",
+   "zh_desc": "每回合，充电{k.Charge}。 \n{k.S}花费{k.Charge}{k.A}给予一个随机单位{k.Shield}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 14
+  },
+  {
+   "key": "Hivemind",
+   "en": "Hivemind",
+   "zh": "蜂巢思维",
+   "cat": "unit",
+   "en_desc": "{k.S} {k.A} Get +0.5 {k.GlobalMult} for each <b>Hivemind</b> scored this turn.",
+   "zh_desc": "{k.S}{k.A}本回合每有一个<b>蜂巢思维</b>得分，获得+0.5{k.GlobalMult}。",
+   "alias_zh": "蜂巢意识",
+   "note": "计分时提供成长的临时倍率；异界版不受重复影响",
+   "icon": 15
+  },
+  {
+   "key": "Oculus",
+   "en": "Oculus",
+   "zh": "万视",
+   "cat": "unit",
+   "en_desc": "Each turn, recharge {k.Charge}.\n{k.S} Spend {k.Charge} {k.A} Score all units in the direction its looking at.",
+   "zh_desc": "每回合，充电{k.Charge}。 \n{k.S}花费{k.Charge}{k.A}让其所注视方向的单位得分。",
+   "alias_zh": "眼球",
+   "note": "触发其注视方向上的所有单位；尽量放最左；被重复时按单位分别计数",
+   "icon": 16
+  },
+  {
+   "key": "Broodmother",
+   "en": "Broodmother",
+   "zh": "母虫",
+   "cat": "unit",
+   "en_desc": "Each turn, recharge {k.Charge}.\n{k.S} Spend {k.Charge} {k.A} Get {k.MiniDice} equal to {k.DicePower}.",
+   "zh_desc": "每回合，充电{k.Charge}。 \n{k.S}花费{k.Charge}{k.A}获得{k.DicePower}数量的{k.MiniDice}。",
+   "alias_zh": "育母",
+   "note": "产生迷你骰相关收益，团块姑娘的好单位",
+   "icon": 17
+  },
+  {
+   "key": "VoidSpawn",
+   "en": "Voidspawn",
+   "zh": "虚空之卵",
+   "cat": "unit",
+   "en_desc": "{k.S}{k.A} Spawn a <b>Void Rift</b> on a random empty tile.",
+   "zh_desc": "{k.S}{k.A}在随机空格子上生成一个<b>虚空裂隙</b>。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 18
+  },
+  {
+   "key": "VoidRift",
+   "en": "Voidrift",
+   "zh": "虚空裂隙",
+   "cat": "token",
+   "en_desc": "{k.S}{k.A} Get +1 {k.GlobalMult} and destroy this.",
+   "zh_desc": "{k.S}{k.A}获得+1{k.GlobalMult}并摧毁自身。",
+   "alias_zh": "",
+   "note": "各指挥官与神器生成的衍生，计分后通常自毁；描述中稀有度处写“Token”",
+   "icon": 19
+  },
+  {
+   "key": "Blob",
+   "en": "Blob",
+   "zh": "团块",
+   "cat": "unit",
+   "en_desc": "{f.keyword}On Death{f.end} {k.A} Spawn 2 <b>Mini-Blobs</b> on random empty tiles.",
+   "zh_desc": "{f.keyword}死亡时{f.end}{k.A}在随机空格子上生成2个<b>小型团块</b>。",
+   "alias_zh": "",
+   "note": "死亡时生成 2 个小型团块，毁灭世界清场后还能接着给迷你骰",
+   "icon": 20
+  },
+  {
+   "key": "Weaver",
+   "en": "Weaver",
+   "zh": "编织者",
+   "cat": "unit",
+   "en_desc": "{k.S}{k.A} Spawn a <b>Web</b> on a random empty tile.",
+   "zh_desc": "{k.S}{k.A}在随机空格子上生成一个<b>网</b>。",
+   "alias_zh": "织网者",
+   "note": "生成蛛网；蛛网把力量给相邻非衍生后自毁；配 Warped Vengoid",
+   "icon": 21
+  },
+  {
+   "key": "Web",
+   "en": "Web",
+   "zh": "网",
+   "cat": "token",
+   "en_desc": "{k.S}{k.A} Give this unit's {k.Attack} to adjacent non-{f.keyword}Token{f.end} units and destroy this.",
+   "zh_desc": "{k.S}{k.A}将这个单位的{k.Attack}给予所有相邻非{f.keyword}衍生{f.end}单位并摧毁自身。",
+   "alias_zh": "",
+   "note": "各指挥官与神器生成的衍生，计分后通常自毁；描述中稀有度处写“Token”",
+   "icon": 22
+  },
+  {
+   "key": "Sponge",
+   "en": "Sponge",
+   "zh": "海绵",
+   "cat": "unit",
+   "en_desc": "{k.S} Spend {k.Charge} {k.A} Gain +50 {k.Attack}. If empty, destroys itself.",
+   "zh_desc": "{k.S}花费{k.Charge}{k.A}获得+50{k.Attack}。如果耗尽，则摧毁自身。",
+   "alias_zh": "海绵",
+   "note": "100 力量起步，每次被计分变强直到自毁；死亡空间挑战的平铺力量来源",
+   "icon": 23
+  },
+  {
+   "key": "Spikebug",
+   "en": "Spikebug",
+   "zh": "尖刺虫",
+   "cat": "unit",
+   "en_desc": "This column has +2 {k.DicePower} if scored by dice.",
+   "zh_desc": "如果通过骰子得分，则该列获得+2{k.DicePower}。",
+   "alias_zh": "刺虫",
+   "note": "提高所在列骰子威力；Wroodmother 流派的核心配件",
+   "icon": 24
+  },
+  {
+   "key": "Astromancer",
+   "en": "Astromancer",
+   "zh": "唤星者",
+   "cat": "unit",
+   "en_desc": "Each turn, recharge {k.Charge}.\n{k.S} Spend {k.Charge} {k.A} Spawn an <b>Asteroid</b> on a random tile.",
+   "zh_desc": "每回合，充电{k.Charge}。 \n{k.S}花费{k.Charge}{k.A}在随机格子生成一个<b>小行星</b>。",
+   "alias_zh": "占星师",
+   "note": "与小行星相关；配 Mycelium 可做无限；需精确控制小行星生成位置",
+   "icon": 25
+  },
+  {
+   "key": "Echo",
+   "en": "Echo",
+   "zh": "回声",
+   "cat": "unit",
+   "en_desc": "{k.S} Gain {k.Charge}. If it has {k.Charge}{k.Charge}{k.Charge}{k.Charge}{k.Charge}, spend them all {k.A} Gain +500 {k.Attack}.",
+   "zh_desc": "{k.S}获得{k.Charge}。如果拥有{k.Charge}{k.Charge}{k.Charge}{k.Charge}{k.Charge}，则花费全部{k.A}获得+500{k.Attack}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 26
+  },
+  {
+   "key": "Pulsar",
+   "en": "Pulsar",
+   "zh": "脉冲星",
+   "cat": "unit",
+   "en_desc": "{k.S} If {k.Shielded}, break its {k.Shield} {k.A} Get +5 {k.GlobalMult}.",
+   "zh_desc": "{k.S}如果{k.Shielded}，则破坏其{k.Shield}{k.A}获得+5{k.GlobalMult}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 27
+  },
+  {
+   "key": "AutoBomb",
+   "en": "Auto-Bomb",
+   "zh": "自动炸弹",
+   "cat": "token",
+   "en_desc": "{k.S}{k.A} Get +1 {k.Budge} and destroy this.",
+   "zh_desc": "{k.S}{k.A}获得+1{k.Budge}并摧毁自身。",
+   "alias_zh": "",
+   "note": "各指挥官与神器生成的衍生，计分后通常自毁；描述中稀有度处写“Token”",
+   "icon": 28
+  },
+  {
+   "key": "MiniBlob",
+   "en": "Mini-Blob",
+   "zh": "小型团块",
+   "cat": "token",
+   "en_desc": "{k.S}{k.A} Get +2 {k.MiniDice} and destroy this.",
+   "zh_desc": "{k.S}{k.A}获得+2{k.MiniDice}并摧毁自身。",
+   "alias_zh": "",
+   "note": "各指挥官与神器生成的衍生，计分后通常自毁；描述中稀有度处写“Token”",
+   "icon": 29
+  },
+  {
+   "key": "Coral",
+   "en": "Coral",
+   "zh": "珊瑚",
+   "cat": "token",
+   "en_desc": "Has negative {k.Attack}.\n{k.S} If scored during a pair {k.A} Destroy this.",
+   "zh_desc": "拥有负值{k.Attack}。 \n{k.S}如果以对子得分{k.A}摧毁自身。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 30
+  },
+  {
+   "key": "Guardian",
+   "en": "Guardian",
+   "zh": "守卫",
+   "cat": "unit",
+   "en_desc": "{k.S} If in the bottom row and {k.Shielded}, break its {k.Shield} {k.A} Trigger this column's artifact.",
+   "zh_desc": "{k.S}如果在最下排且{k.Shielded}，则破坏自身{k.Shield}{k.A}触发该列的神器。",
+   "alias_zh": "守卫",
+   "note": "带护盾；护盾破裂相关效果，可触发神器；配 Piggy Bank / Pincushion 做经济",
+   "icon": 31
+  },
+  {
+   "key": "Virus",
+   "en": "Virus",
+   "zh": "病毒",
+   "cat": "unit",
+   "en_desc": "{k.S}{k.A} Give ({k.DicePower} x10) {k.Attack} to itself and adjacent units.",
+   "zh_desc": "{k.S}{k.A}给予自己和所有相邻单位（{k.DicePower}×10）{k.Attack}。",
+   "alias_zh": "病毒",
+   "note": "吸收其他单位力量；Warped Virus ×2 交换 = 指数成长",
+   "icon": 32
+  },
+  {
+   "key": "Asteroid",
+   "en": "Asteroid",
+   "zh": "小行星",
+   "cat": "token",
+   "en_desc": "{k.S}{k.A} Trigger this column's artifact and destroy this.",
+   "zh_desc": "{k.S}{k.A}触发该列的神器并摧毁自身。",
+   "alias_zh": "",
+   "note": "各指挥官与神器生成的衍生，计分后通常自毁；描述中稀有度处写“Token”",
+   "icon": 33
+  },
+  {
+   "key": "Spitter",
+   "en": "Spitter",
+   "zh": "喷吐者",
+   "cat": "unit",
+   "en_desc": "{k.S} {k.A} Score a random non-<b>Spitter</b> unit.",
+   "zh_desc": "{k.S}{k.A}让一个随机非<b>喷吐者</b>单位得分。",
+   "alias_zh": "喷吐者",
+   "note": "计分/触发其他单位；配 Mimic 形成链式触发；几乎所有流派都适用",
+   "icon": 34
+  },
+  {
+   "key": "Rusher",
+   "en": "Rusher",
+   "zh": "急行者",
+   "cat": "unit",
+   "en_desc": "Has +1 {k.Repeat} for each {k.DicePower}.",
+   "zh_desc": "每点{k.DicePower}+1{k.Repeat}。",
+   "alias_zh": "突击者",
+   "note": "核心 Cavities 列的首选输出；Warped Rusher +1 重复，%增益可能双倍",
+   "icon": 35
+  },
+  {
+   "key": "Leviathan",
+   "en": "Leviathan",
+   "zh": "利维坦",
+   "cat": "unit",
+   "en_desc": "When your turn begins {k.A} Destroy the unit below it, gain its {k.Attack} and +1 {k.ShopToken}.",
+   "zh_desc": "你的回合开始时{k.A}摧毁下方的单位，获得其{k.Attack}和+1{k.ShopToken}。",
+   "alias_zh": "利维坦",
+   "note": "回合开始吞掉下方单位，获得其力量与钱；低语者配苹果；异界版被吞单位会重生",
+   "icon": 36
+  },
+  {
+   "key": "Puppet",
+   "en": "Puppet",
+   "zh": "魔偶",
+   "cat": "token",
+   "en_desc": "Has negative {k.Attack}.\n{k.S}{k.A} Lose 1 {k.Budge} and destroy this.",
+   "zh_desc": "拥有负值{k.Attack}。 \n{k.S}{k.A}失去1点{k.Budge}并摧毁自身。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 37
+  },
+  {
+   "key": "Apple",
+   "en": "Apple",
+   "zh": "苹果",
+   "cat": "special",
+   "en_desc": "{k.S} If scored during a pair {k.A} Get +3 {k.MiniDice} and destroy this.",
+   "zh_desc": "{k.S}如果以对子得分{k.A}获得+3{k.MiniDice}并摧毁自身。",
+   "alias_zh": "",
+   "note": "特别单位，非衍生；被摧毁时触发“非衍生”效果（草叉、捕蝇草等）",
+   "icon": 38
+  },
+  {
+   "key": "Pawn",
+   "en": "Pawn",
+   "zh": "兵",
+   "cat": "chess",
+   "en_desc": "{f.keyword}On Spawn{f.end} {k.A} Give ALL units +10 {k.Attack} for each <b>Pawn</b> on the grid.",
+   "zh_desc": "{f.keyword}生成时{f.end}{k.A}地图上的每个<b>兵</b>给予所有单位+10{k.Attack}。",
+   "alias_zh": "",
+   "note": "女公爵棋子：Bishop 给 6 临时倍率；Rook 配 Tableflipper 放底行可指数成长；Queen 费用 2；King 让其他棋子伤害翻倍；满场 King 是到达无限的方法之一",
+   "icon": 39
+  },
+  {
+   "key": "Knight",
+   "en": "Knight",
+   "zh": "骑士",
+   "cat": "chess",
+   "en_desc": "When bought {k.A} {f.keyword}Capture{f.end} the unit below it and give a {k.Shield} to 3 random units.",
+   "zh_desc": "购买时{k.A}{f.keyword}吃{f.end}掉下方的单位，然后给予3个随机单位{k.Shield}。",
+   "alias_zh": "",
+   "note": "女公爵棋子：Bishop 给 6 临时倍率；Rook 配 Tableflipper 放底行可指数成长；Queen 费用 2；King 让其他棋子伤害翻倍；满场 King 是到达无限的方法之一",
+   "icon": 40
+  },
+  {
+   "key": "Bishop",
+   "en": "Bishop",
+   "zh": "主教",
+   "cat": "chess",
+   "en_desc": "When bought {k.A} {f.keyword}Capture{f.end} the unit below it and get +6 {k.GlobalMult}.",
+   "zh_desc": "购买时{k.A}{f.keyword}吃{f.end}掉下方的单位，然后获得+6{k.GlobalMult}。",
+   "alias_zh": "",
+   "note": "女公爵棋子：Bishop 给 6 临时倍率；Rook 配 Tableflipper 放底行可指数成长；Queen 费用 2；King 让其他棋子伤害翻倍；满场 King 是到达无限的方法之一",
+   "icon": 41
+  },
+  {
+   "key": "Rook",
+   "en": "Rook",
+   "zh": "城堡",
+   "cat": "chess",
+   "en_desc": "When bought {k.A} {f.keyword}Capture{f.end} the unit below it and increase this unit's {k.Attack} by 100%.",
+   "zh_desc": "购买时{k.A}{f.keyword}吃{f.end}掉下方的单位，然后将该单位的{k.Attack}提高100%。",
+   "alias_zh": "",
+   "note": "女公爵棋子：Bishop 给 6 临时倍率；Rook 配 Tableflipper 放底行可指数成长；Queen 费用 2；King 让其他棋子伤害翻倍；满场 King 是到达无限的方法之一",
+   "icon": 42
+  },
+  {
+   "key": "Queen",
+   "en": "Queen",
+   "zh": "王后",
+   "cat": "chess",
+   "en_desc": "When bought {k.A} {f.keyword}Capture{f.end} the unit below it and trigger the artifact in this column.",
+   "zh_desc": "购买时{k.A}{f.keyword}吃{f.end}掉下方的单位，然后触发该列的神器。",
+   "alias_zh": "",
+   "note": "女公爵棋子：Bishop 给 6 临时倍率；Rook 配 Tableflipper 放底行可指数成长；Queen 费用 2；King 让其他棋子伤害翻倍；满场 King 是到达无限的方法之一",
+   "icon": 43
+  },
+  {
+   "key": "Worm",
+   "en": "Worm",
+   "zh": "蠕虫",
+   "cat": "token",
+   "en_desc": "{k.S} {k.A} Gain +1 {k.ShopToken} and +2 {k.MiniDice}, and destroy this.",
+   "zh_desc": "{k.S}{k.A}获得+1{k.ShopToken}和+2{k.MiniDice}，然后摧毁自身。",
+   "alias_zh": "",
+   "note": "各指挥官与神器生成的衍生，计分后通常自毁；描述中稀有度处写“Token”",
+   "icon": 44
+  },
+  {
+   "key": "King",
+   "en": "King",
+   "zh": "国王",
+   "cat": "chess",
+   "en_desc": "Each turn, recharge {k.Charge}.\n{k.S} Spend {k.Charge}{k.Charge}{k.Charge} {k.A} Increase the {k.Attack} of {f.keyword}Chess{f.end} units by 100%.",
+   "zh_desc": "每回合，充电{k.Charge}。 \n{k.S}花费{k.Charge}{k.Charge}{k.Charge}{k.A}使所有{f.keyword}国际象棋{f.end}单位的{k.Attack}提高100%。",
+   "alias_zh": "",
+   "note": "女公爵棋子：Bishop 给 6 临时倍率；Rook 配 Tableflipper 放底行可指数成长；Queen 费用 2；King 让其他棋子伤害翻倍；满场 King 是到达无限的方法之一",
+   "icon": 45
+  },
+  {
+   "key": "WarpedMigo",
+   "en": "Warped Migo",
+   "zh": "异界米戈",
+   "cat": "warped",
+   "en_desc": "{k.S}{k.A} Get +1 {k.GlobalMult} for each {k.DicePower}.",
+   "zh_desc": "{k.S}{k.A}每一点{k.DicePower}获得+1{k.GlobalMult}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 46
+  },
+  {
+   "key": "WarpedShooter",
+   "en": "Warped Shooter",
+   "zh": "异界射手",
+   "cat": "warped",
+   "en_desc": "If it's in the bottom row, all units in this column have +1 {k.Repeat}.",
+   "zh_desc": "如果位于最下排，则同列所有单位拥有+1{k.Repeat}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 47
+  },
+  {
+   "key": "WarpedSwarmer",
+   "en": "Warped Swarmer",
+   "zh": "异界蜂涌怪",
+   "cat": "warped",
+   "en_desc": "{k.S}{k.A} Also counts the {k.Attack} of all connecting <b>Swarmers</b>.\nFor each turn you skip {k.A} Spawn a <b>Swarmer</b> on a random tile.",
+   "zh_desc": "{k.S}{k.A}得到所有相连<b>蜂涌怪</b>{k.Attack}的分数。 \n你每跳过一个回合{k.A}在随机格子生成一个<b>蜂涌怪</b>。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 48
+  },
+  {
+   "key": "WarpedBoomer",
+   "en": "Warped Boomer",
+   "zh": "异界轰天雷",
+   "cat": "warped",
+   "en_desc": "Your non-{f.keyword}Token{f.end} units gain {f.high} \"{f.keyword}On Death{f.end} {k.A} Get +1 {k.Budge}.\" {f.endhigh}",
+   "zh_desc": "你的所有非{f.keyword}衍生{f.end}单位获得{f.high}“{f.keyword}死亡时{f.end}{k.A}获得+1{k.Budge}。”{f.endhigh}",
+   "alias_zh": "",
+   "note": "",
+   "icon": 49
+  },
+  {
+   "key": "WarpedRocketeer",
+   "en": "Wocketeer",
+   "zh": "异界火箭手",
+   "cat": "warped",
+   "en_desc": "{k.S} Spend 1 {k.Budge} {k.A} Increase this unit's {k.Attack} by 20%.",
+   "zh_desc": "{k.S}花费1{k.Budge}{k.A}将这个单位的{k.Attack}提高20%。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 50
+  },
+  {
+   "key": "WarpedPixie",
+   "en": "Warped Pixie",
+   "zh": "异界小精灵",
+   "cat": "warped",
+   "en_desc": "{k.S} Move to a random other column {k.A} Increase this unit's {k.Attack} by 3%.",
+   "zh_desc": "{k.S}移动到一个随机其他列{k.A}将这个单位的{k.Attack}提高3%。",
+   "alias_zh": "扭曲精灵",
+   "note": "移动到随机其他列 → 自身力量 +3%；配大量迷你骰/Peashooter 指数成长",
+   "icon": 51
+  },
+  {
+   "key": "WarpedMartian",
+   "en": "Warped Martian",
+   "zh": "异界火星人",
+   "cat": "warped",
+   "en_desc": "For each {k.Budge} or {k.Chrono} you gain {k.A} Give {f.xp}+10 XP {f.end} to the artifact in this column.",
+   "zh_desc": "你每次获得{k.Budge}或{k.Chrono}时{k.A}给予该列神器{f.xp}+10经验{f.end}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 52
+  },
+  {
+   "key": "WarpedShelled",
+   "en": "Warped Shelled",
+   "zh": "异界硬壳怪",
+   "cat": "warped",
+   "en_desc": "Each turn, recharge {k.Charge}.\n{k.S} Spend {k.Charge}{k.Charge} {k.A} Score 3 random units without a {k.Shield} and give them a {k.Shield}.",
+   "zh_desc": "每回合，充电{k.Charge}。 \r\n{k.S}花费{k.Charge}{k.Charge}{k.A}让3个没有{k.Shield}护盾的单位得分并给予他们{k.Shield}",
+   "alias_zh": "扭曲甲壳",
+   "note": "每回合充能；消耗 → 计分 3 个无护盾单位并给护盾",
+   "icon": 53
+  },
+  {
+   "key": "WarpedBroodmother",
+   "en": "Wroodmother",
+   "zh": "异界母虫",
+   "cat": "warped",
+   "en_desc": "Each turn, recharge {k.Charge}.\n{k.S} Spend {k.Charge} {k.A} Score 3 random units in other columns for each {k.DicePower}.",
+   "zh_desc": "每回合，充电{k.Charge}. \n{k.S}花费{k.Charge}{k.A}每有一点{k.DicePower}，让3个在其他列的随机单位得分。",
+   "alias_zh": "扭曲育母",
+   "note": "每回合充能；消耗 → 每点骰子威力计分其他列 4 个随机单位；民调 76% 胜出",
+   "icon": 54
+  },
+  {
+   "key": "WarpedBlob",
+   "en": "Warped Blob",
+   "zh": "异界团块",
+   "cat": "warped",
+   "en_desc": "When your turn begins {k.A} Spawn a <b>Blob-Bomb</b> on a random tile.",
+   "zh_desc": "你的回合开始时{k.A}在随机格子生成一个<b>团块炸弹</b>。",
+   "alias_zh": "扭曲史莱姆",
+   "note": "回合开始生成团块炸弹（+1 挪移、+3 迷你骰后自毁）；无需投资的稳定收益",
+   "icon": 55
+  },
+  {
+   "key": "BlobBomb",
+   "en": "Blob-Bomb",
+   "zh": "团块炸弹",
+   "cat": "token",
+   "en_desc": "{k.S}{k.A} Get +1 {k.Budge} and +3 {k.MiniDice}, and destroy this.",
+   "zh_desc": "{k.S}{k.A}获得+1{k.Budge}和+3{k.MiniDice}，然后摧毁自身。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 56
+  },
+  {
+   "key": "WarpedSponge",
+   "en": "Warped Sponge",
+   "zh": "异界海绵",
+   "cat": "warped",
+   "en_desc": "{k.S} Spend {k.Charge} {k.A} Gain +100 {k.Attack}. If empty, destroys itself.\n{f.keyword}On Death{f.end} {k.A} Spawn 2 <b>Sponges</b> on random tiles and give them this unit's {k.Attack}.",
+   "zh_desc": "{k.S}花费{k.Charge}{k.A}获得+100{k.Attack}。如果没有{k.Charge}，则摧毁自身。\n{f.keyword}死亡时{f.end}{k.A}在随机格子生成2个<b>海绵</b>，并将自身的{k.Attack}给予他们。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 57
+  },
+  {
+   "key": "WarpedVirus",
+   "en": "Warped Virus",
+   "zh": "异界病毒",
+   "cat": "warped",
+   "en_desc": "When your turn begins {k.A} Gain the {k.Attack} of the unit below this.",
+   "zh_desc": "你的回合开始时{k.A}获得自身下方单位的{k.Attack}。",
+   "alias_zh": "扭曲病毒",
+   "note": "复制下方单位的力量；两只叠放每隔回合交换",
+   "icon": 58
+  },
+  {
+   "key": "WarpedSpitter",
+   "en": "Warped Spitter",
+   "zh": "异界喷吐者",
+   "cat": "warped",
+   "en_desc": "Each turn, recharge {k.Charge}.\n{k.S} Spend {k.Charge} {k.A} Spend 1 {k.Budge} to trigger a random artifact.",
+   "zh_desc": "每回合，充电{k.Charge}。 {k.S}花费{k.Charge}{k.A}花费1{k.Budge}来触发一件随机神器。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 59
+  },
+  {
+   "key": "WarpedRusher",
+   "en": "Warped Rusher",
+   "zh": "异界急行者",
+   "cat": "warped",
+   "en_desc": "Has +1 {k.Repeat}.\nWhen this unit gains {k.Attack}, it gains twice as much.",
+   "zh_desc": "拥有+1{k.Repeat}。\n 这个单位获得{k.Attack}时会获得两倍。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 60
+  },
+  {
+   "key": "WarpedMimic",
+   "en": "Warped Mimic",
+   "zh": "异界拟态怪",
+   "cat": "warped",
+   "en_desc": "When you trigger the artifact in this column {k.A} Spend 1 {k.Budge} to repeat its effect.",
+   "zh_desc": "当你触发该列的神器时{k.A}花费1{k.Budge}，使其效果再发生一次。",
+   "alias_zh": "扭曲模仿者",
+   "note": "花挪移重复某神器的列触发效果",
+   "icon": 61
+  },
+  {
+   "key": "WarpedFallenAngel",
+   "en": "Warped Fallen",
+   "zh": "异界堕天使",
+   "cat": "warped",
+   "en_desc": "Your non-{f.keyword}Token{f.end} units gain {f.high} \"{f.keyword}On Death{f.end} {k.A} Give ALL artifacts {f.xp}+5 XP{f.end}.\" {f.endhigh}",
+   "zh_desc": "你的非{f.keyword}衍生{f.end}单位获得{f.high}“{f.keyword}死亡时{f.end}{k.A}给予所有神器{f.xp}+5经验{f.end}。”{f.endhigh}",
+   "alias_zh": "",
+   "note": "",
+   "icon": 62
+  },
+  {
+   "key": "WarpedOrchid",
+   "en": "Warped Orchid",
+   "zh": "异界幻兰",
+   "cat": "warped",
+   "en_desc": "You have +20% more chance of finding {f.keyword}Astral{f.end} artifacts.",
+   "zh_desc": "你找到{f.keyword}星界{f.end}神器的几率+20%。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 63
+  },
+  {
+   "key": "WarpedVengoid",
+   "en": "Warped Vengoid",
+   "zh": "异界复仇者",
+   "cat": "warped",
+   "en_desc": "Units spawn with +{k.Attack} equal to 50% of this unit's {k.Attack}.",
+   "zh_desc": "单位生成时，{k.Attack}增加这个单位{k.Attack}的50%。",
+   "alias_zh": "扭曲复仇者",
+   "note": "牺牲时获得力量，并把一半力量给蛛网",
+   "icon": 64
+  },
+  {
+   "key": "WarpedAirship",
+   "en": "Warped Airship",
+   "zh": "异界飞艇",
+   "cat": "warped",
+   "en_desc": "{k.S} Move to a random other column {k.A} Multiply {k.GlobalMult} by 1.1x.",
+   "zh_desc": "{k.S}移动到随机其他列{k.A}将{k.GlobalMult}乘以1.1。",
+   "alias_zh": "扭曲飞艇",
+   "note": "移动到随机其他列 → 给随机单位护盾；无限流中最快的指数临时倍率来源之一",
+   "icon": 65
+  },
+  {
+   "key": "WarpedGuardian",
+   "en": "Warped Guardian",
+   "zh": "异界守卫",
+   "cat": "warped",
+   "en_desc": "{k.S} If in the bottom row and {k.Shielded}, break its {k.Shield} {k.A} Get +9 {k.MiniDice}.",
+   "zh_desc": "{k.S}如果在最下排且{k.Shielded}，破坏自身的{k.Shield}{k.A}获得+9{k.MiniDice}。",
+   "alias_zh": "扭曲守卫",
+   "note": "自带护盾；在底行且有护盾时打破护盾 → +9 迷你骰",
+   "icon": 66
+  },
+  {
+   "key": "WarpedPulsar",
+   "en": "Warped Pulsar",
+   "zh": "异界脉冲星",
+   "cat": "warped",
+   "en_desc": "When ANY {k.Shield} breaks {k.A} Increase this unit's {k.Attack} by 5%.",
+   "zh_desc": "当有任何{k.Shield}被破坏时{k.A}将这个单位的{k.Attack}提高5%。",
+   "alias_zh": "扭曲脉冲星",
+   "note": "自带护盾；任意护盾破裂 → 自身力量 +3%",
+   "icon": 67
+  },
+  {
+   "key": "WarpedEcho",
+   "en": "Warped Echo",
+   "zh": "异界回声",
+   "cat": "warped",
+   "en_desc": "Each turn, recharge {k.Charge}{k.Charge}{k.Charge}.\nWhen you would spend {k.Charge} from another unit, spend {k.Charge} from this unit instead.",
+   "zh_desc": "每回合，充电{k.Charge}{k.Charge}{k.Charge}。 \n当你有其他单位要花费{k.Charge}时，改为花费该单位的{k.Charge}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 68
+  },
+  {
+   "key": "WarpedWeaver",
+   "en": "Warped Weaver",
+   "zh": "异界编织者",
+   "cat": "warped",
+   "en_desc": "When your turn begins {k.A} Spawn a <b>Web</b> on a random tile with this unit's {k.Attack}.",
+   "zh_desc": "你的回合开始时{k.A}在随机格子生成一个拥有该单位{k.Attack}的<b>网</b>。",
+   "alias_zh": "扭曲织网者",
+   "note": "回合开始在随机格生成一个带本单位力量的蛛网",
+   "icon": 69
+  },
+  {
+   "key": "WarpedOculus",
+   "en": "Warped Oculus",
+   "zh": "异界万视",
+   "cat": "warped",
+   "en_desc": "Each turn, recharge {k.Charge}.\n{k.S} Spend {k.Charge}{k.A} Increase the {k.Attack} of all units in the direction its looking at by +20%.",
+   "zh_desc": "每回合，充电{k.Charge}。 \n{k.S}花费{k.Charge}{k.A}让其所注视方向的所有单位的{k.Attack}提高20%。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 70
+  },
+  {
+   "key": "WarpedHivemind",
+   "en": "Warped Hivemind",
+   "zh": "异界蜂巢思维",
+   "cat": "warped",
+   "en_desc": "When your turn ends {k.A} Multiply {k.GlobalMult} by 1.3x. Increases by 0.3x for each <b>Hivemind</b> scored this turn.",
+   "zh_desc": "你的回合结束时{k.A}将{k.GlobalMult}乘以1.3。本回合每有一个<b>蜂巢思维</b>得分，将此倍率增加0.3倍。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 71
+  },
+  {
+   "key": "WarpedLeviathan",
+   "en": "Weviathan",
+   "zh": "异界利维坦",
+   "cat": "warped",
+   "en_desc": "When your turn begins {k.A} Destroy the unit below and gain its {k.Attack}. Respawn it on a random tile.",
+   "zh_desc": "你的回合开始时{k.A}摧毁下方的单位并获得其{k.Attack}。使被摧毁的单位在随机格子重生。",
+   "alias_zh": "扭曲利维坦",
+   "note": "吞掉下方单位获得力量，被吞单位重生（保留力量）；配 Titan Migo、Sponge",
+   "icon": 72
+  },
+  {
+   "key": "WarpedVoidSpawn",
+   "en": "Woidspawn",
+   "zh": "异界虚空之卵",
+   "cat": "warped",
+   "en_desc": "When your turn ends {k.A} Multiply your {k.GlobalMult} by x1.5. Increases by 0.5x for each empty tile on the grid.",
+   "zh_desc": "你的回合结束时{k.A}将{k.GlobalMult}乘以1.5倍。地图上每有一个空格子就再增加0.5倍。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 73
+  },
+  {
+   "key": "WarpedAstromancer",
+   "en": "Wastromancer",
+   "zh": "异界唤星师",
+   "cat": "warped",
+   "en_desc": "Each turn, recharge {k.Charge}.\n{k.S} Spend {k.Charge}{k.Charge}{k.Charge} {k.A} Level up your {f.keyword}Starter{f.end} perk.",
+   "zh_desc": "每回合，充电{k.Charge}。 \n{k.S}花费{k.Charge}{k.Charge}{k.Charge}{k.A}升级你的{f.keyword}初始{f.end}专长。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 74
+  },
+  {
+   "key": "WarpedGhost",
+   "en": "Warped Ghost",
+   "zh": "异界幽灵",
+   "cat": "warped",
+   "en_desc": "{f.keyword}On Death{f.end} {k.A} Respawn on a random tile.\n{f.keyword}On Spawn{f.end} {k.A} Increase {k.Attack} by 100%.",
+   "zh_desc": "{f.keyword}死亡时{f.end}{k.A}在随机格子重生。 \n{f.keyword}生成时{f.end}{k.A}将{k.Attack}提高100%。",
+   "alias_zh": "扭曲幽灵",
+   "note": "死亡后重生并大幅增加力量（实质无限成长）；有它基本就赢了",
+   "icon": 75
+  },
+  {
+   "key": "WarpedSpikebug",
+   "en": "Wikebug",
+   "zh": "异界尖刺虫",
+   "cat": "warped",
+   "en_desc": "One of your {k.BaseDice} gets +3 {k.DicePower}.",
+   "zh_desc": "你的一个{k.BaseDice}获得+3{k.DicePower}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 76
+  },
+  {
+   "key": "WorkerBee",
+   "en": "Worker Bee",
+   "zh": "工蜂",
+   "cat": "token",
+   "en_desc": "{k.S}{k.A} Collect the <b>Honey</b> of a random other column, get +1 {k.Budge}, and destroy this.",
+   "zh_desc": "{k.S}{k.A}采集其他列上的一个随机<b>蜂蜜</b>，获得+1{k.Budge}然后摧毁自身。",
+   "alias_zh": "",
+   "note": "各指挥官与神器生成的衍生，计分后通常自毁；描述中稀有度处写“Token”",
+   "icon": 77
+  },
+  {
+   "key": "BlackCat",
+   "en": "The Black Cat",
+   "zh": "黑猫",
+   "cat": "token",
+   "en_desc": "Has negative {k.Attack}.\n{k.S}{k.A} Increase this unit's {k.Attack} by 20%.\n{f.keyword}On Death{f.end} {k.A} Respawn on a random tile.",
+   "zh_desc": "拥有负值{k.Attack}。 {k.S}{k.A}将这个单位的{k.Attack}提高20%。 {f.keyword}死亡时{f.end}{k.A}在随机格子重生。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 78
+  },
+  {
+   "key": "Hemocyte",
+   "en": "Hemocyte",
+   "zh": "血细胞",
+   "cat": "token",
+   "en_desc": "{k.S} If scored during a pair {k.A} Destroy this.",
+   "zh_desc": "{k.S}如果以对子得分{k.A}摧毁自身。",
+   "alias_zh": "",
+   "note": "各指挥官与神器生成的衍生，计分后通常自毁；描述中稀有度处写“Token”",
+   "icon": 79
+  },
+  {
+   "key": "SupplyDrop",
+   "en": "Supply Drop",
+   "zh": "空投补给",
+   "cat": "special",
+   "en_desc": "{k.S} If scored during a triple {k.A} Get +3 {k.ShopToken}, +3 {k.Budge}, +3 {k.Chrono}, and destroy this.",
+   "zh_desc": "{k.S}如果以三条得分{k.A}获得+3{k.ShopToken}、+3{k.Budge}、+3{k.Chrono}，然后摧毁自身。",
+   "alias_zh": "",
+   "note": "特别单位，非衍生",
+   "icon": 80
+  },
+  {
+   "key": "Egg",
+   "en": "Egg",
+   "zh": "蛋",
+   "cat": "special",
+   "en_desc": "Each turn, recharge {k.Charge}. If full, destroy this and spawn a <b>Dragon</b> with its {k.Attack}.",
+   "zh_desc": "每回合，充电{k.Charge}。如果充满，摧毁这个单位并生成一个{k.Attack}相等的<b>龙</b>。",
+   "alias_zh": "",
+   "note": "特别单位，非衍生；龙继承蛋的最终力量",
+   "icon": 81
+  },
+  {
+   "key": "GlitchBomb",
+   "en": "Glitch Bomb",
+   "zh": "漏洞炸弹",
+   "cat": "token",
+   "en_desc": "Has negative {k.Attack} and cannot be sacrificed.\n{k.S} If scored during a triple {k.A} Destroy this.",
+   "zh_desc": "拥有负值{k.Attack}且无法被牺牲。 \n{k.S}如果以三条得分{k.A}摧毁自身。",
+   "alias_zh": "故障炸弹",
+   "note": "Min? 生成的负力量炸弹，战后保留；负力量机制：被吞噬时给正力量",
+   "icon": 82
+  },
+  {
+   "key": "Dragon",
+   "en": "Dragon",
+   "zh": "龙",
+   "cat": "special",
+   "en_desc": "When your turn ends {k.A} Get + {k.GlobalMult} equal to 1% of this unit's {k.Attack}.",
+   "zh_desc": "你的回合结束时{k.A}获得等于该单位{k.Attack}1%的{k.GlobalMult}。",
+   "alias_zh": "",
+   "note": "",
+   "icon": 83
+  }
+ ],
+ "pilots": [
+  {
+   "k": "Bud",
+   "name": "Bud",
+   "portrait": 0,
+   "card": 247,
+   "ability": [
+    "Bud"
+   ]
+  },
+  {
+   "k": "Garu",
+   "name": "Garu",
+   "portrait": 1,
+   "card": 248,
+   "ability": [
+    "Garu"
+   ]
+  },
+  {
+   "k": "Hali",
+   "name": "Hali",
+   "portrait": 2,
+   "card": 249,
+   "ability": [
+    "Hali"
+   ]
+  },
+  {
+   "k": "Iris",
+   "name": "Iris",
+   "portrait": 3,
+   "card": 250,
+   "ability": [
+    "Iris"
+   ]
+  },
+  {
+   "k": "Kaia",
+   "name": "Kaia",
+   "portrait": 4,
+   "card": 251,
+   "ability": [
+    "Kaia"
+   ]
+  },
+  {
+   "k": "Max",
+   "name": "Max",
+   "portrait": 5,
+   "card": 252,
+   "ability": [
+    "Max"
+   ]
+  },
+  {
+   "k": "Min",
+   "name": "Min",
+   "portrait": 6,
+   "card": 253,
+   "ability": [
+    "Min"
+   ]
+  },
+  {
+   "k": "Noel",
+   "name": "Noel",
+   "portrait": 7,
+   "card": 254,
+   "ability": [
+    "Noel"
+   ]
+  },
+  {
+   "k": "RoboMin",
+   "name": "Min?",
+   "portrait": 8,
+   "card": 255,
+   "ability": [
+    "RoboMin"
+   ]
+  },
+  {
+   "k": "Roxy",
+   "name": "Roxy",
+   "portrait": 9,
+   "card": 256,
+   "ability": [
+    "Roxy"
+   ]
+  },
+  {
+   "k": "Shun",
+   "name": "Shun",
+   "portrait": 10,
+   "card": 257,
+   "ability": [
+    "Shun"
+   ]
+  },
+  {
+   "k": "Star",
+   "name": "The Star",
+   "portrait": 11,
+   "card": 258,
+   "ability": [
+    "ChainLightning",
+    "Overclock",
+    "TakeHeart",
+    "Devour",
+    "Tornado"
+   ]
+  },
+  {
+   "k": "Sura",
+   "name": "Sura",
+   "portrait": 12,
+   "card": 259,
+   "ability": [
+    "Sura"
+   ]
+  },
+  {
+   "k": "Tippy",
+   "name": "Tippy",
+   "portrait": 13,
+   "card": 260,
+   "ability": [
+    "Tippy"
+   ]
+  },
+  {
+   "k": "Xenn",
+   "name": "Xenn",
+   "portrait": 14,
+   "card": 261,
+   "ability": [
+    "Xenn"
+   ]
+  },
+  {
+   "k": "Zeke",
+   "name": "Zeke",
+   "portrait": 15,
+   "card": 262,
+   "ability": [
+    "Zeke"
+   ]
+  }
+ ],
+ "chapters": [
+  {
+   "n": 1,
+   "title": {
+    "en": "Chapter 1 - First Contact",
+    "zh": "第<size=150%><voffset=-2>1</voffset></size>章 - 第一次接触"
+   },
+   "desc": {
+    "en": "The invasion begins! Strike the Earth and the <b>Gunner</b> pilots defending it!",
+    "zh": "侵略开始！进攻由<b>重炮手</b>驾驶员们守护的地球！"
+   },
+   "mission": {
+    "en": "Win CH1 with any commander",
+    "zh": "用任意指挥官获得第1章胜利"
+   },
+   "ic": 278
+  },
+  {
+   "n": 2,
+   "title": {
+    "en": "Chapter 2 - Invasion",
+    "zh": "第<size=150%><voffset=-2>2</voffset></size>章 - 入侵"
+   },
+   "desc": {
+    "en": "The planet strikes back! The <b>Stinger</b> pilots have come to defend.",
+    "zh": "地球开始反击！<b>刺针</b>驾驶员们开始前来防卫。"
+   },
+   "mission": {
+    "en": "Win CH2 with 2 commanders",
+    "zh": "用2名指挥官获得第2章胜利"
+   },
+   "ic": 279
+  },
+  {
+   "n": 3,
+   "title": {
+    "en": "Chapter 3 - Apocalypse",
+    "zh": "第<size=150%><voffset=-2>3</voffset></size>章 - 天启"
+   },
+   "desc": {
+    "en": "The mysterious <b>Keeper</b> pilots have been summoned - prepare for war!",
+    "zh": "神秘的<b>守护者</b>驾驶员们被征召登场——准备迎接一场战争吧！"
+   },
+   "mission": {
+    "en": "Win CH3 with 2 commanders",
+    "zh": "用2名指挥官获得第3章胜利"
+   },
+   "ic": 280
+  },
+  {
+   "n": 4,
+   "title": {
+    "en": "Chapter 4 - Post-Apoc",
+    "zh": "第<size=150%><voffset=-2>4</voffset></size>章 - 天启之后"
+   },
+   "desc": {
+    "en": "All the mech pilots have united against you - can you survive the onslaught?",
+    "zh": "所有机甲的驾驶员开始团结起来与你作战——你能从他们的强攻中活下来吗？"
+   },
+   "mission": {
+    "en": "Win CH4 with 2 commanders",
+    "zh": "用2名指挥官获得第4章胜利"
+   },
+   "ic": 281
+  },
+  {
+   "n": 5,
+   "title": {
+    "en": "Chapter 5 - Impossible",
+    "zh": "第<size=150%><voffset=-2>5</voffset></size>章 - 绝路"
+   },
+   "desc": {
+    "en": "Your resources are drawing thin... one last push to reach the end!",
+    "zh": "你的资源不再充足……最后一拼，前往终点！"
+   },
+   "mission": {
+    "en": "Win CH5 with 2 commanders",
+    "zh": "用2名指挥官获得第5章胜利"
+   },
+   "ic": 282
+  },
+  {
+   "n": 6,
+   "title": {
+    "en": "Chapter 6 - The End?",
+    "zh": "第<size=150%><voffset=-1>6</voffset></size>章 - 终末？"
+   },
+   "desc": {
+    "en": "This is it! Find the source of their power and defeat the Earth!",
+    "zh": "就看这一次了！找到敌方的力量源泉，彻底击败地球吧！"
+   },
+   "mission": {
+    "en": "",
+    "zh": ""
+   },
+   "ic": 283
+  }
+ ],
+ "mods": [
+  {
+   "k": "LockedSlots",
+   "title": {
+    "en": "Locked Artifact Slots",
+    "zh": "锁定神器栏位"
+   },
+   "desc": {
+    "en": "- <indent=3%>Start with 2 of your artifact slots {f.keyword}LOCKED{f.end} and only 1 random artifact.",
+    "zh": "- <indent=3%>初始有2个神器栏位被{f.keyword}锁定{f.end}，并且只有1件随机神器。"
+   },
+   "from": 2,
+   "ic": 284
+  },
+  {
+   "k": "ShuffledAndStrongerPilots",
+   "title": {
+    "en": "The United Pilots",
+    "zh": "万众一心"
+   },
+   "desc": {
+    "en": "- <indent=3%>You now encounter random pilots each run, and they all have {f.keyword}+40% DEFENSE{f.end}.</indent>\n- <indent=3%>You can no longer reroll {f.keyword}PERKS{f.end}.",
+    "zh": "- <indent=3%>你现在每局游戏中遇到的驾驶员会随机化，并且所有驾驶员都拥有{f.keyword}+40%防御值{f.end}。 </indent> \n- <indent=3%>你无法再重掷{f.keyword}专长{f.end}。"
+   },
+   "from": 4,
+   "ic": 285
+  },
+  {
+   "k": "Scarcity",
+   "title": {
+    "en": "Struggle for Survival",
+    "zh": "艰难求生"
+   },
+   "desc": {
+    "en": "- Choose to keep {f.keyword}ONLY 1 LOOT{f.end} from pilots.\n- An additional artifact slot is {f.keyword}LOCKED{f.end}.\n- More chance for {f.keyword}CURSED{f.end} items.\n- Pilots have {f.keyword}+10% DEFENSE{f.end}.",
+    "zh": "- 驾驶员战斗后{f.keyword}只能选择1项战利品{f.end}作为奖励。 \n- 再有一个神器栏位被{f.keyword}锁定{f.end}。 \n- {f.keyword}诅咒{f.end}物品的几率提高。 \n- 驾驶员拥有{f.keyword}+10%防御值{f.end}。"
+   },
+   "from": 5,
+   "ic": 286
+  },
+  {
+   "k": "CursedShop",
+   "title": {
+    "en": "Cursed Shop Items",
+    "zh": "诅咒商店物品"
+   },
+   "desc": {
+    "en": "- <indent=3%>Some items in the shop have a chance to be {f.keyword}CURSED{f.end}, which costs hearts to buy.",
+    "zh": "- <indent=3%>商店中的部分物品将有几率被{f.keyword}诅咒{f.end}，需要花费心心才能购买。"
+   },
+   "from": 6,
+   "ic": 287
+  },
+  {
+   "k": "TrueEnding",
+   "title": {
+    "en": "The Source of Power",
+    "zh": "力量之源"
+   },
+   "desc": {
+    "en": "- <indent=3%>Fight against three new pilots and a dangerous {f.keyword}FINAL ACT{f.end}!",
+    "zh": "- <indent=3%>与三名新驾驶员为敌，并面对危险的{f.keyword}终幕{f.end}！"
+   },
+   "from": 6,
+   "ic": 288
+  },
+  {
+   "k": "ConstellationSystem",
+   "title": {
+    "en": "Constellation System",
+    "zh": "星座系统"
+   },
+   "desc": {
+    "en": "At the start of each run, you will get up to 3 random modifiers to change up the game!\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\nBeware, rarer units will also be harder to find...",
+    "zh": "在每局游戏开始时，你会获得最多3个调整项来改变游戏的体验！ \n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n请注意，稀有度更高的单位也更难遇到……"
+   },
+   "from": 6,
+   "ic": null
+  }
+ ],
+ "challenges": [
+  {
+   "k": "Cataclysm",
+   "title": {
+    "en": "Doomed World",
+    "zh": "毁灭世界"
+   },
+   "flavor": {
+    "en": "A planet that is stuck in an eternal loop of cataclysmic erruptions.",
+    "zh": "一个天灾爆发周期性发生、永无休止的世界。"
+   },
+   "modTitle": {
+    "en": "Cataclysmic",
+    "zh": "天灾爆发"
+   },
+   "mod": {
+    "en": "- <indent=3%>After defeating a pilot, {f.keyword}DESTROY{f.end} ALL units and spawn 3 <b>Migo</b> on random tiles.</indent>\n- <indent=3%>You get +3 {k.ShopToken} when you defeat a target.",
+    "zh": "- <indent=3%>打败一名驾驶员后，{f.keyword}摧毁{f.end}所有单位，然后在随机格子生成3个<b>米戈</b>。</indent>\n- <indent=3%>击败目标时获得+3{k.ShopToken}。"
+   },
+   "ic": 289
+  },
+  {
+   "k": "Powerless",
+   "title": {
+    "en": "Dead Space",
+    "zh": "死亡空间"
+   },
+   "flavor": {
+    "en": "A cruel and empty dimension, with nothing to help you survive.",
+    "zh": "一个残酷而空旷的位面，没有任何东西帮助你在这里生存。"
+   },
+   "modTitle": {
+    "en": "Powerless",
+    "zh": "无能为力"
+   },
+   "mod": {
+    "en": "- <indent=3%>Start with 3 special artifacts.</indent>\n- <indent=3%>You can no longer obtain new {f.keyword}ARTIFACTS{f.end} or new {f.keyword}PERKS{f.end}.",
+    "zh": "- <indent=3%>初始带有3件特殊神器。</indent> \n- <indent=3%>你无法再获得新{f.keyword}神器{f.end}和新{f.keyword}专长{f.end}。"
+   },
+   "ic": 290
+  },
+  {
+   "k": "BlackCat",
+   "title": {
+    "en": "Full Moon",
+    "zh": "满月"
+   },
+   "flavor": {
+    "en": "A dark and cozy world with a dangerously pettable cosmic entity.",
+    "zh": "一个黑暗而舒适的世界，拥有一个很好撸但又极度危险的宇宙级实体。"
+   },
+   "modTitle": {
+    "en": "The Black Cat",
+    "zh": "黑猫"
+   },
+   "mod": {
+    "en": "- <indent=3%>Start with {f.keyword}THE BLACK CAT{f.end} on the grid.</indent>",
+    "zh": "- <indent=3%>地图上初始带有{f.keyword}黑猫{f.end}。</indent>"
+   },
+   "ic": 291
+  },
+  {
+   "k": "WarpedOnly",
+   "title": {
+    "en": "Strange World",
+    "zh": "奇异世界"
+   },
+   "flavor": {
+    "en": "A wiggly and wobbly world where weird is everywhere.",
+    "zh": "离奇混沌诡谲世，古怪荒唐变异时。"
+   },
+   "modTitle": {
+    "en": "Warped Only",
+    "zh": "全员异界"
+   },
+   "mod": {
+    "en": "- <indent=3%>All units in the shop will be their {f.keyword}WARPED{f.end} version if they have one.",
+    "zh": "- <indent=3%>商店中的所有单位，只要拥有{f.keyword}异界{f.end}版本，就一定会是该形态。"
+   },
+   "ic": 292
+  },
+  {
+   "k": "Autoroller",
+   "title": {
+    "en": "Robo-World",
+    "zh": "机械世界"
+   },
+   "flavor": {
+    "en": "A world controlled by two robotic overlords, Minimizer and Maximizer.",
+    "zh": "被两个机械上神——<b>极大化</b>与<b>极小化</b>——控制的世界。"
+   },
+   "modTitle": {
+    "en": "Auto-Roller",
+    "zh": "自动掷骰"
+   },
+   "mod": {
+    "en": "- <indent=3%>Your {f.keyword}BASE DICE{f.end} have +1 {k.DicePower} and are rolled automatically each turn.\n- <indent=3%>All artifact slots are unlocked",
+    "zh": "- <indent=3%>你的{f.keyword}基础骰{f.end}拥有+1{k.DicePower}同时每回合会自动掷出。 \n- <indent=3%>所有神器栏位初始解锁"
+   },
+   "ic": 293
+  },
+  {
+   "k": "Moneybags",
+   "title": {
+    "en": "Luxury Axiom",
+    "zh": "奢华公理"
+   },
+   "flavor": {
+    "en": "Welcome to a platinum-member exclusive luxury space resort!",
+    "zh": "欢迎来到白金会员专属的奢华宇宙度假区！"
+   },
+   "modTitle": {
+    "en": "Moneybags",
+    "zh": "有钱人"
+   },
+   "mod": {
+    "en": "- <indent=3%>You are rich! Start with {f.keyword}99 {k.ShopToken}{f.end}.</indent>\n- <indent=3%>You no longer gain {k.ShopToken} each turn.</indent>\n- <indent=3%>Your {k.ShopToken} carries over each turn instead of being converted into {k.MiniDice}.</indent>",
+    "zh": "- <indent=3%>你很有钱！初始拥有{f.keyword}99{k.ShopToken}{f.end}。</indent> \n- <indent=3%>你不再在每回合获得{k.ShopToken}。</indent> \n- <indent=3%>你每回合的{k.ShopToken}不再被转化为{k.MiniDice}，而是会保留到下回合。</indent>"
+   },
+   "ic": 294
+  },
+  {
+   "k": "CrampedGrid",
+   "title": {
+    "en": "Pocket Universe",
+    "zh": "口袋宇宙"
+   },
+   "flavor": {
+    "en": "A tiny universe, it's so small you can barely fit it in your pocket!",
+    "zh": "微缩型的宇宙，小到几乎可以放进口袋里！"
+   },
+   "modTitle": {
+    "en": "Cramped Grid",
+    "zh": "逼仄地图"
+   },
+   "mod": {
+    "en": "- <indent=3%>You cannot build on columns #1 or #6.</indent>\n- <indent=3%>Your {f.keyword}DICE{f.end} cannot roll into a 1 or 6.",
+    "zh": "- <indent=3%>你无法在第1列和第6列建造格子。</indent> \n- <indent=3%>你的{f.keyword}骰子{f.end}不会掷出1和6。"
+   },
+   "ic": 295
+  },
+  {
+   "k": "Lightspeed",
+   "title": {
+    "en": "Chronoverse",
+    "zh": "超时空宇宙"
+   },
+   "flavor": {
+    "en": "A universe where time moves about 20% faster.",
+    "zh": "这个宇宙的时间速度要快大约20%。"
+   },
+   "modTitle": {
+    "en": "Lightspeed",
+    "zh": "光速"
+   },
+   "mod": {
+    "en": "- <indent=3%>You have one fewer {f.keyword}TURN{f.end} for each target.</indent>\n- <indent=3%>You get +3 {k.ShopToken} when you defeat a target.",
+    "zh": "- <indent=3%>所有目标的{f.keyword}回合{f.end}限制减少1。</indent> \n- <indent=3%>击败目标时获得+3{k.ShopToken}。"
+   },
+   "ic": 296
+  },
+  {
+   "k": "AstralOnly",
+   "title": {
+    "en": "Star Nebula",
+    "zh": "恒星星云"
+   },
+   "flavor": {
+    "en": "The gases are so dense, only the brightest stars will appear in this sector.",
+    "zh": "这里的星云过于厚实，只有最明亮的恒星才会出现在这片星区。"
+   },
+   "modTitle": {
+    "en": "Astral Only",
+    "zh": "全员星界"
+   },
+   "mod": {
+    "en": "- <indent=3%>Artifacts in the shop are always {f.keyword}ASTRAL{f.end} rarity.</indent>",
+    "zh": "- <indent=3%>商店中的神器全都是{f.keyword}星界{f.end}稀有度</indent>"
+   },
+   "ic": 297
+  },
+  {
+   "k": "PermaArtifacts",
+   "title": {
+    "en": "The Maw",
+    "zh": "巨口"
+   },
+   "flavor": {
+    "en": "All that is consumed by The Maw can no longer escape.",
+    "zh": "被巨口吞噬的东西永远无法逃脱。"
+   },
+   "modTitle": {
+    "en": "Perma-Artifacts",
+    "zh": "永久神器"
+   },
+   "mod": {
+    "en": "- <indent=3%>When you buy a new artifact, you can no longer replace existing artifacts with it.",
+    "zh": "- <indent=3%>无法再在购买新神器时替换已有的神器。"
+   },
+   "ic": 298
+  },
+  {
+   "k": "UltimateEnding",
+   "title": {
+    "en": "Ultimate Earth",
+    "zh": "终极地球"
+   },
+   "flavor": {
+    "en": "The final challenge... Good luck, you'll need it!",
+    "zh": "最终的挑战……祝你好运，你会需要一点运气的！"
+   },
+   "modTitle": {
+    "en": "Ultimate Source",
+    "zh": "终极来源"
+   },
+   "mod": {
+    "en": "- <indent=3%>The pilots from {f.keyword}CHAPTER 6{f.end} are back, and target {f.keyword}DEFENSE{f.end} scales much faster.</indent>\n- <indent=3%>You start with a {f.keyword}BAB{f.end} artifact.</indent>",
+    "zh": "- <indent=3%>{f.keyword}第6章{f.end}的驾驶员回来了，而且目标{f.keyword}防御值{f.end}提升大幅加快。</indent> \n- <indent=3%>你初始拥有一个{f.keyword}BAB{f.end}神器。</indent>"
+   },
+   "ic": 299
+  },
+  {
+   "k": "Daily",
+   "title": {
+    "en": "Daily Planet",
+    "zh": "每日行星"
+   },
+   "flavor": {
+    "en": "A randomized seeded world, the rules change every day!",
+    "zh": "一个种子随机的世界，规则每天都会变化！"
+   },
+   "modTitle": {
+    "en": "Daily Planet",
+    "zh": "每日行星"
+   },
+   "mod": {
+    "en": "- <indent=3%>A randomized seeded world, the rules change every day!",
+    "zh": "- <indent=3%>一个种子随机的世界，规则每天都会变化！"
+   },
+   "ic": 300
+  },
+  {
+   "k": "DailyMultiverse",
+   "title": {
+    "en": "Daily Multiverse",
+    "zh": "每日多元宇宙"
+   },
+   "flavor": {
+    "en": "A more difficult and rule-bending daily challenge!",
+    "zh": "一个更加困难、规则更加多变的每日挑战！"
+   },
+   "modTitle": {
+    "en": "Daily Multiverse",
+    "zh": "每日多元宇宙"
+   },
+   "mod": {
+    "en": "- <indent=3%>A more difficult and rule-bending daily challenge!",
+    "zh": "- <indent=3%>一个更加困难、规则更加多变的每日挑战！C149"
+   },
+   "ic": 301
+  }
+ ],
+ "dailyMods": [
+  {
+   "k": "PermaCursed",
+   "title": {
+    "en": "Perma-Cursed",
+    "zh": "永久诅咒"
+   },
+   "desc": {
+    "en": "- <indent=3%>Rare and Legendary items in the shop are always {f.keyword}CURSED{f.end}.",
+    "zh": "- <indent=3%>商店中的稀有和传说物品总是有{f.keyword}诅咒{f.end}。"
+   }
+  },
+  {
+   "k": "Heartless",
+   "title": {
+    "en": "Heartless",
+    "zh": "无心"
+   },
+   "desc": {
+    "en": "- <indent=3%>You start with only 2 {f.keyword}HEARTS{f.end} instead of 5.",
+    "zh": "- <indent=3%>你初始拥有的{f.keyword}心心{f.end}从5颗变为2颗。"
+   }
+  },
+  {
+   "k": "Jammed",
+   "title": {
+    "en": "Jammed",
+    "zh": "干扰"
+   },
+   "desc": {
+    "en": "- <indent=3%>Your {f.keyword}SWAP{f.end} spells in the shop cost 3 instead of 1.",
+    "zh": "- <indent=3%>你在商店中的{f.keyword}交换{f.end}法术费用从1变成3。"
+   }
+  },
+  {
+   "k": "Morality",
+   "title": {
+    "en": "Morality",
+    "zh": "道德观"
+   },
+   "desc": {
+    "en": "- <indent=3%>Your {f.keyword}SACRIFICE{f.end} spells in the shop cost 3 instead of 1.",
+    "zh": "- <indent=3%>你在商店中的{f.keyword}牺牲{f.end}法术费用从1变成3。"
+   }
+  },
+  {
+   "k": "UltimatePilots",
+   "title": {
+    "en": "Ultimate Pilots",
+    "zh": "究极驾驶员"
+   },
+   "desc": {
+    "en": "- <indent=3%>Pilots targets have {f.keyword}+50% DEFENSE{f.end}.",
+    "zh": "- <indent=3%>驾驶员拥有{f.keyword}+50%防御值{f.end}。"
+   }
+  },
+  {
+   "k": "CoralBloom",
+   "title": {
+    "en": "Coral Bloom",
+    "zh": "珊瑚盛放"
+   },
+   "desc": {
+    "en": "- <indent=3%>After you defeat a target, spawn a {f.keyword}CORAL{f.end} on a random tile.",
+    "zh": "- <indent=3%>当你击败一个目标时，在随机格子生成一个{f.keyword}珊瑚{f.end}。"
+   }
+  },
+  {
+   "k": "BannedMiniDice",
+   "title": {
+    "en": "Antibiotics",
+    "zh": "抗生素"
+   },
+   "desc": {
+    "en": "- <indent=3%>All {icons.MiniDice} {f.keyword}MINI-DICE{f.end} related artifacts have been removed from the pool.",
+    "zh": "- <indent=3%>所有{icons.MiniDice}{f.keyword}迷你骰{f.end}相关的神器从物品池中被移除。"
+   }
+  },
+  {
+   "k": "BannedShield",
+   "title": {
+    "en": "Defenseless",
+    "zh": "防不胜防"
+   },
+   "desc": {
+    "en": "- <indent=3%>All {icons.Shield} {f.keyword}SHIELD{f.end} related artifacts have been removed from the pool.",
+    "zh": "- <indent=3%>所有{icons.Shield}{f.keyword}护盾{f.end}相关的神器从物品池中被移除。"
+   }
+  },
+  {
+   "k": "BannedBudge",
+   "title": {
+    "en": "Prohibition",
+    "zh": "禁令"
+   },
+   "desc": {
+    "en": "- <indent=3%>All {icons.Budge} {f.keyword}BUDGE{f.end} related artifacts have been removed from the pool.",
+    "zh": "- <indent=3%>所有{icons.Budge}{f.keyword}挪移{f.end}相关的神器从物品池中被移除。"
+   }
+  },
+  {
+   "k": "BannedChrono",
+   "title": {
+    "en": "Timeless",
+    "zh": "无时无刻"
+   },
+   "desc": {
+    "en": "- <indent=3%>All {icons.Chrono} {f.keyword}CHRONO{f.end} related artifacts have been removed from the pool.",
+    "zh": "- <indent=3%>所有{icons.Chrono} {f.keyword}时空点{f.end}相关的神器从物品池中被移除。"
+   }
+  },
+  {
+   "k": "BannedShopToken",
+   "title": {
+    "en": "Penniless",
+    "zh": "身无分文"
+   },
+   "desc": {
+    "en": "- <indent=3%>All \" {k.ShopToken} \" related artifacts have been removed from the pool.",
+    "zh": "- <indent=3%>所有“{k.ShopToken}”相关的神器从物品池中被移除。"
+   }
+  }
+ ],
+ "achievements": [
+  {
+   "k": "CompleteTutorial",
+   "title": {
+    "en": "Baby Steps",
+    "zh": "学步"
+   },
+   "desc": {
+    "en": "Complete the tutorial",
+    "zh": "完成教程"
+   },
+   "kind": "tutorial",
+   "ref": null,
+   "pct": 96.9,
+   "ic": 302
+  },
+  {
+   "k": "WinChapter1",
+   "title": {
+    "en": "First Contact",
+    "zh": "第一次接触"
+   },
+   "desc": {
+    "en": "Complete Chapter 1",
+    "zh": "完成第1章"
+   },
+   "kind": "chapter",
+   "ref": 1,
+   "pct": 71.9,
+   "ic": 303
+  },
+  {
+   "k": "WinChapter2",
+   "title": {
+    "en": "Invasion",
+    "zh": "入侵"
+   },
+   "desc": {
+    "en": "Complete Chapter 2",
+    "zh": "完成第2章"
+   },
+   "kind": "chapter",
+   "ref": 2,
+   "pct": 60.6,
+   "ic": 304
+  },
+  {
+   "k": "WinChapter3",
+   "title": {
+    "en": "Apocalypse",
+    "zh": "末日"
+   },
+   "desc": {
+    "en": "Complete Chapter 3",
+    "zh": "完成第3章"
+   },
+   "kind": "chapter",
+   "ref": 3,
+   "pct": 48.8,
+   "ic": 305
+  },
+  {
+   "k": "WinChapter4",
+   "title": {
+    "en": "Post-Apocalypse",
+    "zh": "末日之后"
+   },
+   "desc": {
+    "en": "Complete Chapter 4",
+    "zh": "完成第4章"
+   },
+   "kind": "chapter",
+   "ref": 4,
+   "pct": 38.6,
+   "ic": 306
+  },
+  {
+   "k": "WinChapter5",
+   "title": {
+    "en": "Impossible",
+    "zh": "不可能"
+   },
+   "desc": {
+    "en": "Complete Chapter 5",
+    "zh": "完成第5章"
+   },
+   "kind": "chapter",
+   "ref": 5,
+   "pct": 29.0,
+   "ic": 307
+  },
+  {
+   "k": "WinChapter6",
+   "title": {
+    "en": "This Is Only The Beginning...",
+    "zh": "这还只是开始……"
+   },
+   "desc": {
+    "en": "Complete Chapter 6",
+    "zh": "完成第6章"
+   },
+   "kind": "chapter",
+   "ref": 6,
+   "pct": 13.0,
+   "ic": 308
+  },
+  {
+   "k": "NessieUnlocked",
+   "title": {
+    "en": "Fishbait",
+    "zh": "鱼饵"
+   },
+   "desc": {
+    "en": "Unlock Whisperer",
+    "zh": "解锁低语者"
+   },
+   "kind": "cmd",
+   "ref": "Nessie",
+   "pct": 69.1,
+   "ic": 309
+  },
+  {
+   "k": "ShamblerUnlocked",
+   "title": {
+    "en": "In Shambles",
+    "zh": "混乱"
+   },
+   "desc": {
+    "en": "Unlock Riftmaker",
+    "zh": "解锁裂隙制造师"
+   },
+   "kind": "cmd",
+   "ref": "Shambler",
+   "pct": 63.2,
+   "ic": 310
+  },
+  {
+   "k": "GrandmasterUnlocked",
+   "title": {
+    "en": "Queen's Gambit",
+    "zh": "女王棋局"
+   },
+   "desc": {
+    "en": "Unlock Duchess",
+    "zh": "解锁女公爵"
+   },
+   "kind": "cmd",
+   "ref": "Grandmaster",
+   "pct": 50.0,
+   "ic": 311
+  },
+  {
+   "k": "EclipseUnlocked",
+   "title": {
+    "en": "Egress",
+    "zh": "脱俗"
+   },
+   "desc": {
+    "en": "Unlock The Exalted",
+    "zh": "超凡者"
+   },
+   "kind": "cmd",
+   "ref": "Eclipse",
+   "pct": 48.9,
+   "ic": 312
+  },
+  {
+   "k": "HiveUnlocked",
+   "title": {
+    "en": "Beekeeper",
+    "zh": "养蜂人"
+   },
+   "desc": {
+    "en": "Unlock Hex Prince",
+    "zh": "解锁六角王子"
+   },
+   "kind": "cmd",
+   "ref": "Hive",
+   "pct": 59.9,
+   "ic": 313
+  },
+  {
+   "k": "HemophageUnlocked",
+   "title": {
+    "en": "Red Wedding",
+    "zh": "红色婚礼"
+   },
+   "desc": {
+    "en": "Unlock Blood Beast",
+    "zh": "解锁血怒兽"
+   },
+   "kind": "cmd",
+   "ref": "Hemophage",
+   "pct": 51.2,
+   "ic": 314
+  },
+  {
+   "k": "OverseerUnlocked",
+   "title": {
+    "en": "Convergence",
+    "zh": "世界线交汇"
+   },
+   "desc": {
+    "en": "Unlock Overseer",
+    "zh": "解锁天理"
+   },
+   "kind": "cmd",
+   "ref": "Overseer",
+   "pct": 35.2,
+   "ic": 315
+  },
+  {
+   "k": "WinWarpedOnly",
+   "title": {
+    "en": "Wibbly Wobbly",
+    "zh": "歪歪扭扭"
+   },
+   "desc": {
+    "en": "Complete the Strange World",
+    "zh": "完成奇异世界"
+   },
+   "kind": "challenge",
+   "ref": "WarpedOnly",
+   "pct": 19.1,
+   "ic": 292
+  },
+  {
+   "k": "WinAutoroller",
+   "title": {
+    "en": "Beep Boop",
+    "zh": "嘀嘀嘟嘟"
+   },
+   "desc": {
+    "en": "Complete the Robo-World",
+    "zh": "完成机械世界"
+   },
+   "kind": "challenge",
+   "ref": "Autoroller",
+   "pct": 18.6,
+   "ic": 293
+  },
+  {
+   "k": "WinLightspeed",
+   "title": {
+    "en": "Gotta Go Fast",
+    "zh": "速度加快"
+   },
+   "desc": {
+    "en": "Complete the Chronoverse",
+    "zh": "完成超时空宇宙"
+   },
+   "kind": "challenge",
+   "ref": "Lightspeed",
+   "pct": 14.5,
+   "ic": 296
+  },
+  {
+   "k": "WinCrampedGrid",
+   "title": {
+    "en": "Small Potatoes",
+    "zh": "小小土豆"
+   },
+   "desc": {
+    "en": "Complete the Pocket Universe",
+    "zh": "完成口袋宇宙"
+   },
+   "kind": "challenge",
+   "ref": "CrampedGrid",
+   "pct": 16.4,
+   "ic": 295
+  },
+  {
+   "k": "WinPowerless",
+   "title": {
+    "en": "Where We're Going, We Won't Need Eyes To See",
+    "zh": "我们要去的地方，看东西不需要眼睛"
+   },
+   "desc": {
+    "en": "Complete the Dead Space",
+    "zh": "死亡空间"
+   },
+   "kind": "challenge",
+   "ref": "Powerless",
+   "pct": 10.5,
+   "ic": 290
+  },
+  {
+   "k": "WinDaily",
+   "title": {
+    "en": "An Apple a Day...",
+    "zh": "一天一个苹果……"
+   },
+   "desc": {
+    "en": "Complete the Daily Planet",
+    "zh": "完成每日行星"
+   },
+   "kind": "challenge",
+   "ref": "Daily",
+   "pct": 14.3,
+   "ic": 300
+  },
+  {
+   "k": "WinAstralOnly",
+   "title": {
+    "en": "Written In The Stars",
+    "zh": "星命所定"
+   },
+   "desc": {
+    "en": "Complete the Star Nebula",
+    "zh": "完成恒星星云"
+   },
+   "kind": "challenge",
+   "ref": "AstralOnly",
+   "pct": 8.0,
+   "ic": 297
+  },
+  {
+   "k": "WinBlackCat",
+   "title": {
+    "en": "Meow",
+    "zh": "喵喵"
+   },
+   "desc": {
+    "en": "Complete the Full Moon",
+    "zh": "完成满月"
+   },
+   "kind": "challenge",
+   "ref": "BlackCat",
+   "pct": 8.1,
+   "ic": 291
+  },
+  {
+   "k": "WinCataclysm",
+   "title": {
+    "en": "Judgement Day",
+    "zh": "审判日"
+   },
+   "desc": {
+    "en": "Complete the Doomed World",
+    "zh": "完成毁灭世界"
+   },
+   "kind": "challenge",
+   "ref": "Cataclysm",
+   "pct": 9.5,
+   "ic": 289
+  },
+  {
+   "k": "WinDailyMultiverse",
+   "title": {
+    "en": "...Keeps the Doctor Away",
+    "zh": "……医生不来找我"
+   },
+   "desc": {
+    "en": "Complete the Daily Multiverse",
+    "zh": "完成每日多元宇宙"
+   },
+   "kind": "challenge",
+   "ref": "DailyMultiverse",
+   "pct": 6.8,
+   "ic": 301
+  },
+  {
+   "k": "WinMoneybags",
+   "title": {
+    "en": "Eat The Rich",
+    "zh": "吃掉富人"
+   },
+   "desc": {
+    "en": "Complete the Luxury Axiom",
+    "zh": "完成奢华公理"
+   },
+   "kind": "challenge",
+   "ref": "Moneybags",
+   "pct": 8.1,
+   "ic": 294
+  },
+  {
+   "k": "WinPermaArtifacts",
+   "title": {
+    "en": "Swallowed Whole",
+    "zh": "整个吞下"
+   },
+   "desc": {
+    "en": "Complete The Maw",
+    "zh": "完成巨口"
+   },
+   "kind": "challenge",
+   "ref": "PermaArtifacts",
+   "pct": 6.8,
+   "ic": 298
+  },
+  {
+   "k": "WinUltimateEnding",
+   "title": {
+    "en": "...The End",
+    "zh": "……终结"
+   },
+   "desc": {
+    "en": "Complete the Ultimate Earth. Thanks for playing!",
+    "zh": "完成终极地球。感谢您的游玩！"
+   },
+   "kind": "challenge",
+   "ref": "UltimateEnding",
+   "pct": 5.1,
+   "ic": 299
+  }
+ ],
+ "constellations": [
+  "Volcanus",
+  "LuminosMajor",
+  "Magus",
+  "DisruptusMajor",
+  "Aegis",
+  "QuadraMajor",
+  "VindictusMax",
+  "Nullus",
+  "OrchidaeMax",
+  "FaeMajor",
+  "CapraMax",
+  "IgnisMajor",
+  "HispidusMajor",
+  "Fortuna",
+  "Exodium",
+  "MigoMajor",
+  "InsectumMax",
+  "EchoMax",
+  "TextumMajor",
+  "ArcusMajor",
+  "Tempus",
+  "PluribusMajor",
+  "StellaMax",
+  "BlobusMajor",
+  "JubatusMajor",
+  "GaleaMajor",
+  "RespuoMax",
+  "Ruina",
+  "Corvus",
+  "Glacialis"
+ ],
+ "future_items": [
+  {
+   "k": "Phantom",
+   "en": "Echo From Beyond",
+   "den": "You only have 2 regular {k.BaseDice}, but they leave behind <b>Echo Dice</b> for next turn.\nWhen your turn begins {k.A} Give {f.xp}+[#] XP{f.end} to columns with <b>Echo Dice</b>."
+  },
+  {
+   "k": "HarvestMoon",
+   "en": "Harvest Moon",
+   "den": "When you destroy a non-{f.keyword}Token{f.end} unit {k.A} Spawn an <b>Echo Dice</b> in its column for the next turn. (Max 2 per column)"
+  },
+  {
+   "k": "JackOLantern",
+   "en": "Jack-O-Lantern",
+   "den": "When you launch a pair of regular {k.BaseDice} {k.A} Spawn 2 more <b>Echo Dice</b> on random columns for the next turn."
+  },
+  {
+   "k": "Necrophone",
+   "en": "Necrophone",
+   "den": "After your turn begins, spawn an <b>Echo Dice</b> in this column if there aren't any {k.A} Give +[#] {k.Attack} to the bottom unit of this column."
+  },
+  {
+   "k": "ElixirOfSouls",
+   "en": "Elixir of Souls",
+   "den": "If this column is scored by a quadruple, replace this with a random {f.keyword}Legendary{f.end} artifact at {f.xp}LV.[#]{f.end}."
+  },
+  {
+   "k": "Gravestones",
+   "en": "Gravestones",
+   "den": "Your columns with <b>Echo Dice</b> have +[#] {k.DicePower} while scoring {k.BaseDice}."
+  },
+  {
+   "k": "HolySoda",
+   "en": "Holy Soda",
+   "den": "After your turn begins, destroy all <b>Echo Dice</b> in this column. For each one destroyed {k.A} Get +3 {k.MiniDice} and +[#] {k.GlobalMult}."
+  },
+  {
+   "k": "Nephele",
+   "en": "Weather Machine",
+   "den": "Your <b>Migo</b> units always spawn {f.keyword}Cloudy{f.end}.\nWhen a {f.keyword}Cloudy{f.end} unit is destroyed {k.A} The unit above it becomes {f.keyword}Cloudy{f.end}, and give {f.xp}+[#] XP{f.end} to ALL artifacts.\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\nYour {f.keyword}Cloudy{f.end} units have +1 {k.Repeat}."
+  },
+  {
+   "k": "Trifecta",
+   "en": "Trifecta",
+   "den": "Spawn 3 <b>Migo</b> units with {k.Attack} equal to your unit with the most {k.Attack}."
+  },
+  {
+   "k": "Zapstorm",
+   "en": "Zapstorm",
+   "den": "After {k.BaseDice} have been scored {k.A} Fully recharge {k.Charge} for every {f.keyword}Cloudy{f.end} unit."
+  },
+  {
+   "k": "Repeater",
+   "en": "Repeater",
+   "den": "Your units gain +[#] {k.Attack} each time they are repeated."
+  },
+  {
+   "k": "Nimbus",
+   "en": "Nimbus",
+   "den": "When you score a <b>Cloudy</b> unit with a pair, it has +1 {k.Repeat} {k.A} Get +[#] {k.GlobalMult}."
+  },
+  {
+   "k": "FoamBoot",
+   "en": "Foam Boot",
+   "den": "After you score a pair of {k.BaseDice} in this column {k.A} Give all {f.keyword}Cloudy{f.end} units a {k.Shield} and +[#] {k.Attack}."
+  },
+  {
+   "k": "BoosterMigo",
+   "en": "Booster Migo",
+   "den": "Spawn a <b>Migo</b> on a random tile when bought.\nWhen destroyed or replaced {k.A} Give +[#] {k.Attack} to ALL units."
+  },
+  {
+   "k": "Warlock",
+   "en": "Codex Inversus",
+   "den": "When you use a <b>Build Tile</b>, a <b>Give Shield</b>, or a <b>Give XP</b> spell {k.A} Give {f.xp}+[#] XP{f.end} to the artifact in that column and create a {f.keyword}Mirror Hex{f.end}.\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\nDice that roll into a {f.keyword}Mirror Hex{f.end} consume it to get +2 {k.DicePower}, and are rerolled into the mirrored value (1-6, 2-5, 3-4)."
+  },
+  {
+   "k": "CodexMagicka",
+   "en": "Codex Magicka",
+   "den": "Your <b>Give XP</b> spell creates a {f.keyword}Focus Hex{f.end} instead, which forces all your dice to roll into that column's value.\nMax 1 {f.keyword}Focus Hex{f.end} active."
+  },
+  {
+   "k": "Oblivion",
+   "en": "Oblivion",
+   "den": "Your <b>Sacrifice</b> spells can destroy the topmost tile if it is empty.\nIf you do so {k.A} Create a {f.keyword}Mirror Hex{f.end} on 3 random columns."
+  },
+  {
+   "k": "Sootbugs",
+   "en": "Sootbugs",
+   "den": "When a {f.keyword}Hex{f.end} is consumed {k.A} Get +1 {k.ShopToken} and +[#] {k.MiniDice}."
+  },
+  {
+   "k": "Speculux",
+   "en": "Speculux",
+   "den": "When your turn begins, create a {f.keyword}Mirror Hex{f.end} in this column {k.A} Give {f.xp}+[#] XP{f.end} to the artifact in the mirrored slot."
+  },
+  {
+   "k": "CrystalBall",
+   "en": "Crystal Ball",
+   "den": "When a {f.keyword}Hex{f.end} is consumed by dice, give the dice +2 {k.DicePower} {k.A} Get +[#] {k.GlobalMult}."
+  },
+  {
+   "k": "RunicStaff",
+   "en": "Runic Staff",
+   "den": "When you begin rolling {k.BaseDice} {k.A} Give [#] {k.Attack} to all units in columns with a {f.keyword}Hex{f.end}."
+  },
+  {
+   "k": "Belladonna",
+   "en": "Rampant Greens",
+   "den": "When your turn begins {k.A} Spawn <b>Bloom</b> on random empty tiles until there are 2.\nWhen <b>Bloom</b> is consumed {k.A} Get +5% {f.keyword}Shop Rarity{f.end}, and give ALL artifacts {f.xp}+[#] XP{f.end}.\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\nUnits that move into or spawn onto tiles with <b>Bloom</b> will consume it to gain {k.Attack} ...\n- <indent=3%>Gain +10 {k.Attack} in {f.keyword}Act 1{f.end}. </indent>\n- <indent=3%>Gain +100 {k.Attack} in {f.keyword}Act 2{f.end}. </indent>\n- <indent=3%>Gain +1000 {k.Attack} in {f.keyword}Act 3{f.end}. </indent>\n... and so on."
+  },
+  {
+   "k": "LotusSeed",
+   "en": "Lotus Seed",
+   "den": "After a unit moves into a tile with <b>Bloom</b> {k.A} Increase its {k.Attack} by +20%.\nAfter a unit spawns onto a tile with <b>Bloom</b> {k.A} Get +3 {k.MiniDice}."
+  },
+  {
+   "k": "GildedPetal",
+   "en": "Gilded Petal",
+   "den": "When you gain {f.keyword}Shop Rarity{f.end} {k.A} Get +1 {k.ShopToken},"
+  },
+  {
+   "k": "HangingTree",
+   "en": "Hanging Tree",
+   "den": "Whenever a unit consumes <b>Bloom</b>, trigger its \"{f.keyword}On Death{f.end}\" ability if it had one {k.A} Get +[#] {k.GlobalMult}."
+  },
+  {
+   "k": "Perfume",
+   "en": "Perfume",
+   "den": "After you score ANY pair with {k.BaseDice} {k.A} Move the bottom unit of this column to a tile with <b>Bloom</b> and give ALL units +[#] {k.Attack}."
+  },
+  {
+   "k": "PointedIvy",
+   "en": "Pointed Ivy",
+   "den": "Your <b>Bloom</b> gives +[#]x as much {k.Attack} when consumed."
+  },
+  {
+   "k": "DormantSoil",
+   "en": "Dormant Soil",
+   "den": "After you score ANY triple {k.A} Spawn <b>Bloom</b> on ALL empty tiles and get +[#] {k.GlobalMult}."
+  },
+  {
+   "k": "Loomo",
+   "en": "Resonance Core",
+   "den": "You have an <b>AMP</b> dice with +1 {k.DicePower}.\nWhen launched, give <b>AMPED</b> to the artifact in its column. If it was already <b>AMPED</b>, give {f.xp}+[#] XP{f.end} to ALL artifacts instead.\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\nYou can only have 1 <b>AMPED</b> artifact at a time.\n- <indent=3%>When an <b>AMPED</b> artifact is triggered {k.A} Repeat its effect.</indent>\n- <indent=3%>If it does not have a trigger it behaves as if its level was doubled instead!</indent>"
+  },
+  {
+   "k": "Cyborg",
+   "en": "Cyborg",
+   "den": "Units scored during <b>AMP</b> dice have +1 {k.Repeat}."
+  },
+  {
+   "k": "DjMixer",
+   "en": "DJ-M1XR",
+   "den": "You no longer have a maximum amount of <b>AMPED</b> artifacts.\nAfter you launch <b>AMP</b> dice into a column with an artifact that is already <b>AMPED</b> {k.A} Remove <b>AMPED</b> from ALL artifacts."
+  },
+  {
+   "k": "Loudspeaker",
+   "en": "Loudspeaker",
+   "den": "When you launch <b>AMP</b> dice into a column with an <b>AMPED</b> artifact {k.A} Give +[#] {k.Attack} to ALL units."
+  },
+  {
+   "k": "Reverb",
+   "en": "R3V3-RB",
+   "den": "Your <b>AMP</b> dice has +[#] {k.DicePower}, and it counts as a pair when it's alone. \nWhile this is <b>AMPED</b>, it counts as a triple instead."
+  },
+  {
+   "k": "StereoBot",
+   "en": "Stereo Bot",
+   "den": "After this artifact becomes <b>AMPED</b> {k.A} Score [#] random units."
+  },
+  {
+   "k": "FluxField",
+   "en": "Flux Field",
+   "den": "When you launch <b>AMP</b> dice, give a {k.Shield} to all units in its column {k.A} Get +[#] {k.GlobalMult} for each {k.Shielded} unit."
+  }
+ ]
+}
