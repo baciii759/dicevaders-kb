@@ -1,3 +1,6 @@
 .DS_Store
 raw/
 compendium/
+vision/raw_atlas/
+vision/_synth.png
+vision/__pycache__/

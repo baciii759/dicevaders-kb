@@ -30,6 +30,11 @@
 | `06_章节与挑战.md` | 六章、6 个难度调整项、13 个多元宇宙挑战、每日调整、27 成就 |
 | `07_自动化Agent指南.md` | 面向自动化操作：状态空间、动作空间、关键规则、术语陷阱、数据使用说明 |
 | `08_星座.md` | 30 个星座内部键 + 10 个神器星座英文名与专属神器 |
+| `vision/` | **截图识别模块**：380 张 sprite 模板 + 模板匹配(matcher.py) + OCR(ocr.py) + 状态解析(state.py) + 截图(capture.py)，输出结构化棋盘状态 JSON |
+
+## 视觉识别模块（vision/）
+
+让 Agent「看得懂」截图。从游戏 sprite 图集切出 380 张模板图（84 单位、151 神器、64 专长、20 Boss 技能、17 法术、10 指挥官、16 Boss、16 关键词图标），用 numpy FFT 的 ZNCC 模板匹配 + OCR 从截图解析棋盘状态，输出 `BoardState` JSON 供下游 LLM/规则引擎决策。详见 `vision/README.md`。
 
 ## 关键术语速查（官方中文 → 英文）
 
@@ -41,3 +46,4 @@
 2. **社区补充**：00/01/02/07 文件中的打法、Boss 数值、冷知识来自社区攻略（逗游、gemelog、tahalog、GrindnStrat、Steam 指南），已标注来源与日期，个别数值可能随补丁变动。
 3. **已知陷阱**：`dicevaders.wiki`（.wiki 域）存在 AI 生成/臆造内容风险，本库已剔除；以游戏数据文件 + dicevadersguide.wiki + 逗游/gemelog 为准。
 4. **描述标记**：数据中 `[#]`=随神器等级成长的数值；`{k.X}`=关键词引用（如 `{k.S}`=得分时、`{k.A}`=触发箭头、`{k.Attack}`=力量、`{k.DicePower}`=骰子威力）；`{f.keyword}…{f.end}`=关键词高亮、`{icons.X}`=图标；`▶`=触发效果分隔（▶之前为条件/代价，▶之后才是被触发时执行的效果）。`<color=…><b>…</b></color>` 为富文本强调标记，可忽略。
+5. **`artifacts` 数组实为 6 类实体的合集**（用 `kind` 字段区分）：`artifact`(151 神器)、`perk`(54 专长)、`starter`(10 起始专长)、`pilot`(20 个 Boss 技能)、`constellation`(30 星座)、`special`(15 特殊状态如锁定栏位/Income/Bab)。Boss 技能官方名见 02 文件，星座见 08 文件。

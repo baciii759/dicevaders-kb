@@ -1,0 +1,3838 @@
+{
+ "atlas_meta": {
+  "icons": {
+   "src": "icons.webp",
+   "size": [
+    112,
+    112
+   ],
+   "cols": 20
+  },
+  "units": {
+   "src": "units.webp",
+   "size": [
+    112,
+    112
+   ],
+   "cols": 12
+  },
+  "commanders": {
+   "src": "commanders.webp",
+   "size": [
+    320,
+    400
+   ],
+   "cols": 5
+  },
+  "pilots": {
+   "src": "pilots.webp",
+   "size": [
+    256,
+    192
+   ],
+   "cols": 4
+  }
+ },
+ "items": [
+  {
+   "category": "units",
+   "key": "Migo",
+   "en": "Migo",
+   "zh": "米戈",
+   "kind": "",
+   "atlas": "units",
+   "index": 0,
+   "file": "units/Migo.png"
+  },
+  {
+   "category": "units",
+   "key": "Swarmer",
+   "en": "Swarmer",
+   "zh": "蜂涌怪",
+   "kind": "",
+   "atlas": "units",
+   "index": 1,
+   "file": "units/Swarmer.png"
+  },
+  {
+   "category": "units",
+   "key": "Shooter",
+   "en": "Shooter",
+   "zh": "射手",
+   "kind": "",
+   "atlas": "units",
+   "index": 2,
+   "file": "units/Shooter.png"
+  },
+  {
+   "category": "units",
+   "key": "Rocketeer",
+   "en": "Rocketeer",
+   "zh": "火箭手",
+   "kind": "",
+   "atlas": "units",
+   "index": 3,
+   "file": "units/Rocketeer.png"
+  },
+  {
+   "category": "units",
+   "key": "Boomer",
+   "en": "Boomer",
+   "zh": "轰天雷",
+   "kind": "",
+   "atlas": "units",
+   "index": 4,
+   "file": "units/Boomer.png"
+  },
+  {
+   "category": "units",
+   "key": "Vengoid",
+   "en": "Vengoid",
+   "zh": "复仇者",
+   "kind": "",
+   "atlas": "units",
+   "index": 5,
+   "file": "units/Vengoid.png"
+  },
+  {
+   "category": "units",
+   "key": "Airship",
+   "en": "Airship",
+   "zh": "飞艇",
+   "kind": "",
+   "atlas": "units",
+   "index": 6,
+   "file": "units/Airship.png"
+  },
+  {
+   "category": "units",
+   "key": "FallenAngel",
+   "en": "Fallen Angel",
+   "zh": "堕落天使",
+   "kind": "",
+   "atlas": "units",
+   "index": 7,
+   "file": "units/FallenAngel.png"
+  },
+  {
+   "category": "units",
+   "key": "Pixie",
+   "en": "Pixie",
+   "zh": "小精灵",
+   "kind": "",
+   "atlas": "units",
+   "index": 8,
+   "file": "units/Pixie.png"
+  },
+  {
+   "category": "units",
+   "key": "Martian",
+   "en": "Martian",
+   "zh": "火星人",
+   "kind": "",
+   "atlas": "units",
+   "index": 9,
+   "file": "units/Martian.png"
+  },
+  {
+   "category": "units",
+   "key": "TimeAngel",
+   "en": "Time Angel",
+   "zh": "时间天使",
+   "kind": "",
+   "atlas": "units",
+   "index": 10,
+   "file": "units/TimeAngel.png"
+  },
+  {
+   "category": "units",
+   "key": "Ghost",
+   "en": "Ghost",
+   "zh": "幽灵",
+   "kind": "",
+   "atlas": "units",
+   "index": 11,
+   "file": "units/Ghost.png"
+  },
+  {
+   "category": "units",
+   "key": "Mimic",
+   "en": "Mimic",
+   "zh": "拟态怪",
+   "kind": "",
+   "atlas": "units",
+   "index": 12,
+   "file": "units/Mimic.png"
+  },
+  {
+   "category": "units",
+   "key": "Orchid",
+   "en": "Orchid",
+   "zh": "幻兰",
+   "kind": "",
+   "atlas": "units",
+   "index": 13,
+   "file": "units/Orchid.png"
+  },
+  {
+   "category": "units",
+   "key": "Shelled",
+   "en": "Shelled",
+   "zh": "硬壳怪",
+   "kind": "",
+   "atlas": "units",
+   "index": 14,
+   "file": "units/Shelled.png"
+  },
+  {
+   "category": "units",
+   "key": "Hivemind",
+   "en": "Hivemind",
+   "zh": "蜂巢思维",
+   "kind": "",
+   "atlas": "units",
+   "index": 15,
+   "file": "units/Hivemind.png"
+  },
+  {
+   "category": "units",
+   "key": "Oculus",
+   "en": "Oculus",
+   "zh": "万视",
+   "kind": "",
+   "atlas": "units",
+   "index": 16,
+   "file": "units/Oculus.png"
+  },
+  {
+   "category": "units",
+   "key": "Broodmother",
+   "en": "Broodmother",
+   "zh": "母虫",
+   "kind": "",
+   "atlas": "units",
+   "index": 17,
+   "file": "units/Broodmother.png"
+  },
+  {
+   "category": "units",
+   "key": "VoidSpawn",
+   "en": "Voidspawn",
+   "zh": "虚空之卵",
+   "kind": "",
+   "atlas": "units",
+   "index": 18,
+   "file": "units/VoidSpawn.png"
+  },
+  {
+   "category": "units",
+   "key": "VoidRift",
+   "en": "Voidrift",
+   "zh": "虚空裂隙",
+   "kind": "",
+   "atlas": "units",
+   "index": 19,
+   "file": "units/VoidRift.png"
+  },
+  {
+   "category": "units",
+   "key": "Blob",
+   "en": "Blob",
+   "zh": "团块",
+   "kind": "",
+   "atlas": "units",
+   "index": 20,
+   "file": "units/Blob.png"
+  },
+  {
+   "category": "units",
+   "key": "Weaver",
+   "en": "Weaver",
+   "zh": "编织者",
+   "kind": "",
+   "atlas": "units",
+   "index": 21,
+   "file": "units/Weaver.png"
+  },
+  {
+   "category": "units",
+   "key": "Web",
+   "en": "Web",
+   "zh": "网",
+   "kind": "",
+   "atlas": "units",
+   "index": 22,
+   "file": "units/Web.png"
+  },
+  {
+   "category": "units",
+   "key": "Sponge",
+   "en": "Sponge",
+   "zh": "海绵",
+   "kind": "",
+   "atlas": "units",
+   "index": 23,
+   "file": "units/Sponge.png"
+  },
+  {
+   "category": "units",
+   "key": "Spikebug",
+   "en": "Spikebug",
+   "zh": "尖刺虫",
+   "kind": "",
+   "atlas": "units",
+   "index": 24,
+   "file": "units/Spikebug.png"
+  },
+  {
+   "category": "units",
+   "key": "Astromancer",
+   "en": "Astromancer",
+   "zh": "唤星者",
+   "kind": "",
+   "atlas": "units",
+   "index": 25,
+   "file": "units/Astromancer.png"
+  },
+  {
+   "category": "units",
+   "key": "Echo",
+   "en": "Echo",
+   "zh": "回声",
+   "kind": "",
+   "atlas": "units",
+   "index": 26,
+   "file": "units/Echo.png"
+  },
+  {
+   "category": "units",
+   "key": "Pulsar",
+   "en": "Pulsar",
+   "zh": "脉冲星",
+   "kind": "",
+   "atlas": "units",
+   "index": 27,
+   "file": "units/Pulsar.png"
+  },
+  {
+   "category": "units",
+   "key": "AutoBomb",
+   "en": "Auto-Bomb",
+   "zh": "自动炸弹",
+   "kind": "",
+   "atlas": "units",
+   "index": 28,
+   "file": "units/AutoBomb.png"
+  },
+  {
+   "category": "units",
+   "key": "MiniBlob",
+   "en": "Mini-Blob",
+   "zh": "小型团块",
+   "kind": "",
+   "atlas": "units",
+   "index": 29,
+   "file": "units/MiniBlob.png"
+  },
+  {
+   "category": "units",
+   "key": "Coral",
+   "en": "Coral",
+   "zh": "珊瑚",
+   "kind": "",
+   "atlas": "units",
+   "index": 30,
+   "file": "units/Coral.png"
+  },
+  {
+   "category": "units",
+   "key": "Guardian",
+   "en": "Guardian",
+   "zh": "守卫",
+   "kind": "",
+   "atlas": "units",
+   "index": 31,
+   "file": "units/Guardian.png"
+  },
+  {
+   "category": "units",
+   "key": "Virus",
+   "en": "Virus",
+   "zh": "病毒",
+   "kind": "",
+   "atlas": "units",
+   "index": 32,
+   "file": "units/Virus.png"
+  },
+  {
+   "category": "units",
+   "key": "Asteroid",
+   "en": "Asteroid",
+   "zh": "小行星",
+   "kind": "",
+   "atlas": "units",
+   "index": 33,
+   "file": "units/Asteroid.png"
+  },
+  {
+   "category": "units",
+   "key": "Spitter",
+   "en": "Spitter",
+   "zh": "喷吐者",
+   "kind": "",
+   "atlas": "units",
+   "index": 34,
+   "file": "units/Spitter.png"
+  },
+  {
+   "category": "units",
+   "key": "Rusher",
+   "en": "Rusher",
+   "zh": "急行者",
+   "kind": "",
+   "atlas": "units",
+   "index": 35,
+   "file": "units/Rusher.png"
+  },
+  {
+   "category": "units",
+   "key": "Leviathan",
+   "en": "Leviathan",
+   "zh": "利维坦",
+   "kind": "",
+   "atlas": "units",
+   "index": 36,
+   "file": "units/Leviathan.png"
+  },
+  {
+   "category": "units",
+   "key": "Puppet",
+   "en": "Puppet",
+   "zh": "魔偶",
+   "kind": "",
+   "atlas": "units",
+   "index": 37,
+   "file": "units/Puppet.png"
+  },
+  {
+   "category": "units",
+   "key": "Apple",
+   "en": "Apple",
+   "zh": "苹果",
+   "kind": "",
+   "atlas": "units",
+   "index": 38,
+   "file": "units/Apple.png"
+  },
+  {
+   "category": "units",
+   "key": "Pawn",
+   "en": "Pawn",
+   "zh": "兵",
+   "kind": "",
+   "atlas": "units",
+   "index": 39,
+   "file": "units/Pawn.png"
+  },
+  {
+   "category": "units",
+   "key": "Knight",
+   "en": "Knight",
+   "zh": "骑士",
+   "kind": "",
+   "atlas": "units",
+   "index": 40,
+   "file": "units/Knight.png"
+  },
+  {
+   "category": "units",
+   "key": "Bishop",
+   "en": "Bishop",
+   "zh": "主教",
+   "kind": "",
+   "atlas": "units",
+   "index": 41,
+   "file": "units/Bishop.png"
+  },
+  {
+   "category": "units",
+   "key": "Rook",
+   "en": "Rook",
+   "zh": "城堡",
+   "kind": "",
+   "atlas": "units",
+   "index": 42,
+   "file": "units/Rook.png"
+  },
+  {
+   "category": "units",
+   "key": "Queen",
+   "en": "Queen",
+   "zh": "王后",
+   "kind": "",
+   "atlas": "units",
+   "index": 43,
+   "file": "units/Queen.png"
+  },
+  {
+   "category": "units",
+   "key": "Worm",
+   "en": "Worm",
+   "zh": "蠕虫",
+   "kind": "",
+   "atlas": "units",
+   "index": 44,
+   "file": "units/Worm.png"
+  },
+  {
+   "category": "units",
+   "key": "King",
+   "en": "King",
+   "zh": "国王",
+   "kind": "",
+   "atlas": "units",
+   "index": 45,
+   "file": "units/King.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedMigo",
+   "en": "Warped Migo",
+   "zh": "异界米戈",
+   "kind": "",
+   "atlas": "units",
+   "index": 46,
+   "file": "units/WarpedMigo.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedShooter",
+   "en": "Warped Shooter",
+   "zh": "异界射手",
+   "kind": "",
+   "atlas": "units",
+   "index": 47,
+   "file": "units/WarpedShooter.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedSwarmer",
+   "en": "Warped Swarmer",
+   "zh": "异界蜂涌怪",
+   "kind": "",
+   "atlas": "units",
+   "index": 48,
+   "file": "units/WarpedSwarmer.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedBoomer",
+   "en": "Warped Boomer",
+   "zh": "异界轰天雷",
+   "kind": "",
+   "atlas": "units",
+   "index": 49,
+   "file": "units/WarpedBoomer.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedRocketeer",
+   "en": "Wocketeer",
+   "zh": "异界火箭手",
+   "kind": "",
+   "atlas": "units",
+   "index": 50,
+   "file": "units/WarpedRocketeer.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedPixie",
+   "en": "Warped Pixie",
+   "zh": "异界小精灵",
+   "kind": "",
+   "atlas": "units",
+   "index": 51,
+   "file": "units/WarpedPixie.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedMartian",
+   "en": "Warped Martian",
+   "zh": "异界火星人",
+   "kind": "",
+   "atlas": "units",
+   "index": 52,
+   "file": "units/WarpedMartian.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedShelled",
+   "en": "Warped Shelled",
+   "zh": "异界硬壳怪",
+   "kind": "",
+   "atlas": "units",
+   "index": 53,
+   "file": "units/WarpedShelled.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedBroodmother",
+   "en": "Wroodmother",
+   "zh": "异界母虫",
+   "kind": "",
+   "atlas": "units",
+   "index": 54,
+   "file": "units/WarpedBroodmother.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedBlob",
+   "en": "Warped Blob",
+   "zh": "异界团块",
+   "kind": "",
+   "atlas": "units",
+   "index": 55,
+   "file": "units/WarpedBlob.png"
+  },
+  {
+   "category": "units",
+   "key": "BlobBomb",
+   "en": "Blob-Bomb",
+   "zh": "团块炸弹",
+   "kind": "",
+   "atlas": "units",
+   "index": 56,
+   "file": "units/BlobBomb.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedSponge",
+   "en": "Warped Sponge",
+   "zh": "异界海绵",
+   "kind": "",
+   "atlas": "units",
+   "index": 57,
+   "file": "units/WarpedSponge.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedVirus",
+   "en": "Warped Virus",
+   "zh": "异界病毒",
+   "kind": "",
+   "atlas": "units",
+   "index": 58,
+   "file": "units/WarpedVirus.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedSpitter",
+   "en": "Warped Spitter",
+   "zh": "异界喷吐者",
+   "kind": "",
+   "atlas": "units",
+   "index": 59,
+   "file": "units/WarpedSpitter.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedRusher",
+   "en": "Warped Rusher",
+   "zh": "异界急行者",
+   "kind": "",
+   "atlas": "units",
+   "index": 60,
+   "file": "units/WarpedRusher.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedMimic",
+   "en": "Warped Mimic",
+   "zh": "异界拟态怪",
+   "kind": "",
+   "atlas": "units",
+   "index": 61,
+   "file": "units/WarpedMimic.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedFallenAngel",
+   "en": "Warped Fallen",
+   "zh": "异界堕天使",
+   "kind": "",
+   "atlas": "units",
+   "index": 62,
+   "file": "units/WarpedFallenAngel.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedOrchid",
+   "en": "Warped Orchid",
+   "zh": "异界幻兰",
+   "kind": "",
+   "atlas": "units",
+   "index": 63,
+   "file": "units/WarpedOrchid.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedVengoid",
+   "en": "Warped Vengoid",
+   "zh": "异界复仇者",
+   "kind": "",
+   "atlas": "units",
+   "index": 64,
+   "file": "units/WarpedVengoid.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedAirship",
+   "en": "Warped Airship",
+   "zh": "异界飞艇",
+   "kind": "",
+   "atlas": "units",
+   "index": 65,
+   "file": "units/WarpedAirship.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedGuardian",
+   "en": "Warped Guardian",
+   "zh": "异界守卫",
+   "kind": "",
+   "atlas": "units",
+   "index": 66,
+   "file": "units/WarpedGuardian.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedPulsar",
+   "en": "Warped Pulsar",
+   "zh": "异界脉冲星",
+   "kind": "",
+   "atlas": "units",
+   "index": 67,
+   "file": "units/WarpedPulsar.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedEcho",
+   "en": "Warped Echo",
+   "zh": "异界回声",
+   "kind": "",
+   "atlas": "units",
+   "index": 68,
+   "file": "units/WarpedEcho.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedWeaver",
+   "en": "Warped Weaver",
+   "zh": "异界编织者",
+   "kind": "",
+   "atlas": "units",
+   "index": 69,
+   "file": "units/WarpedWeaver.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedOculus",
+   "en": "Warped Oculus",
+   "zh": "异界万视",
+   "kind": "",
+   "atlas": "units",
+   "index": 70,
+   "file": "units/WarpedOculus.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedHivemind",
+   "en": "Warped Hivemind",
+   "zh": "异界蜂巢思维",
+   "kind": "",
+   "atlas": "units",
+   "index": 71,
+   "file": "units/WarpedHivemind.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedLeviathan",
+   "en": "Weviathan",
+   "zh": "异界利维坦",
+   "kind": "",
+   "atlas": "units",
+   "index": 72,
+   "file": "units/WarpedLeviathan.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedVoidSpawn",
+   "en": "Woidspawn",
+   "zh": "异界虚空之卵",
+   "kind": "",
+   "atlas": "units",
+   "index": 73,
+   "file": "units/WarpedVoidSpawn.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedAstromancer",
+   "en": "Wastromancer",
+   "zh": "异界唤星师",
+   "kind": "",
+   "atlas": "units",
+   "index": 74,
+   "file": "units/WarpedAstromancer.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedGhost",
+   "en": "Warped Ghost",
+   "zh": "异界幽灵",
+   "kind": "",
+   "atlas": "units",
+   "index": 75,
+   "file": "units/WarpedGhost.png"
+  },
+  {
+   "category": "units",
+   "key": "WarpedSpikebug",
+   "en": "Wikebug",
+   "zh": "异界尖刺虫",
+   "kind": "",
+   "atlas": "units",
+   "index": 76,
+   "file": "units/WarpedSpikebug.png"
+  },
+  {
+   "category": "units",
+   "key": "WorkerBee",
+   "en": "Worker Bee",
+   "zh": "工蜂",
+   "kind": "",
+   "atlas": "units",
+   "index": 77,
+   "file": "units/WorkerBee.png"
+  },
+  {
+   "category": "units",
+   "key": "BlackCat",
+   "en": "The Black Cat",
+   "zh": "黑猫",
+   "kind": "",
+   "atlas": "units",
+   "index": 78,
+   "file": "units/BlackCat.png"
+  },
+  {
+   "category": "units",
+   "key": "Hemocyte",
+   "en": "Hemocyte",
+   "zh": "血细胞",
+   "kind": "",
+   "atlas": "units",
+   "index": 79,
+   "file": "units/Hemocyte.png"
+  },
+  {
+   "category": "units",
+   "key": "SupplyDrop",
+   "en": "Supply Drop",
+   "zh": "空投补给",
+   "kind": "",
+   "atlas": "units",
+   "index": 80,
+   "file": "units/SupplyDrop.png"
+  },
+  {
+   "category": "units",
+   "key": "Egg",
+   "en": "Egg",
+   "zh": "蛋",
+   "kind": "",
+   "atlas": "units",
+   "index": 81,
+   "file": "units/Egg.png"
+  },
+  {
+   "category": "units",
+   "key": "GlitchBomb",
+   "en": "Glitch Bomb",
+   "zh": "漏洞炸弹",
+   "kind": "",
+   "atlas": "units",
+   "index": 82,
+   "file": "units/GlitchBomb.png"
+  },
+  {
+   "category": "units",
+   "key": "Dragon",
+   "en": "Dragon",
+   "zh": "龙",
+   "kind": "",
+   "atlas": "units",
+   "index": 83,
+   "file": "units/Dragon.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Engi89",
+   "en": "Engi-89",
+   "zh": "工程师-89",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 16,
+   "file": "artifacts/Engi89.png"
+  },
+  {
+   "category": "perks",
+   "key": "Seraphim",
+   "en": "Seraphim",
+   "zh": "炽天使",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 17,
+   "file": "perks/Seraphim.png"
+  },
+  {
+   "category": "perks",
+   "key": "DeathRattle",
+   "en": "Death Rattle",
+   "zh": "死亡残音",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 18,
+   "file": "perks/DeathRattle.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Wormhole",
+   "en": "Wormhole",
+   "zh": "虫洞",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 19,
+   "file": "artifacts/Wormhole.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Peashooter",
+   "en": "Peashooter",
+   "zh": "微型炮",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 20,
+   "file": "artifacts/Peashooter.png"
+  },
+  {
+   "category": "perks",
+   "key": "Nemesis",
+   "en": "Nemesis",
+   "zh": "天罚",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 21,
+   "file": "perks/Nemesis.png"
+  },
+  {
+   "category": "perks",
+   "key": "MegaBlob",
+   "en": "Amalgam",
+   "zh": "聚合体",
+   "kind": "starter",
+   "atlas": "icons",
+   "index": 22,
+   "file": "perks/MegaBlob.png"
+  },
+  {
+   "category": "perks",
+   "key": "Kraken",
+   "en": "From The Deep",
+   "zh": "深渊之物",
+   "kind": "starter",
+   "atlas": "icons",
+   "index": 23,
+   "file": "perks/Kraken.png"
+  },
+  {
+   "category": "perks",
+   "key": "VoltaicCoil",
+   "en": "Voltaic Coil",
+   "zh": "伏特线圈",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 24,
+   "file": "perks/VoltaicCoil.png"
+  },
+  {
+   "category": "perks",
+   "key": "Landlord",
+   "en": "Landlord",
+   "zh": "房东",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 25,
+   "file": "perks/Landlord.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "RoboParrot",
+   "en": "Robo-Parrot",
+   "zh": "机器鹦鹉",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 26,
+   "file": "artifacts/RoboParrot.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "TrinityStar",
+   "en": "Trinity Star",
+   "zh": "三一之星",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 27,
+   "file": "artifacts/TrinityStar.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Ocarina",
+   "en": "Ocarina",
+   "zh": "陶笛",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 28,
+   "file": "artifacts/Ocarina.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "CosmicDice",
+   "en": "Cosmic Dice",
+   "zh": "宇宙骰子",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 29,
+   "file": "artifacts/CosmicDice.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "ToadHead",
+   "en": "Toad Head",
+   "zh": "蟾蜍头",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 30,
+   "file": "artifacts/ToadHead.png"
+  },
+  {
+   "category": "perks",
+   "key": "BlobCutter",
+   "en": "Blob Cutter",
+   "zh": "团块切割器",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 31,
+   "file": "perks/BlobCutter.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "RedHorns",
+   "en": "Red Horns",
+   "zh": "红角",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 32,
+   "file": "artifacts/RedHorns.png"
+  },
+  {
+   "category": "perks",
+   "key": "Timekeeper",
+   "en": "Timekeeper",
+   "zh": "计时器",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 33,
+   "file": "perks/Timekeeper.png"
+  },
+  {
+   "category": "perks",
+   "key": "Mothership",
+   "en": "Mothership",
+   "zh": "母舰",
+   "kind": "starter",
+   "atlas": "icons",
+   "index": 34,
+   "file": "perks/Mothership.png"
+  },
+  {
+   "category": "perks",
+   "key": "MoonBeam",
+   "en": "Moon Beam",
+   "zh": "月亮光束",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 35,
+   "file": "perks/MoonBeam.png"
+  },
+  {
+   "category": "perks",
+   "key": "Megabrain",
+   "en": "Megabrain",
+   "zh": "超级大脑",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 36,
+   "file": "perks/Megabrain.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "CocoonShield",
+   "en": "Cocoon Shield",
+   "zh": "茧之盾",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 37,
+   "file": "artifacts/CocoonShield.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Vroomba",
+   "en": "Vroomba",
+   "zh": "吸尘机器人",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 38,
+   "file": "artifacts/Vroomba.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "HelixShell",
+   "en": "Helix Shell",
+   "zh": "螺旋壳",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 39,
+   "file": "artifacts/HelixShell.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Buzzsaw",
+   "en": "Buzzsaw",
+   "zh": "圆锯",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 40,
+   "file": "artifacts/Buzzsaw.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "CrypticPattern",
+   "en": "Cryptic Pattern",
+   "zh": "隐秘构造",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 41,
+   "file": "artifacts/CrypticPattern.png"
+  },
+  {
+   "category": "perks",
+   "key": "SlushoMax",
+   "en": "Slusho-Max",
+   "zh": "雪泥杯",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 42,
+   "file": "perks/SlushoMax.png"
+  },
+  {
+   "category": "perks",
+   "key": "CloneArmy",
+   "en": "Clone Army",
+   "zh": "克隆军团",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 43,
+   "file": "perks/CloneArmy.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "MeteorShower",
+   "en": "Meteor",
+   "zh": "陨石",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 44,
+   "file": "artifacts/MeteorShower.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Comet",
+   "en": "Comet",
+   "zh": "彗星",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 45,
+   "file": "artifacts/Comet.png"
+  },
+  {
+   "category": "perks",
+   "key": "BrokenLens",
+   "en": "Broken Lens",
+   "zh": "破损透镜",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 46,
+   "file": "perks/BrokenLens.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "BoltHead",
+   "en": "Bolt-Head",
+   "zh": "螺栓头",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 47,
+   "file": "artifacts/BoltHead.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "BookOfTheDead",
+   "en": "Book of Death",
+   "zh": "死亡之书",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 48,
+   "file": "artifacts/BookOfTheDead.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "BookOfTheLiving",
+   "en": "Book of Life",
+   "zh": "生命之书",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 49,
+   "file": "artifacts/BookOfTheLiving.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "GlassTeeth",
+   "en": "Glass Teeth",
+   "zh": "玻璃牙齿",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 50,
+   "file": "artifacts/GlassTeeth.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Antimatter",
+   "en": "Antimatter",
+   "zh": "反物质",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 51,
+   "file": "artifacts/Antimatter.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "DreamEye",
+   "en": "Dream Eye",
+   "zh": "梦之眼",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 52,
+   "file": "artifacts/DreamEye.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "WhiteSpace",
+   "en": "White Space",
+   "zh": "白色空间",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 53,
+   "file": "artifacts/WhiteSpace.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "TheBait",
+   "en": "The Bait",
+   "zh": "诱饵",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 54,
+   "file": "artifacts/TheBait.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Stowaway",
+   "en": "Stowaway",
+   "zh": "偷渡者",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 55,
+   "file": "artifacts/Stowaway.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "RoguePlanet",
+   "en": "Rogue Planet",
+   "zh": "叛离行星",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 56,
+   "file": "artifacts/RoguePlanet.png"
+  },
+  {
+   "category": "perks",
+   "key": "EldritchTome",
+   "en": "Eldritch Tome",
+   "zh": "邪异魔典",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 57,
+   "file": "perks/EldritchTome.png"
+  },
+  {
+   "category": "perks",
+   "key": "GrowthSerum",
+   "en": "Growth Serum",
+   "zh": "生长血清",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 58,
+   "file": "perks/GrowthSerum.png"
+  },
+  {
+   "category": "perks",
+   "key": "SuperMigo",
+   "en": "Super-Migo",
+   "zh": "超级米戈",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 59,
+   "file": "perks/SuperMigo.png"
+  },
+  {
+   "category": "perks",
+   "key": "FusionReactor",
+   "en": "Fusion Reactor",
+   "zh": "聚变反应堆",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 60,
+   "file": "perks/FusionReactor.png"
+  },
+  {
+   "category": "perks",
+   "key": "Universe",
+   "en": "Universe",
+   "zh": "一元宇宙",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 61,
+   "file": "perks/Universe.png"
+  },
+  {
+   "category": "perks",
+   "key": "Duoprism",
+   "en": "Duoprism",
+   "zh": "二重棱镜",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 62,
+   "file": "perks/Duoprism.png"
+  },
+  {
+   "category": "perks",
+   "key": "Trisolaris",
+   "en": "Trisolaris",
+   "zh": "三体恒星",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 63,
+   "file": "perks/Trisolaris.png"
+  },
+  {
+   "category": "perks",
+   "key": "Quadruped",
+   "en": "Quadruped",
+   "zh": "四足生灵",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 64,
+   "file": "perks/Quadruped.png"
+  },
+  {
+   "category": "perks",
+   "key": "Pentagram",
+   "en": "Pentagram",
+   "zh": "五星法阵",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 65,
+   "file": "perks/Pentagram.png"
+  },
+  {
+   "category": "perks",
+   "key": "Hexafoil",
+   "en": "Hexafoil",
+   "zh": "六方薄片",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 66,
+   "file": "perks/Hexafoil.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "DustCloud",
+   "en": "Dust Cloud",
+   "zh": "尘埃云",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 67,
+   "file": "artifacts/DustCloud.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Deimos",
+   "en": "Deimos",
+   "zh": "得摩斯",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 68,
+   "file": "artifacts/Deimos.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "RocketShip",
+   "en": "Rocket Ship",
+   "zh": "火箭飞船",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 69,
+   "file": "artifacts/RocketShip.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "LeftHand",
+   "en": "Left Hand",
+   "zh": "左手",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 70,
+   "file": "artifacts/LeftHand.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "SpaceRock",
+   "en": "Space Rock",
+   "zh": "太空岩石",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 71,
+   "file": "artifacts/SpaceRock.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Mycelium",
+   "en": "Mycelium",
+   "zh": "菌丝",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 72,
+   "file": "artifacts/Mycelium.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Teleporter",
+   "en": "Teleporter",
+   "zh": "传送器",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 73,
+   "file": "artifacts/Teleporter.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Gluttony",
+   "en": "Gluttony",
+   "zh": "暴食",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 74,
+   "file": "artifacts/Gluttony.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Solman",
+   "en": "Solman",
+   "zh": "山文鱼",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 75,
+   "file": "artifacts/Solman.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "TrailPot",
+   "en": "Trail Pot",
+   "zh": "野营锅",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 76,
+   "file": "artifacts/TrailPot.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "RedValve",
+   "en": "Red Valve",
+   "zh": "红色阀门",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 77,
+   "file": "artifacts/RedValve.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Saterpillar",
+   "en": "Saterpillar",
+   "zh": "卫星毛毛虫",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 78,
+   "file": "artifacts/Saterpillar.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Pyramid",
+   "en": "Pyramid",
+   "zh": "金字塔",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 79,
+   "file": "artifacts/Pyramid.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "XenoSeed",
+   "en": "Xeno Seed",
+   "zh": "异星种子",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 80,
+   "file": "artifacts/XenoSeed.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "DoomRitual",
+   "en": "Doom Ritual",
+   "zh": "毁灭仪式",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 81,
+   "file": "artifacts/DoomRitual.png"
+  },
+  {
+   "category": "perks",
+   "key": "LabTube",
+   "en": "Lab Tube",
+   "zh": "实验管",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 82,
+   "file": "perks/LabTube.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Pomegranate",
+   "en": "Pomegranate",
+   "zh": "石榴",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 83,
+   "file": "artifacts/Pomegranate.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "KingMigo",
+   "en": "King Migo",
+   "zh": "米戈之王",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 84,
+   "file": "artifacts/KingMigo.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "FourDPrinter",
+   "en": "4D Printer",
+   "zh": "4D打印机",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 85,
+   "file": "artifacts/FourDPrinter.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Astroflora",
+   "en": "Astroflora",
+   "zh": "太空植被",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 86,
+   "file": "artifacts/Astroflora.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "TheWatcher",
+   "en": "The Watcher",
+   "zh": "观察者",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 87,
+   "file": "artifacts/TheWatcher.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "LongNose",
+   "en": "Long Nose",
+   "zh": "长鼻",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 88,
+   "file": "artifacts/LongNose.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Pawnmower",
+   "en": "Pawnmower",
+   "zh": "割草兵",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 89,
+   "file": "artifacts/Pawnmower.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "CompostBin",
+   "en": "Compost Bin",
+   "zh": "堆肥箱",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 90,
+   "file": "artifacts/CompostBin.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "GoldenBell",
+   "en": "Golden Bell",
+   "zh": "金铃铛",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 91,
+   "file": "artifacts/GoldenBell.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "VenusFlytrap",
+   "en": "Venus Flytrap",
+   "zh": "捕蝇草",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 92,
+   "file": "artifacts/VenusFlytrap.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "OrbitalLaser",
+   "en": "Orbital Laser",
+   "zh": "轨道激光",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 93,
+   "file": "artifacts/OrbitalLaser.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Syzygy",
+   "en": "Syzygy",
+   "zh": "朔望",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 94,
+   "file": "artifacts/Syzygy.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Voracity",
+   "en": "Voracity",
+   "zh": "贪婪",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 95,
+   "file": "artifacts/Voracity.png"
+  },
+  {
+   "category": "specials",
+   "key": "Prospect",
+   "en": "The Tutorial",
+   "zh": "教程",
+   "kind": "special",
+   "atlas": "icons",
+   "index": 96,
+   "file": "specials/Prospect.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "XMutation",
+   "en": "X-Mutation",
+   "zh": "X变异",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 97,
+   "file": "artifacts/XMutation.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Greenhouse",
+   "en": "Greenhouse",
+   "zh": "温室",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 98,
+   "file": "artifacts/Greenhouse.png"
+  },
+  {
+   "category": "perks",
+   "key": "ThornCrest",
+   "en": "Thorn Crest",
+   "zh": "荆棘徽章",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 99,
+   "file": "perks/ThornCrest.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "DeusExMachina",
+   "en": "Deus Ex Machina",
+   "zh": "机械降神",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 100,
+   "file": "artifacts/DeusExMachina.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Pitchfork",
+   "en": "Pitchfork",
+   "zh": "草叉",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 101,
+   "file": "artifacts/Pitchfork.png"
+  },
+  {
+   "category": "perks",
+   "key": "DeadRinger",
+   "en": "Dead Ringer",
+   "zh": "双生之魂",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 102,
+   "file": "perks/DeadRinger.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Pincushion",
+   "en": "Pincushion",
+   "zh": "针垫",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 103,
+   "file": "artifacts/Pincushion.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "TripleRainbow",
+   "en": "Triple Rainbow",
+   "zh": "三重彩虹",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 104,
+   "file": "artifacts/TripleRainbow.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Torpedo",
+   "en": "Torpedo",
+   "zh": "鱼雷",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 105,
+   "file": "artifacts/Torpedo.png"
+  },
+  {
+   "category": "perks",
+   "key": "Monocle",
+   "en": "Monocle",
+   "zh": "单片眼镜",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 106,
+   "file": "perks/Monocle.png"
+  },
+  {
+   "category": "perks",
+   "key": "SkyArbiter",
+   "en": "Sky Arbiter",
+   "zh": "天空仲裁者",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 107,
+   "file": "perks/SkyArbiter.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Bunker",
+   "en": "Bunker",
+   "zh": "掩体",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 108,
+   "file": "artifacts/Bunker.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "WingsOfFury",
+   "en": "Wings of Fury",
+   "zh": "愤怒之翼",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 109,
+   "file": "artifacts/WingsOfFury.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Oozone",
+   "en": "Oozone",
+   "zh": "双臭氧层",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 110,
+   "file": "artifacts/Oozone.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "LeakyFaucet",
+   "en": "Leaky Faucet",
+   "zh": "漏水龙头",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 111,
+   "file": "artifacts/LeakyFaucet.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "SpikyGel",
+   "en": "Spiky Gel",
+   "zh": "带刺凝胶",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 112,
+   "file": "artifacts/SpikyGel.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "AcidTown",
+   "en": "Acid Town",
+   "zh": "酸液小镇",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 113,
+   "file": "artifacts/AcidTown.png"
+  },
+  {
+   "category": "perks",
+   "key": "HydraHead",
+   "en": "Hydra Head",
+   "zh": "九头蛇首",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 114,
+   "file": "perks/HydraHead.png"
+  },
+  {
+   "category": "perks",
+   "key": "BoneEater",
+   "en": "Bone Eater",
+   "zh": "噬骨者",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 115,
+   "file": "perks/BoneEater.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Cavities",
+   "en": "Cavities",
+   "zh": "蛀牙",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 116,
+   "file": "artifacts/Cavities.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "DreadKnot",
+   "en": "Dread Knot",
+   "zh": "恐惧之结",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 117,
+   "file": "artifacts/DreadKnot.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "LoneDragon",
+   "en": "Lone Dragon",
+   "zh": "独龙",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 118,
+   "file": "artifacts/LoneDragon.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "RibCannon",
+   "en": "Rib Cannon",
+   "zh": "肋骨大炮",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 119,
+   "file": "artifacts/RibCannon.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "Roxy",
+   "en": "Trailblazer",
+   "zh": "灼热先锋",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 256,
+   "file": "pilot_abilities/Roxy.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "Garu",
+   "en": "Turret",
+   "zh": "炮塔",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 248,
+   "file": "pilot_abilities/Garu.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "Noel",
+   "en": "Hyperfreeze",
+   "zh": "超冻结",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 254,
+   "file": "pilot_abilities/Noel.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "Zeke",
+   "en": "Theorycraft",
+   "zh": "验证假设",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 262,
+   "file": "pilot_abilities/Zeke.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "Min",
+   "en": "Accelerator",
+   "zh": "加速器",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 253,
+   "file": "pilot_abilities/Min.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "Shun",
+   "en": "Mitochondria",
+   "zh": "线粒体",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 257,
+   "file": "pilot_abilities/Shun.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "Hali",
+   "en": "Coral Reef",
+   "zh": "珊瑚礁",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 249,
+   "file": "pilot_abilities/Hali.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "Iris",
+   "en": "Poof!",
+   "zh": "砰！",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 250,
+   "file": "pilot_abilities/Iris.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "Kaia",
+   "en": "Booby Trap",
+   "zh": "陷阱",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 251,
+   "file": "pilot_abilities/Kaia.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "Max",
+   "en": "Dive Suit",
+   "zh": "潜水服",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 252,
+   "file": "pilot_abilities/Max.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "Sura",
+   "en": "Overload",
+   "zh": "过载",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 259,
+   "file": "pilot_abilities/Sura.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "Xenn",
+   "en": "Sol & Luna",
+   "zh": "太阳与月亮",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 261,
+   "file": "pilot_abilities/Xenn.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "PandoraBox",
+   "en": "Pandora's Box",
+   "zh": "潘多拉的魔盒",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 120,
+   "file": "artifacts/PandoraBox.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Protoship",
+   "en": "Protoship",
+   "zh": "原型飞船",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 121,
+   "file": "artifacts/Protoship.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Boombox",
+   "en": "Boombox",
+   "zh": "录音机",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 122,
+   "file": "artifacts/Boombox.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "DysonSphere",
+   "en": "Dyson Sphere",
+   "zh": "戴森球",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 123,
+   "file": "artifacts/DysonSphere.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "JupiterBrain",
+   "en": "Jupiter Brain",
+   "zh": "木星大脑",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 124,
+   "file": "artifacts/JupiterBrain.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Neuron",
+   "en": "Neuron",
+   "zh": "神经元",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 125,
+   "file": "artifacts/Neuron.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "GreyMatter",
+   "en": "Grey Matter",
+   "zh": "灰质",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 126,
+   "file": "artifacts/GreyMatter.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "TimeCapsule",
+   "en": "Time Capsule",
+   "zh": "时间胶囊",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 127,
+   "file": "artifacts/TimeCapsule.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "ShyPluto",
+   "en": "Shy Pluto",
+   "zh": "害羞冥王星",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 128,
+   "file": "artifacts/ShyPluto.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "FishLegs",
+   "en": "Fish Legs",
+   "zh": "鱼腿",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 129,
+   "file": "artifacts/FishLegs.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Whalefall",
+   "en": "Whalefall",
+   "zh": "鲸落",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 130,
+   "file": "artifacts/Whalefall.png"
+  },
+  {
+   "category": "perks",
+   "key": "Shimmer",
+   "en": "Shimmer",
+   "zh": "闪烁",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 131,
+   "file": "perks/Shimmer.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "PiggyBank",
+   "en": "Piggy Bank",
+   "zh": "存钱罐",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 132,
+   "file": "artifacts/PiggyBank.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Gemstone",
+   "en": "Gemstone",
+   "zh": "宝石",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 133,
+   "file": "artifacts/Gemstone.png"
+  },
+  {
+   "category": "perks",
+   "key": "Nessie",
+   "en": "Frugivore",
+   "zh": "食果者",
+   "kind": "starter",
+   "atlas": "icons",
+   "index": 134,
+   "file": "perks/Nessie.png"
+  },
+  {
+   "category": "perks",
+   "key": "Grandmaster",
+   "en": "The Art of War",
+   "zh": "棋子兵法",
+   "kind": "starter",
+   "atlas": "icons",
+   "index": 135,
+   "file": "perks/Grandmaster.png"
+  },
+  {
+   "category": "perks",
+   "key": "Tableflipper",
+   "en": "Tableflipper",
+   "zh": "掀桌",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 136,
+   "file": "perks/Tableflipper.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "StoneChisel",
+   "en": "Stone Chisel",
+   "zh": "石凿",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 137,
+   "file": "artifacts/StoneChisel.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Fortress",
+   "en": "Fortress",
+   "zh": "要塞",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 138,
+   "file": "artifacts/Fortress.png"
+  },
+  {
+   "category": "perks",
+   "key": "GreatWall",
+   "en": "The Great Wall",
+   "zh": "巨墙",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 139,
+   "file": "perks/GreatWall.png"
+  },
+  {
+   "category": "perks",
+   "key": "Wormfection",
+   "en": "Wormfection",
+   "zh": "蠕虫感染",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 140,
+   "file": "perks/Wormfection.png"
+  },
+  {
+   "category": "perks",
+   "key": "Bogland",
+   "en": "Bogland",
+   "zh": "沼地",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 141,
+   "file": "perks/Bogland.png"
+  },
+  {
+   "category": "perks",
+   "key": "Overseer",
+   "en": "Convergence",
+   "zh": "时间线融合",
+   "kind": "starter",
+   "atlas": "icons",
+   "index": 142,
+   "file": "perks/Overseer.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "RedSpice",
+   "en": "Red Spice",
+   "zh": "红色香料",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 143,
+   "file": "artifacts/RedSpice.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "BigBang",
+   "en": "Big Bang",
+   "zh": "大爆炸",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 144,
+   "file": "artifacts/BigBang.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Guillotine",
+   "en": "Guillotine",
+   "zh": "断头台",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 145,
+   "file": "artifacts/Guillotine.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Leatherback",
+   "en": "Leatherback",
+   "zh": "棱皮",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 146,
+   "file": "artifacts/Leatherback.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "DarkTower",
+   "en": "Dark Tower",
+   "zh": "黑暗塔",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 147,
+   "file": "artifacts/DarkTower.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "AngelFeather",
+   "en": "Angel Feather",
+   "zh": "天使之羽",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 148,
+   "file": "artifacts/AngelFeather.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "HiddenPortal",
+   "en": "Hidden Portal",
+   "zh": "隐秘传送门",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 149,
+   "file": "artifacts/HiddenPortal.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "RubyShard",
+   "en": "Ruby Shard",
+   "zh": "红宝石碎片",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 150,
+   "file": "artifacts/RubyShard.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "WickedMirror",
+   "en": "Wicked Mirror",
+   "zh": "邪恶魔镜",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 151,
+   "file": "artifacts/WickedMirror.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "CuckooClock",
+   "en": "Cuckoo Clock",
+   "zh": "布谷鸟钟",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 152,
+   "file": "artifacts/CuckooClock.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Blossom",
+   "en": "Blossom",
+   "zh": "花簇",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 153,
+   "file": "artifacts/Blossom.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "LoneStar",
+   "en": "Lone Star",
+   "zh": "孤星",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 154,
+   "file": "artifacts/LoneStar.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "BarrenRock",
+   "en": "Barren Rock",
+   "zh": "荒芜岩石",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 155,
+   "file": "artifacts/BarrenRock.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Microbe",
+   "en": "Microbe",
+   "zh": "微生物",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 156,
+   "file": "artifacts/Microbe.png"
+  },
+  {
+   "category": "perks",
+   "key": "Eclipse",
+   "en": "Divine Touch",
+   "zh": "神圣之触",
+   "kind": "starter",
+   "atlas": "icons",
+   "index": 157,
+   "file": "perks/Eclipse.png"
+  },
+  {
+   "category": "perks",
+   "key": "SuperNova",
+   "en": "Rift Nova",
+   "zh": "裂隙新星",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 158,
+   "file": "perks/SuperNova.png"
+  },
+  {
+   "category": "perks",
+   "key": "GammaRay",
+   "en": "Gamma Ray",
+   "zh": "伽马射线",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 159,
+   "file": "perks/GammaRay.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Sunblock",
+   "en": "Timeblock",
+   "zh": "时间方块",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 160,
+   "file": "artifacts/Sunblock.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "ExoMagnet",
+   "en": "Exo Magnet",
+   "zh": "奇异磁铁",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 161,
+   "file": "artifacts/ExoMagnet.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Cyclotron",
+   "en": "Cyclotron",
+   "zh": "循环机器人",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 162,
+   "file": "artifacts/Cyclotron.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Moonflower",
+   "en": "Eon Moss",
+   "zh": "世代青苔",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 163,
+   "file": "artifacts/Moonflower.png"
+  },
+  {
+   "category": "perks",
+   "key": "Shamby",
+   "en": "Chrono Rift",
+   "zh": "时空裂隙",
+   "kind": "starter",
+   "atlas": "icons",
+   "index": 164,
+   "file": "perks/Shamby.png"
+  },
+  {
+   "category": "perks",
+   "key": "Hive",
+   "en": "Honeycomb",
+   "zh": "蜂窝",
+   "kind": "starter",
+   "atlas": "icons",
+   "index": 165,
+   "file": "perks/Hive.png"
+  },
+  {
+   "category": "perks",
+   "key": "Apiary",
+   "en": "Apiary",
+   "zh": "蜂房",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 166,
+   "file": "perks/Apiary.png"
+  },
+  {
+   "category": "perks",
+   "key": "RoyalJelly",
+   "en": "Royal Jelly",
+   "zh": "蜂皇浆",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 167,
+   "file": "perks/RoyalJelly.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "FlowerPot",
+   "en": "Flower Pot",
+   "zh": "花盆",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 168,
+   "file": "artifacts/FlowerPot.png"
+  },
+  {
+   "category": "perks",
+   "key": "Hemophage",
+   "en": "Insatiable Curse",
+   "zh": "饥渴诅咒",
+   "kind": "starter",
+   "atlas": "icons",
+   "index": 169,
+   "file": "perks/Hemophage.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "BloodClot",
+   "en": "Blood Clot",
+   "zh": "血栓",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 170,
+   "file": "artifacts/BloodClot.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "LizardTail",
+   "en": "Lizard Tail",
+   "zh": "蜥蜴尾巴",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 171,
+   "file": "artifacts/LizardTail.png"
+  },
+  {
+   "category": "perks",
+   "key": "TwoWolves",
+   "en": "Two Wolves",
+   "zh": "双狼",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 172,
+   "file": "perks/TwoWolves.png"
+  },
+  {
+   "category": "perks",
+   "key": "MarkOfTheBeast",
+   "en": "Mark of the Beast",
+   "zh": "兽之印记",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 173,
+   "file": "perks/MarkOfTheBeast.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "RageVirus",
+   "en": "Rage Virus",
+   "zh": "怒火病毒",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 174,
+   "file": "artifacts/RageVirus.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "MeatStick",
+   "en": "Meat Stick",
+   "zh": "肉串",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 175,
+   "file": "artifacts/MeatStick.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "MassRelay",
+   "en": "Mass Relay",
+   "zh": "质量中继器",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 176,
+   "file": "artifacts/MassRelay.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "SugarCube",
+   "en": "Sugar Cube",
+   "zh": "方糖",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 177,
+   "file": "artifacts/SugarCube.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "HotBuzz",
+   "en": "Hot Buzz",
+   "zh": "炽热嗡声",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 178,
+   "file": "artifacts/HotBuzz.png"
+  },
+  {
+   "category": "perks",
+   "key": "Usurper",
+   "en": "Usurper",
+   "zh": "篡位者",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 179,
+   "file": "perks/Usurper.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "EnPassant",
+   "en": "En Passant",
+   "zh": "吃过路兵",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 180,
+   "file": "artifacts/EnPassant.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "BlitzArmor",
+   "en": "Blitz Armor",
+   "zh": "超快护甲",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 181,
+   "file": "artifacts/BlitzArmor.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "RatPoison",
+   "en": "Rat Poison",
+   "zh": "老鼠药",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 182,
+   "file": "artifacts/RatPoison.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "FlyingStinger",
+   "en": "Flying Stinger",
+   "zh": "飞刺",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 183,
+   "file": "artifacts/FlyingStinger.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "BigApple",
+   "en": "Big Apple",
+   "zh": "大苹果",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 184,
+   "file": "artifacts/BigApple.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Parasite",
+   "en": "Parasite",
+   "zh": "寄生虫",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 185,
+   "file": "artifacts/Parasite.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "GoldenHalo",
+   "en": "Golden Halo",
+   "zh": "黄金光环",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 186,
+   "file": "artifacts/GoldenHalo.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "PowerPlant",
+   "en": "Power Plant",
+   "zh": "发电站",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 187,
+   "file": "artifacts/PowerPlant.png"
+  },
+  {
+   "category": "perks",
+   "key": "Grimoire",
+   "en": "Grimoire",
+   "zh": "魔法书",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 188,
+   "file": "perks/Grimoire.png"
+  },
+  {
+   "category": "perks",
+   "key": "WorldEater",
+   "en": "World Eater",
+   "zh": "吞世者",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 189,
+   "file": "perks/WorldEater.png"
+  },
+  {
+   "category": "perks",
+   "key": "ToyMaker",
+   "en": "Toy Maker",
+   "zh": "玩具制造商",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 190,
+   "file": "perks/ToyMaker.png"
+  },
+  {
+   "category": "perks",
+   "key": "Ectoplasm",
+   "en": "Ectoplasm",
+   "zh": "灵体外质",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 191,
+   "file": "perks/Ectoplasm.png"
+  },
+  {
+   "category": "perks",
+   "key": "LastTrain",
+   "en": "Last Train",
+   "zh": "末班列车",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 192,
+   "file": "perks/LastTrain.png"
+  },
+  {
+   "category": "perks",
+   "key": "Commonwealth",
+   "en": "Commonwealth",
+   "zh": "联合体",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 193,
+   "file": "perks/Commonwealth.png"
+  },
+  {
+   "category": "perks",
+   "key": "AsteroidBelt",
+   "en": "Asteroid Belt",
+   "zh": "小行星带",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 194,
+   "file": "perks/AsteroidBelt.png"
+  },
+  {
+   "category": "perks",
+   "key": "StrangePortal",
+   "en": "Strange Portal",
+   "zh": "奇异传送门",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 195,
+   "file": "perks/StrangePortal.png"
+  },
+  {
+   "category": "perks",
+   "key": "PhoenixAsh",
+   "en": "Phoenix Ash",
+   "zh": "不死鸟之灰",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 196,
+   "file": "perks/PhoenixAsh.png"
+  },
+  {
+   "category": "perks",
+   "key": "ColdStar",
+   "en": "Cold Star",
+   "zh": "冷星",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 197,
+   "file": "perks/ColdStar.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "TitanMigo",
+   "en": "Titan Migo",
+   "zh": "泰坦米戈",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 198,
+   "file": "artifacts/TitanMigo.png"
+  },
+  {
+   "category": "perks",
+   "key": "SupplyDrop",
+   "en": "Supply Drop",
+   "zh": "空投补给",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 199,
+   "file": "perks/SupplyDrop.png"
+  },
+  {
+   "category": "perks",
+   "key": "Egg",
+   "en": "Egg",
+   "zh": "蛋",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 200,
+   "file": "perks/Egg.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "Tippy",
+   "en": "Call Tippy!",
+   "zh": "呼叫Tippy！",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 260,
+   "file": "pilot_abilities/Tippy.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "RoboMin",
+   "en": "Glitch Bomb",
+   "zh": "漏洞炸弹",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 255,
+   "file": "pilot_abilities/RoboMin.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "Bud",
+   "en": "Bud",
+   "zh": "Bud",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 247,
+   "file": "pilot_abilities/Bud.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "ChainLightning",
+   "en": "Chain Lightning",
+   "zh": "连环闪电",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 263,
+   "file": "pilot_abilities/ChainLightning.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "Overclock",
+   "en": "Overclock",
+   "zh": "超频",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 264,
+   "file": "pilot_abilities/Overclock.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "TakeHeart",
+   "en": "Take Heart",
+   "zh": "夺心",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 265,
+   "file": "pilot_abilities/TakeHeart.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "Devour",
+   "en": "Devour",
+   "zh": "吞噬",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 266,
+   "file": "pilot_abilities/Devour.png"
+  },
+  {
+   "category": "pilot_abilities",
+   "key": "Tornado",
+   "en": "Tornado",
+   "zh": "飓风",
+   "kind": "pilot",
+   "atlas": "icons",
+   "index": 267,
+   "file": "pilot_abilities/Tornado.png"
+  },
+  {
+   "category": "specials",
+   "key": "Bab",
+   "en": "Bab",
+   "zh": "哔",
+   "kind": "special",
+   "atlas": "icons",
+   "index": 201,
+   "file": "specials/Bab.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Decimator",
+   "en": "Decimator",
+   "zh": "歼灭者",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 202,
+   "file": "artifacts/Decimator.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "ToxicPlume",
+   "en": "Toxic Plume",
+   "zh": "毒羽毛",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 203,
+   "file": "artifacts/ToxicPlume.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Brinicles",
+   "en": "Brinicles",
+   "zh": "死亡冰柱",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 204,
+   "file": "artifacts/Brinicles.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "FrostCubes",
+   "en": "Frost Cubes",
+   "zh": "冰冻方块",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 205,
+   "file": "artifacts/FrostCubes.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "BigFridge",
+   "en": "Big Fridge",
+   "zh": "大冰箱",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 206,
+   "file": "artifacts/BigFridge.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "ReAnimator",
+   "en": "Re-Animator",
+   "zh": "复活器",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 207,
+   "file": "artifacts/ReAnimator.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "RitualBlade",
+   "en": "Ritual Blade",
+   "zh": "仪式刀刃",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 208,
+   "file": "artifacts/RitualBlade.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Firewall",
+   "en": "Firewall",
+   "zh": "防火墙",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 209,
+   "file": "artifacts/Firewall.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "PineHead",
+   "en": "Pine Head",
+   "zh": "松果头",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 210,
+   "file": "artifacts/PineHead.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Phalanx",
+   "en": "Phalanx",
+   "zh": "密集方阵",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 211,
+   "file": "artifacts/Phalanx.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "AlphaBot",
+   "en": "Alphazod",
+   "zh": "阿尔法佐德",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 212,
+   "file": "artifacts/AlphaBot.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "BetaBot",
+   "en": "Betazod",
+   "zh": "贝塔佐德",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 213,
+   "file": "artifacts/BetaBot.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "OmegaBot",
+   "en": "Omegazod",
+   "zh": "欧米伽佐德",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 214,
+   "file": "artifacts/OmegaBot.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "StasisCube",
+   "en": "Stasis Cube",
+   "zh": "静滞方块",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 215,
+   "file": "artifacts/StasisCube.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Quendulum",
+   "en": "Quendulum",
+   "zh": "纠缠摆",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 216,
+   "file": "artifacts/Quendulum.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "SunflowerDial",
+   "en": "Sunflower Dial",
+   "zh": "向日晷",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 217,
+   "file": "artifacts/SunflowerDial.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "SteamPipe",
+   "en": "Steam Pipe",
+   "zh": "蒸汽管",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 218,
+   "file": "artifacts/SteamPipe.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "BronzeWings",
+   "en": "Bronze Wings",
+   "zh": "青铜翅膀",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 219,
+   "file": "artifacts/BronzeWings.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Lemonade",
+   "en": "Lemonade",
+   "zh": "柠檬水",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 220,
+   "file": "artifacts/Lemonade.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "AshenArrow",
+   "en": "Ashen Arrow",
+   "zh": "灰烬箭矢",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 221,
+   "file": "artifacts/AshenArrow.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "FocusFuel",
+   "en": "Focus Fuel",
+   "zh": "集中燃料",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 222,
+   "file": "artifacts/FocusFuel.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "DirtySludge",
+   "en": "Dirty Sludge",
+   "zh": "污秽泥浆",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 223,
+   "file": "artifacts/DirtySludge.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Cantrip",
+   "en": "Cantrip",
+   "zh": "戏法",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 224,
+   "file": "artifacts/Cantrip.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "SignMagick",
+   "en": "Sign Magick",
+   "zh": "法印",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 225,
+   "file": "artifacts/SignMagick.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "PlanetX",
+   "en": "Planet X",
+   "zh": "行星X",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 226,
+   "file": "artifacts/PlanetX.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "SolarSail",
+   "en": "Solar Sail",
+   "zh": "太阳帆",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 227,
+   "file": "artifacts/SolarSail.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Galactory",
+   "en": "Galactory",
+   "zh": "星系工厂",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 228,
+   "file": "artifacts/Galactory.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "Silverheart",
+   "en": "Silverheart",
+   "zh": "银心",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 229,
+   "file": "artifacts/Silverheart.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "FullHouse",
+   "en": "Full House",
+   "zh": "满员",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 230,
+   "file": "artifacts/FullHouse.png"
+  },
+  {
+   "category": "artifacts",
+   "key": "GalacticWeb",
+   "en": "Galactic Web",
+   "zh": "星系之网",
+   "kind": "artifact",
+   "atlas": "icons",
+   "index": 231,
+   "file": "artifacts/GalacticWeb.png"
+  },
+  {
+   "category": "perks",
+   "key": "DarkMedal",
+   "en": "Dark Medal",
+   "zh": "黑暗勋章",
+   "kind": "perk",
+   "atlas": "icons",
+   "index": 232,
+   "file": "perks/DarkMedal.png"
+  },
+  {
+   "category": "spells",
+   "key": "BuildTile",
+   "en": "Build Tile",
+   "zh": "建造格子",
+   "kind": "",
+   "atlas": "icons",
+   "index": 233,
+   "file": "spells/BuildTile.png"
+  },
+  {
+   "category": "spells",
+   "key": "Swap",
+   "en": "Swap or Move",
+   "zh": "交换或移动",
+   "kind": "",
+   "atlas": "icons",
+   "index": 234,
+   "file": "spells/Swap.png"
+  },
+  {
+   "category": "spells",
+   "key": "Shield",
+   "en": "Give Shield",
+   "zh": "给予护盾",
+   "kind": "",
+   "atlas": "icons",
+   "index": 235,
+   "file": "spells/Shield.png"
+  },
+  {
+   "category": "spells",
+   "key": "Sacrifice",
+   "en": "Sacrifice Unit",
+   "zh": "牺牲单位",
+   "kind": "",
+   "atlas": "icons",
+   "index": 237,
+   "file": "spells/Sacrifice.png"
+  },
+  {
+   "category": "spells",
+   "key": "BloodSacrifice",
+   "en": "Blood Sacrifice",
+   "zh": "浴血牺牲",
+   "kind": "",
+   "atlas": "icons",
+   "index": 238,
+   "file": "spells/BloodSacrifice.png"
+  },
+  {
+   "category": "spells",
+   "key": "Clone",
+   "en": "Clone Unit",
+   "zh": "克隆单位",
+   "kind": "",
+   "atlas": "icons",
+   "index": 239,
+   "file": "spells/Clone.png"
+  },
+  {
+   "category": "spells",
+   "key": "XP",
+   "en": "Give +5 XP",
+   "zh": "给予+5经验",
+   "kind": "",
+   "atlas": "icons",
+   "index": 240,
+   "file": "spells/XP.png"
+  },
+  {
+   "category": "spells",
+   "key": "XP_Uncommon",
+   "en": "Give +10 XP",
+   "zh": "给予+10经验",
+   "kind": "",
+   "atlas": "icons",
+   "index": 240,
+   "file": "spells/XP_Uncommon.png"
+  },
+  {
+   "category": "spells",
+   "key": "XP_Rare",
+   "en": "Give +15 XP",
+   "zh": "给予+15经验",
+   "kind": "",
+   "atlas": "icons",
+   "index": 240,
+   "file": "spells/XP_Rare.png"
+  },
+  {
+   "category": "spells",
+   "key": "XP_Legendary",
+   "en": "Give +25 XP",
+   "zh": "给予+25经验",
+   "kind": "",
+   "atlas": "icons",
+   "index": 240,
+   "file": "spells/XP_Legendary.png"
+  },
+  {
+   "category": "spells",
+   "key": "GainBudge",
+   "en": "Get +2 Budge",
+   "zh": "获得+2挪移",
+   "kind": "",
+   "atlas": "icons",
+   "index": 241,
+   "file": "spells/GainBudge.png"
+  },
+  {
+   "category": "spells",
+   "key": "Gain3Budge",
+   "en": "Get +3 Budge",
+   "zh": "获得+3挪移",
+   "kind": "",
+   "atlas": "icons",
+   "index": 242,
+   "file": "spells/Gain3Budge.png"
+  },
+  {
+   "category": "spells",
+   "key": "GainReroll",
+   "en": "Get +1 Chrono",
+   "zh": "获得+1时空点",
+   "kind": "",
+   "atlas": "icons",
+   "index": 243,
+   "file": "spells/GainReroll.png"
+  },
+  {
+   "category": "spells",
+   "key": "Gain2Reroll",
+   "en": "Get +2 Chrono",
+   "zh": "获得+2时空点",
+   "kind": "",
+   "atlas": "icons",
+   "index": 243,
+   "file": "spells/Gain2Reroll.png"
+  },
+  {
+   "category": "spells",
+   "key": "Gain3Reroll",
+   "en": "Get +3 Chrono",
+   "zh": "获得+3时空点",
+   "kind": "",
+   "atlas": "icons",
+   "index": 244,
+   "file": "spells/Gain3Reroll.png"
+  },
+  {
+   "category": "spells",
+   "key": "Gain9Reroll",
+   "en": "Get +9 Chrono",
+   "zh": "获得+9时空点",
+   "kind": "",
+   "atlas": "icons",
+   "index": 245,
+   "file": "spells/Gain9Reroll.png"
+  },
+  {
+   "category": "spells",
+   "key": "GainHeart",
+   "en": "Get +1 Heart",
+   "zh": "获得+1心心",
+   "kind": "",
+   "atlas": "icons",
+   "index": 246,
+   "file": "spells/GainHeart.png"
+  },
+  {
+   "category": "commanders",
+   "key": "Mothership",
+   "en": "The Captain",
+   "zh": "舰长",
+   "kind": "",
+   "atlas": "commanders",
+   "index": 0,
+   "file": "commanders/Mothership.png"
+  },
+  {
+   "category": "commanders",
+   "key": "Megablob",
+   "en": "Blob-Girl",
+   "zh": "团块姑娘",
+   "kind": "",
+   "atlas": "commanders",
+   "index": 1,
+   "file": "commanders/Megablob.png"
+  },
+  {
+   "category": "commanders",
+   "key": "Kraken",
+   "en": "The Core",
+   "zh": "核心",
+   "kind": "",
+   "atlas": "commanders",
+   "index": 2,
+   "file": "commanders/Kraken.png"
+  },
+  {
+   "category": "commanders",
+   "key": "Shambler",
+   "en": "Riftmaker",
+   "zh": "裂隙制造师",
+   "kind": "",
+   "atlas": "commanders",
+   "index": 3,
+   "file": "commanders/Shambler.png"
+  },
+  {
+   "category": "commanders",
+   "key": "Nessie",
+   "en": "Whisperer",
+   "zh": "低语者",
+   "kind": "",
+   "atlas": "commanders",
+   "index": 4,
+   "file": "commanders/Nessie.png"
+  },
+  {
+   "category": "commanders",
+   "key": "Grandmaster",
+   "en": "The Duchess",
+   "zh": "女公爵",
+   "kind": "",
+   "atlas": "commanders",
+   "index": 5,
+   "file": "commanders/Grandmaster.png"
+  },
+  {
+   "category": "commanders",
+   "key": "Eclipse",
+   "en": "The Exalted",
+   "zh": "超凡者",
+   "kind": "",
+   "atlas": "commanders",
+   "index": 6,
+   "file": "commanders/Eclipse.png"
+  },
+  {
+   "category": "commanders",
+   "key": "Hive",
+   "en": "Hex Prince",
+   "zh": "六角王子",
+   "kind": "",
+   "atlas": "commanders",
+   "index": 7,
+   "file": "commanders/Hive.png"
+  },
+  {
+   "category": "commanders",
+   "key": "Hemophage",
+   "en": "Blood Beast",
+   "zh": "血怒兽",
+   "kind": "",
+   "atlas": "commanders",
+   "index": 8,
+   "file": "commanders/Hemophage.png"
+  },
+  {
+   "category": "commanders",
+   "key": "Overseer",
+   "en": "Overseer",
+   "zh": "天理",
+   "kind": "",
+   "atlas": "commanders",
+   "index": 9,
+   "file": "commanders/Overseer.png"
+  },
+  {
+   "category": "pilots",
+   "key": "Bud",
+   "en": "Bud",
+   "zh": "Bud",
+   "kind": "",
+   "atlas": "pilots",
+   "index": 0,
+   "file": "pilots/Bud.png"
+  },
+  {
+   "category": "pilots",
+   "key": "Garu",
+   "en": "Garu",
+   "zh": "Garu",
+   "kind": "",
+   "atlas": "pilots",
+   "index": 1,
+   "file": "pilots/Garu.png"
+  },
+  {
+   "category": "pilots",
+   "key": "Hali",
+   "en": "Hali",
+   "zh": "Hali",
+   "kind": "",
+   "atlas": "pilots",
+   "index": 2,
+   "file": "pilots/Hali.png"
+  },
+  {
+   "category": "pilots",
+   "key": "Iris",
+   "en": "Iris",
+   "zh": "Iris",
+   "kind": "",
+   "atlas": "pilots",
+   "index": 3,
+   "file": "pilots/Iris.png"
+  },
+  {
+   "category": "pilots",
+   "key": "Kaia",
+   "en": "Kaia",
+   "zh": "Kaia",
+   "kind": "",
+   "atlas": "pilots",
+   "index": 4,
+   "file": "pilots/Kaia.png"
+  },
+  {
+   "category": "pilots",
+   "key": "Max",
+   "en": "Max",
+   "zh": "Max",
+   "kind": "",
+   "atlas": "pilots",
+   "index": 5,
+   "file": "pilots/Max.png"
+  },
+  {
+   "category": "pilots",
+   "key": "Min",
+   "en": "Min",
+   "zh": "Min",
+   "kind": "",
+   "atlas": "pilots",
+   "index": 6,
+   "file": "pilots/Min.png"
+  },
+  {
+   "category": "pilots",
+   "key": "Noel",
+   "en": "Noel",
+   "zh": "Noel",
+   "kind": "",
+   "atlas": "pilots",
+   "index": 7,
+   "file": "pilots/Noel.png"
+  },
+  {
+   "category": "pilots",
+   "key": "RoboMin",
+   "en": "Min?",
+   "zh": "Min?",
+   "kind": "",
+   "atlas": "pilots",
+   "index": 8,
+   "file": "pilots/RoboMin.png"
+  },
+  {
+   "category": "pilots",
+   "key": "Roxy",
+   "en": "Roxy",
+   "zh": "Roxy",
+   "kind": "",
+   "atlas": "pilots",
+   "index": 9,
+   "file": "pilots/Roxy.png"
+  },
+  {
+   "category": "pilots",
+   "key": "Shun",
+   "en": "Shun",
+   "zh": "Shun",
+   "kind": "",
+   "atlas": "pilots",
+   "index": 10,
+   "file": "pilots/Shun.png"
+  },
+  {
+   "category": "pilots",
+   "key": "Star",
+   "en": "The Star",
+   "zh": "The Star",
+   "kind": "",
+   "atlas": "pilots",
+   "index": 11,
+   "file": "pilots/Star.png"
+  },
+  {
+   "category": "pilots",
+   "key": "Sura",
+   "en": "Sura",
+   "zh": "Sura",
+   "kind": "",
+   "atlas": "pilots",
+   "index": 12,
+   "file": "pilots/Sura.png"
+  },
+  {
+   "category": "pilots",
+   "key": "Tippy",
+   "en": "Tippy",
+   "zh": "Tippy",
+   "kind": "",
+   "atlas": "pilots",
+   "index": 13,
+   "file": "pilots/Tippy.png"
+  },
+  {
+   "category": "pilots",
+   "key": "Xenn",
+   "en": "Xenn",
+   "zh": "Xenn",
+   "kind": "",
+   "atlas": "pilots",
+   "index": 14,
+   "file": "pilots/Xenn.png"
+  },
+  {
+   "category": "pilots",
+   "key": "Zeke",
+   "en": "Zeke",
+   "zh": "Zeke",
+   "kind": "",
+   "atlas": "pilots",
+   "index": 15,
+   "file": "pilots/Zeke.png"
+  },
+  {
+   "category": "keywords",
+   "key": "Attack",
+   "en": "Attack",
+   "zh": "Attack",
+   "kind": "",
+   "atlas": "icons",
+   "index": 0,
+   "file": "keywords/Attack.png"
+  },
+  {
+   "category": "keywords",
+   "key": "Budge",
+   "en": "Budge",
+   "zh": "Budge",
+   "kind": "",
+   "atlas": "icons",
+   "index": 1,
+   "file": "keywords/Budge.png"
+  },
+  {
+   "category": "keywords",
+   "key": "Chrono",
+   "en": "Chrono",
+   "zh": "Chrono",
+   "kind": "",
+   "atlas": "icons",
+   "index": 2,
+   "file": "keywords/Chrono.png"
+  },
+  {
+   "category": "keywords",
+   "key": "MiniDice",
+   "en": "MiniDice",
+   "zh": "MiniDice",
+   "kind": "",
+   "atlas": "icons",
+   "index": 3,
+   "file": "keywords/MiniDice.png"
+  },
+  {
+   "category": "keywords",
+   "key": "DicePower",
+   "en": "DicePower",
+   "zh": "DicePower",
+   "kind": "",
+   "atlas": "icons",
+   "index": 4,
+   "file": "keywords/DicePower.png"
+  },
+  {
+   "category": "keywords",
+   "key": "Shield",
+   "en": "Shield",
+   "zh": "Shield",
+   "kind": "",
+   "atlas": "icons",
+   "index": 5,
+   "file": "keywords/Shield.png"
+  },
+  {
+   "category": "keywords",
+   "key": "Shock",
+   "en": "Shock",
+   "zh": "Shock",
+   "kind": "",
+   "atlas": "icons",
+   "index": 6,
+   "file": "keywords/Shock.png"
+  },
+  {
+   "category": "keywords",
+   "key": "Charge",
+   "en": "Charge",
+   "zh": "Charge",
+   "kind": "",
+   "atlas": "icons",
+   "index": 7,
+   "file": "keywords/Charge.png"
+  },
+  {
+   "category": "keywords",
+   "key": "React",
+   "en": "React",
+   "zh": "React",
+   "kind": "",
+   "atlas": "icons",
+   "index": 8,
+   "file": "keywords/React.png"
+  },
+  {
+   "category": "keywords",
+   "key": "Target",
+   "en": "Target",
+   "zh": "Target",
+   "kind": "",
+   "atlas": "icons",
+   "index": 9,
+   "file": "keywords/Target.png"
+  },
+  {
+   "category": "keywords",
+   "key": "ShopToken",
+   "en": "ShopToken",
+   "zh": "ShopToken",
+   "kind": "",
+   "atlas": "icons",
+   "index": 10,
+   "file": "keywords/ShopToken.png"
+  },
+  {
+   "category": "keywords",
+   "key": "Arrow",
+   "en": "Arrow",
+   "zh": "Arrow",
+   "kind": "",
+   "atlas": "icons",
+   "index": 11,
+   "file": "keywords/Arrow.png"
+  },
+  {
+   "category": "keywords",
+   "key": "Doom",
+   "en": "Doom",
+   "zh": "Doom",
+   "kind": "",
+   "atlas": "icons",
+   "index": 12,
+   "file": "keywords/Doom.png"
+  },
+  {
+   "category": "keywords",
+   "key": "Power",
+   "en": "Power",
+   "zh": "Power",
+   "kind": "",
+   "atlas": "icons",
+   "index": 13,
+   "file": "keywords/Power.png"
+  },
+  {
+   "category": "keywords",
+   "key": "Rarity",
+   "en": "Rarity",
+   "zh": "Rarity",
+   "kind": "",
+   "atlas": "icons",
+   "index": 14,
+   "file": "keywords/Rarity.png"
+  },
+  {
+   "category": "keywords",
+   "key": "Heat",
+   "en": "Heat",
+   "zh": "Heat",
+   "kind": "",
+   "atlas": "icons",
+   "index": 15,
+   "file": "keywords/Heat.png"
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+# vision 模块依赖
+numpy>=1.24
+Pillow>=9.0
+
+# OCR（可选，二选一）：
+#   方式A：传统 OCR —— 需另装系统级 Tesseract（brew install tesseract）
+# pytesseract>=0.3.10
+#   方式B：接视觉大模型识别数字，无需 tesseract（推荐，见 README）
